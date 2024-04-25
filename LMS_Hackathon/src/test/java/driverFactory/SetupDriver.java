@@ -38,12 +38,12 @@ public class SetupDriver {
 
 	}
 
-	public static void openPage(String url) {
+	public void openPage(String url) {
 		driver.get(url);
 	}
 
-	public static void getTitle() {
-		driver.getTitle();
+	public String getTitle() {
+		return driver.getTitle();
 	}
 
 	public static void navigateBack() {
