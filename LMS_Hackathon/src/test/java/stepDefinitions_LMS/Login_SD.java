@@ -7,11 +7,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
 import utilities.LoggerLoad;
+import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
 public class Login_SD {
-	LoginPage loginpage;
+	 LoginPage loginpage;
 	 TestContextSetup context;
+	 
 	public Login_SD(TestContextSetup context) {
 		this.context=context;
 		loginpage = context.loginpage;
@@ -24,8 +26,8 @@ public class Login_SD {
 	}
 
 	@When("Admin gives the correct LMS portal URL")
-	public void admin_gives_the_correct_lms_portal_url() {
-	    context.openPage("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com");
+	public void admin_gives_the_correct_lms_portal_url() throws Throwable {
+	    context.openPage(PropertyFileReader.getGlobalValue("url"));
 	}
 
 	@Then("Admin should land on the home page")
