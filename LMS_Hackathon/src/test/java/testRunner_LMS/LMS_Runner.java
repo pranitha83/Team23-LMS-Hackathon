@@ -7,9 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin  = {"pretty","html:target/LMS.html"},
-				//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				//"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},  //cucumber reports
+		plugin  = {"pretty","html:target/LMS.html",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},  //cucumber reports
 		
 		monochrome = true,  //console output color and eliminate junk characters
 		tags = "@login",  //tags from feature file

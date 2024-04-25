@@ -6,3 +6,5 @@ Feature: LoginPage Validation
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
     Then Admin should land on the home page
+
+   
