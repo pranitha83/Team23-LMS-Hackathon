@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SetupDriver {
-	static WebDriver driver;
+	public static WebDriver driver;
 	static ResourceBundle rb; // for reading properties file
 	static String br; // for storing browser name
 
@@ -26,7 +26,7 @@ public class SetupDriver {
 		}
 		//driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		return driver;
 
@@ -34,16 +34,16 @@ public class SetupDriver {
 
 	public static WebDriver Driver() {
 
-		return getDriver();
+		return driver;
 
 	}
 
-	public static void openPage(String url) {
+	public void openPage(String url) {
 		driver.get(url);
 	}
 
-	public static void getTitle() {
-		driver.getTitle();
+	public String getTitle() {
+		return driver.getTitle();
 	}
 
 	public static void navigateBack() {
