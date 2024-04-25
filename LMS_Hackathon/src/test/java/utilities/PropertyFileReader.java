@@ -32,5 +32,13 @@ public class PropertyFileReader {
 			throw new RuntimeException("Excel file path not specified in the Configuration.properties file.");
 	}
 
+public static  String getbrowser() {
+	String browserName = prop.getProperty("browser");
+	return browserName;
+}
 
+public static String getUrl() throws Throwable {
+	String url = getGlobalValue("url");
+	return url;
+}
 }

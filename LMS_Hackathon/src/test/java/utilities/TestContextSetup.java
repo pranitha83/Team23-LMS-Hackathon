@@ -1,24 +1,38 @@
 package utilities;
 
-import java.io.IOException;
-
 import driverFactory.SetupDriver;
 import pageObjects.LoginPage;
 import pageObjects.PageObjectManager;
 
-public class TestContextSetup extends SetupDriver {
-	//public  WebDriver driver; 
-
-
-	public PageObjectManager pageobjectmanager; 
-	public LoginPage loginpage;
-	public GenericUtils genericutils;
+public class TestContextSetup  {
+	private SetupDriver setupdriver;
 	
-	public void getpageObjManager() {
-		
-		//loginpage = new LoginPage(driver);
-		pageobjectmanager=new PageObjectManager(driver);
-		//genericutils=new GenericUtils(driver);
+
+
+	private PageObjectManager pageobjectmanager; 
+	private LoginPage loginpage;
+	private GenericUtils genericutils;
+	
+	public TestContextSetup()
+	{
+		setupdriver = new SetupDriver();
+		pageobjectmanager = new PageObjectManager(SetupDriver.Driver());
+		//scenarioContext = new ScenarioContext();
+	}
+	
+	public SetupDriver getsetupdriver() {
+		return setupdriver;
+	}
+	
+	public PageObjectManager getpageobjectmanager() {
+		return pageobjectmanager;
+	}
+	public LoginPage getloginpage() {
+		if (loginpage==null)
+		{
+			loginpage=new LoginPage(SetupDriver.Driver());
+		}
+		return loginpage;
 	}
 }
 

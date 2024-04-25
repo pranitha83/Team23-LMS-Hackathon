@@ -20,22 +20,22 @@ public class Hooks {
 	@Before(order = 0)
 	public static void setup() {
 		LoggerLoad.info("setup browser");
-		//SetupDriver.setupDriver();
-		TestContextSetup.setupDriver();
+		SetupDriver.setupDriver();
+		//TestContextSetup.setupDriver();
 
 	}
 
 	@Before(order = 1)
 	public static void getbrowser() {
 		LoggerLoad.info("get driver");
-		// SetupDriver.Driver();
-		TestContextSetup.Driver();
+		 SetupDriver.Driver();
+		//TestContextSetup.Driver();
 	}
 
 	@After(order = 0)
 	public static void screenshot(Scenario scenario) {
 		if (scenario.isFailed()) {
-			final byte[] screenshot = ((TakesScreenshot) TestContextSetup.Driver()).getScreenshotAs(OutputType.BYTES);
+			final byte[] screenshot = ((TakesScreenshot) SetupDriver.Driver()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", scenario.getName());
 
 		}
