@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
+
 public class PageObjectManager {
 
 	public LoginPage loginpage;
@@ -14,13 +15,19 @@ public class PageObjectManager {
 		
 	}
 	 
-	public LoginPage getLoginpage() {
-		
-		 loginpage=new LoginPage(driver);
-		 return  loginpage;
+//	public LoginPage getLoginpage() {
+//		
+//		 loginpage=new LoginPage(driver);
+//		 return  loginpage;
+//	}
+	
+	public LoginPage getloginpage() {
+		if (loginpage==null)
+		{
+			loginpage=new LoginPage(driver);
+		}
+		return loginpage;
 	}
-	
-	
 
 
 }

@@ -8,20 +8,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import utilities.PropertyFileReader;
+
 public class SetupDriver {
 	public static WebDriver driver;
 	static ResourceBundle rb; // for reading properties file
 	static String br; // for storing browser name
 
-	private static WebDriver getDriver() {
-		rb = ResourceBundle.getBundle("config");
-		br = rb.getString("browser");
+	private static WebDriver getDriver()  {
+		//rb = ResourceBundle.getBundle("config");
+		//br = rb.getString("browser");
+		try {
+			br =  PropertyFileReader.getbrowser();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-		if (br.equals("CHROME")) {
+		if (br.equalsIgnoreCase("CHROME")) {
 			driver = new ChromeDriver();
-		} else if (br.equals("edge")) {
+		} else if (br.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-		} else if (br.equals("Firefox")) {
+		} else if (br.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
 		}
 		//driver.manage().deleteAllCookies();
