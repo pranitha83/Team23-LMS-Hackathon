@@ -27,13 +27,7 @@ public class TestContextSetup  {
 	public PageObjectManager getpageobjectmanager() {
 		return pageobjectmanager;
 	}
-	public LoginPage getloginpage() {
-		if (loginpage==null)
-		{
-			loginpage=new LoginPage(SetupDriver.Driver());
-		}
-		return loginpage;
-	}
+	
 }
 
 
