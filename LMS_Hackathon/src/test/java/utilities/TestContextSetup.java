@@ -10,14 +10,15 @@ public class TestContextSetup  {
 
 
 	private PageObjectManager pageobjectmanager; 
-	private LoginPage loginpage;
-	private GenericUtils genericutils;
 	
+	private GenericUtils genericutils;
+	private Excel_Reader excelreader;
 	public TestContextSetup()
 	{
 		setupdriver = new SetupDriver();
 		pageobjectmanager = new PageObjectManager(SetupDriver.Driver());
 		//scenarioContext = new ScenarioContext();
+		excelreader = new Excel_Reader();
 	}
 	
 	public SetupDriver getsetupdriver() {
@@ -27,7 +28,9 @@ public class TestContextSetup  {
 	public PageObjectManager getpageobjectmanager() {
 		return pageobjectmanager;
 	}
-	
+	public Excel_Reader getexcelreader() {
+	return excelreader;
+	}
 }
 
 

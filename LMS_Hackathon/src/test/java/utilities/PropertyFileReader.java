@@ -25,7 +25,7 @@ public class PropertyFileReader {
 	}
 	
 	public static String getexcelfilepath() {
-		String excelfilelpath = prop.getProperty("excelfilepath");
+		String excelfilelpath = prop.getProperty("excelpath");
 		if (excelfilelpath != null)
 			return excelfilelpath;
 		else
@@ -41,4 +41,9 @@ public static String getUrl() throws Throwable {
 	String url = getGlobalValue("url");
 	return url;
 }
+//public static String getExcelpath() throws Throwable {
+//	String excelpath = getGlobalValue("excelpath");
+//	return excelpath;
+//
+//}
 }
