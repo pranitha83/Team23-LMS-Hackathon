@@ -14,8 +14,8 @@ public class Hooks {
 
 	private TestContextSetup context;
 
-	public Hooks(TestContextSetup context) {
-		this.context=context;
+	public Hooks() {
+		
 	}
 	@Before(order = 0)
 	public static void setup() {

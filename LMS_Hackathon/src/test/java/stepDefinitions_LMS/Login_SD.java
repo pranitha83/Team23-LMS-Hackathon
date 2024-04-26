@@ -18,7 +18,7 @@ public class Login_SD {
 	 
 	public Login_SD(TestContextSetup context) {
 		this.context=context;
-		loginpage = context.getloginpage();
+		loginpage = context.getpageobjectmanager().getloginpage();
 		setupdriver = context.getsetupdriver();
 	}
 
@@ -46,14 +46,16 @@ public class Login_SD {
 	}
 
 	@When("Admin enter valid credentials  and clicks login button")
-	public void admin_enter_valid_credentials_and_clicks_login_button() {
+	public void admin_enter_valid_credentials_and_clicks_login_button() throws InterruptedException {
 	   loginpage.enterUserNPassword("sdetorganizers@gmail.com", "UIHackathon@02");
 	   loginpage.loginBtnClk();
+	   Thread.sleep(2000);
 	}
 
 	@Then("Admin should land on dashboard page")
 	public void admin_should_land_on_dashboard_page() {
-	    
+	    Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
+		System.out.println(SetupDriver.url());
 	}
 
 
