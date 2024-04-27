@@ -1,3 +1,4 @@
+#AuthorVinothini
 @Program
 Feature: Add New Program
 
@@ -25,15 +26,41 @@ And Admin gets a Error message alert
 
 Scenario: Enter only Program Name
 Then Admin enters only<Program Name> in text box and clicks Save button
-And Admin gets a message alert 'Description is required'
+And Admin gets a message alert Description is required
 
 Scenario: Enter only Program Description
 Then Admin enters only<Program description> in text box and clicks Save button
-And Admin gets a message alert 'Name is required'
+And Admin gets a message alert Name is required
 
 Scenario: Select Status only
 Then Admin selects only Status and clicks Save button
-And Admin gets a message alert 'Name and Description required'
+And Admin gets a message alert Name and Description required
+
+
+Scenario: Validate invalid values on the name text column
+Then Admin enters only numbers or special char in name  column 
+And Admin gets a special char Error message alert for name column  
+
+Scenario: Validate invalid values on the desc text column
+Then Admin enters only numbers or special char in desc column 
+And Admin gets a special char Error message alert for desc column 
+
+Scenario: Validate Cancel/Close(X) icon on Program Details form
+Then Admin clicks Cancel or Close(X) Icon on Program Details form 
+And Program Details popup window should be closed without saving 
+
+ Scenario Outline: Validate Save button on Program Details form
+Then Enter all the required fields with valid values in given sheetname "<sheetName>" and rowNumber <rowNo> and then click Save button 
+And Admin gets a message "Successful Program Created" alert and able to see the new program added in the data table
+
+  Examples:
+|sheetName|rowNo|
+|ProgramPage|0|
+
+Scenario: Validate Cancel button on Program Details form
+Then Admin clicks <Cancel>button 
+And Admin can see the Program details popup disappears without creating any program
+
 
 
 

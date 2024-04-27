@@ -37,6 +37,10 @@ public WebDriver driver;
 	By ProNameRequired = By.xpath("//*[text()='Program name is required.']");
 	By ProDescRequired = By.xpath("//*[text()='Description is required.']");
 	By statusrequied=By.xpath("//*[text()='Status is required.']");
+	By PronameSpecialcharerrormsg = By.xpath("//*[text()='This field should start with an alphabet, no special char and min 2 char.']");
+	By ProDesSpecialcharerrormsg = By.xpath("//*[text()='This field should start with an alphabet and min 2 char.']");
+	By Programpopupclose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-3 pi pi-times']");
+	By Capturingfooterentry = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
 	
 	public void NewProgram() {
 		driver.findElement(NewProgram).click();
@@ -89,6 +93,47 @@ public WebDriver driver;
 	public void  onlyenterproDes() {
 		driver.findElement(By.id("programDescription")).sendKeys("Team23");
 		}
+	
+	public void  onlyclickstatus() {
+		driver.findElement(Status).click();
+		}
+	public void  PronameSpecialchar() {
+		 driver.findElement(programName).sendKeys("Java$");
+		}
+	public String PronameSpecialcharerrormsg() {
+		 return driver.findElement(PronameSpecialcharerrormsg).getText();
+		}
+	public void  ProDesSpecialchar() {
+		driver.findElement(programDescription).sendKeys("@@");
+		}
+	public String ProDesSpecialcharerrormsg() {
+		 return driver.findElement(ProDesSpecialcharerrormsg).getText();
+		}
+
+	public void  Programpopupclose() {
+		 driver.findElement(Programpopupclose).click();
+		}
+	
+	public String Capturingfooterentry() {
+		 return driver.findElement(Capturingfooterentry).getText();
+		}
+	
+	
+	public void CancelbuttonClick() {
+		 driver.findElement(Cancelbutton).click();
+		}
+	
+	/*public void enterUserNPassword(String givenusername, String givenpassword) {
+		username.sendKeys(givenusername);
+		password.sendKeys(givenpassword);}*/
+	
+	public void EnterProNameandDesc(String givenprogramname, String givenprodesc) {
+		 driver.findElement(programName).sendKeys(givenprogramname);
+		 driver.findElement(programDescription).sendKeys(givenprodesc);
+	}
+		
+		
+		
 
 
 }
