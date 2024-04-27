@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,6 +19,9 @@ public class SetupDriver {
 	private static WebDriver getDriver()  {
 		//rb = ResourceBundle.getBundle("config");
 		//br = rb.getString("browser");
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setAcceptInsecureCerts(false);
 		try {
 			br =  PropertyFileReader.getbrowser();
 		} catch (Throwable e) {
@@ -26,12 +30,14 @@ public class SetupDriver {
 		}
 
 		if (br.equalsIgnoreCase("CHROME")) {
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} else if (br.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		} else if (br.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
 		}
+		
+		
 		//driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -59,10 +65,11 @@ public class SetupDriver {
 		driver.navigate().back();
 	}
 
-	public static void setupDriver() {
+	public static WebDriver setupDriver() {
 		if (driver == null) {
 			getDriver();
 		}
+		return driver;
 
 	}
 
