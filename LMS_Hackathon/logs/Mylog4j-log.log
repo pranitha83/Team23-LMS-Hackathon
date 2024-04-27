@@ -381,3 +381,43 @@
 ['INFO ]2024-04-26 15:25:11,061(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
 ['INFO ]2024-04-26 15:25:11,063(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
 ['INFO ]2024-04-26 15:25:11,069(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:37:54,056(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:38:57,022(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:38:57,887(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:39:24,759(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:39:24,759(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:39:24,759(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:44:21,099(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:44:40,816(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:44:40,999(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:44:45,431(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:44:45,434(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:44:45,465(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:58:24,020(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:58:33,377(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:58:33,403(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:58:36,577(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:58:36,585(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:58:36,589(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 15:58:37,441(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-file://lms-frontend-api-hackathon-apr-326235f3973d/
+['INFO ]2024-04-26 16:10:10,915(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:10:28,230(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:10:29,027(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 16:10:32,037(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:10:32,075(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:10:32,136(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 16:14:24,251(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:14:37,349(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:14:37,589(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 16:14:40,228(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:14:40,231(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:14:40,244(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['ERROR]2024-04-26 16:14:43,248(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-ERR_FILE_NOT_FOUND
+['INFO ]2024-04-26 16:22:59,068(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:23:09,779(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:23:09,916(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:23:20,040(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:23:20,156(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 16:23:21,608(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:23:21,608(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:23:21,609(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
