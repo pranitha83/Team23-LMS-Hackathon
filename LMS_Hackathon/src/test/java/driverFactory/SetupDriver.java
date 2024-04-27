@@ -4,9 +4,12 @@ import java.time.Duration;
 import java.util.ResourceBundle;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.PropertyFileReader;
 
@@ -72,8 +75,13 @@ public class SetupDriver {
 		}
 
 	}
+	
+	public static void waitForElement(WebElement element) {
+		new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.visibilityOf(element));
 
-	public static String url() {
+	}
+
+	public  String url() {
 		return driver.getCurrentUrl();
 
 	}

@@ -99,3 +99,784 @@
 ['INFO ]2024-04-25 22:10:39,321(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
 ['INFO ]2024-04-25 22:10:39,327(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
 ['INFO ]2024-04-25 22:10:39,331(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 21:39:47,037(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:39:51,591(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,072(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,072(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,090(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,091(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,102(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,103(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,109(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,110(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,120(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,121(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,128(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,128(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,136(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,136(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,142(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,143(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,152(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,165(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,173(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,178(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,187(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,188(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,199(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,200(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:40:02,209(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:40:02,209(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:43:41,207(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:43:47,309(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:43:47,386(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 21:43:50,889(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 21:43:50,897(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 21:43:50,906(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:46:52,109(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:47:12,307(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:47:14,153(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:47:14,206(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:47:17,196(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:47:17,199(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:47:17,203(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:49:18,262(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:49:19,865(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:49:49,950(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:49:51,488(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:49:51,514(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:49:55,208(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:49:55,211(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:49:55,215(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:49:57,828(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:49:57,831(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:51:49,889(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:51:51,448(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:51:51,467(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:51:55,248(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:51:55,248(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:51:55,250(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:51:57,837(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:51:57,837(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:53:29,825(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:53:31,509(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:56:56,564(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:56:58,041(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:56:58,071(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:57:01,076(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:57:01,077(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 22:57:01,077(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 22:59:05,448(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 22:59:07,311(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:03,820(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:05,886(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:05,907(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:00:09,561(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:09,561(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:09,562(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:00:12,350(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:12,350(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:45,839(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:47,645(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:47,693(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:00:50,674(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:50,675(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:00:50,676(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:00:53,454(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:00:53,455(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:15:27,571(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:15:30,271(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:15:30,316(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:15:33,334(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:15:33,334(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:15:33,335(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:15:36,181(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:15:36,181(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:16:34,104(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:16:36,114(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:16:36,154(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:16:39,820(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:16:39,821(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:16:39,822(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:16:42,566(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:16:42,567(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:18:25,984(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:18:27,813(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:18:27,865(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:18:31,015(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:18:31,015(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:18:31,016(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:18:33,752(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:18:33,752(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:20:16,390(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:20:18,017(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:20:18,047(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:20:21,612(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:20:21,612(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:20:21,613(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:20:24,385(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:20:24,386(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:22:49,232(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:22:51,212(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:22:58,526(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:22:58,526(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:24:22,952(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:24:24,922(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:24:35,113(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:24:35,113(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:25:12,269(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:25:14,177(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:31:51,330(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:31:53,358(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:32:55,521(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:32:57,458(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:32:57,513(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:33:01,066(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:33:01,067(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:33:01,067(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:33:04,199(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:33:04,199(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:34:23,509(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:34:25,726(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:35:38,963(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:35:40,783(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:35:51,432(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:35:53,528(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:38:11,955(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:38:14,267(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:40:06,158(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:40:07,804(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:40:57,074(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:40:58,801(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:40:58,830(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:42:15,590(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:42:17,308(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:42:37,108(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:42:38,895(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:42:38,955(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:42:42,848(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:42:42,848(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-25 23:42:42,849(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-25 23:42:45,606(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-25 23:42:45,607(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:43:05,094(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:43:09,140(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:43:09,303(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:43:13,451(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:43:13,452(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:43:13,453(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:43:16,489(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:43:16,490(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:48:16,880(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:48:19,837(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:48:19,930(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:48:22,621(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:48:22,621(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:48:22,623(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:48:25,455(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:48:25,456(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:49:37,852(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:49:40,388(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:49:40,463(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:49:43,626(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:49:43,627(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:49:43,628(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:49:46,425(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:49:46,425(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:54:32,937(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:54:35,530(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:54:35,640(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:54:38,875(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:54:38,876(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:54:38,876(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:54:41,817(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:54:41,818(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:57:10,243(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:57:12,973(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:57:13,053(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:57:17,603(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:57:17,603(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 09:57:17,605(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 09:57:20,465(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 09:57:20,465(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:11:06,539(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:11:08,752(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:11:08,817(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:11:12,095(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:11:12,095(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:11:12,096(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:11:14,745(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:11:14,745(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:14:59,640(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:15:02,099(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:15:02,164(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:15:05,434(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:15:05,434(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:15:05,435(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:15:08,350(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:15:08,351(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:18:41,530(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:18:44,297(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:18:44,471(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:18:47,577(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:18:47,577(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:18:47,578(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:18:50,493(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:18:50,493(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:21:54,016(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:21:56,641(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:21:56,727(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:21:59,962(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:21:59,964(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:21:59,964(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:22:02,940(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:22:02,942(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:23:50,181(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:23:53,262(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:26:38,874(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:26:42,079(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:26:42,125(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:26:45,172(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:26:45,174(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:26:45,174(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:26:48,008(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:26:48,009(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:27:12,198(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:27:13,998(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:27:14,056(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:27:17,234(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:27:17,235(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:27:17,235(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:27:19,881(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:27:19,881(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:27:25,464(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:27:25,464(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:29:35,141(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:29:36,852(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:29:36,904(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:29:40,775(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:29:40,776(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:29:40,776(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:29:43,463(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:29:43,463(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:29:48,960(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:29:48,960(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:30:32,798(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:30:34,394(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:30:34,413(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:30:37,938(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:30:37,938(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:30:37,939(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:30:40,516(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:30:40,516(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:30:46,008(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:30:46,009(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:31:31,659(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:31:33,142(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:31:33,168(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:31:36,474(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:31:36,474(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:31:36,475(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Launch the browser
+['INFO ]2024-04-26 10:31:39,053(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:31:39,054(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:31:44,562(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:31:44,563(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:37:01,452(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:37:03,345(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:37:11,709(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:37:11,710(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:37:11,795(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:37:11,796(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:39:10,811(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:39:13,120(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:39:21,577(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 10:39:21,579(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 10:39:21,658(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 10:39:21,658(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 10:39:24,360(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-26 10:39:24,360(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-26 11:10:11,319(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 11:10:19,927(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 11:10:30,674(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-26 11:10:30,676(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-26 11:10:30,809(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 11:10:30,810(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 11:10:34,572(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-26 11:10:35,793(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 11:10:35,795(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 11:10:39,873(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-26 11:10:39,874(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-26 12:14:28,307(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:14:37,326(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:14:45,528(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:20:11,409(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:20:19,620(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:20:28,090(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:41:22,112(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:41:25,167(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:41:30,618(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:45:46,014(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:45:48,684(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:45:55,016(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:46:11,983(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:46:15,134(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:46:21,162(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:47:57,730(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:48:00,611(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:48:06,792(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:51:38,708(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:51:41,599(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:51:46,884(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 12:55:10,076(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 12:55:12,875(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 12:55:18,676(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 14:05:56,701(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:05:59,443(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:06:04,670(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-26 14:10:44,804(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:10:46,677(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:10:52,154(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-26 14:21:02,085(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:21:04,246(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:21:09,760(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:22:26,487(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:22:28,018(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:22:33,710(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:24:52,072(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:24:53,704(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:24:59,266(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:26:01,797(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:26:03,268(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:26:09,274(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:27:42,120(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:27:43,953(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:27:49,614(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:29:16,407(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:29:18,357(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:29:23,993(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:32:04,221(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:32:06,259(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:32:12,092(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:38:01,328(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:38:03,549(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:38:09,246(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:39:52,958(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:39:54,429(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:40:00,731(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 14:43:47,237(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 14:43:49,066(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 14:43:54,505(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 15:04:16,031(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:04:24,003(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:04:32,497(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 15:13:36,855(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:13:45,775(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:13:53,541(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 15:26:43,660(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:26:50,549(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:26:58,581(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 15:31:13,618(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:31:20,503(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:31:30,063(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 15:54:45,129(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 15:54:54,061(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 15:55:06,571(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 16:02:27,735(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:02:36,036(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:02:45,330(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 16:05:51,323(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:05:57,891(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:06:03,745(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 16:25:38,870(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:25:41,797(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:25:47,329(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 16:27:23,634(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:27:25,536(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:27:31,737(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 16:33:07,546(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 16:33:10,462(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 16:33:15,932(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 17:28:56,801(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:28:59,339(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:29:05,145(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-26 17:34:41,597(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:34:43,802(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:34:49,095(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-26 17:37:43,936(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:37:46,094(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:37:51,615(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-26 17:38:35,228(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:38:38,260(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:38:44,126(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-26 17:43:42,798(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:43:44,769(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:43:50,194(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-26 17:43:50,296(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:43:50,297(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:43:52,990(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-26 17:45:03,099(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 17:45:04,979(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 17:45:10,719(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-26 20:05:46,764(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 20:05:50,201(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 20:05:55,587(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-26 21:19:00,734(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:19:03,657(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:19:09,628(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:19:19,892(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:19:19,892(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:19:22,608(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:19:32,815(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:19:32,816(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:19:35,485(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:21:03,311(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:21:05,228(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:21:13,857(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:22:12,998(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:22:14,514(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:22:21,772(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:23:19,118(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:23:20,833(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:23:26,408(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:23:26,462(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:23:26,463(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:23:29,174(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:23:29,222(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:23:29,223(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:23:31,696(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:25:19,596(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:25:21,766(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:25:27,383(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:25:27,440(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:25:27,441(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:25:30,121(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:25:30,165(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:25:30,166(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:25:32,629(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:30:06,395(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:30:08,495(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:30:14,183(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:30:14,226(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-26 21:30:14,234(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:30:14,235(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:30:16,909(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:30:16,952(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-26 21:30:16,958(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:30:16,958(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:30:19,443(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:30:19,489(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-26 21:35:26,421(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:35:28,023(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:35:33,856(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:35:33,905(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-26 21:35:33,913(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:35:33,914(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:35:36,515(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:35:36,563(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-26 21:35:36,568(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:35:36,569(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:35:39,092(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:35:39,144(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-26 21:37:57,698(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:38:35,776(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:38:37,248(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:38:43,283(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in eighth place
+['INFO ]2024-04-26 21:41:46,300(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:41:48,143(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:41:54,394(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:41:54,450(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-26 21:41:54,460(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:41:54,461(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:41:57,110(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:41:57,158(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-26 21:41:57,163(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:41:57,164(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:41:59,667(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:41:59,727(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-26 21:41:59,738(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:41:59,739(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:42:02,283(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in eighth place
+['INFO ]2024-04-26 21:44:59,283(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:45:01,085(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:45:07,069(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-26 21:45:07,112(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-26 21:45:07,120(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:45:07,120(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:45:09,713(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-26 21:45:09,760(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-26 21:45:09,768(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:45:09,768(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:45:12,259(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-26 21:45:12,330(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-26 21:45:12,336(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 21:45:12,336(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 21:45:14,940(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in eighth place
+['INFO ]2024-04-26 21:45:14,962(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-26 22:31:06,780(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 22:31:10,262(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 22:31:16,924(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-26 22:32:10,801(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-26 22:32:12,454(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-26 22:32:18,158(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-26 22:32:18,169(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-26 22:32:18,225(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page
+['INFO ]2024-04-27 09:16:12,501(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:16:15,414(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:16:20,428(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 09:18:15,651(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:18:17,643(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:18:22,346(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 09:18:22,355(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-27 09:18:22,427(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page
+['INFO ]2024-04-27 09:31:59,090(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:01,984(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:09,974(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-27 09:32:09,974(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-27 09:32:10,024(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:10,025(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:12,698(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-27 09:32:12,740(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Response Time: 37 milliseconds
+['INFO ]2024-04-27 09:32:12,751(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:12,752(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:15,279(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-27 09:32:15,649(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Valid link found: https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com
+['INFO ]2024-04-27 09:32:15,668(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:15,670(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:18,169(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-27 09:32:18,169(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-27 09:32:18,192(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:18,193(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:20,592(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-27 09:32:20,623(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:20,623(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:23,204(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-27 09:32:23,297(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:23,298(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:25,712(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-27 09:32:25,743(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:25,743(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:28,233(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-27 09:32:28,266(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:28,266(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:30,702(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-27 09:32:30,755(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-27 09:32:30,759(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:30,760(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:33,345(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-27 09:32:33,422(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-27 09:32:33,425(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:33,425(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:35,845(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-27 09:32:35,881(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-27 09:32:35,884(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:35,885(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:38,367(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in fourth place
+['INFO ]2024-04-27 09:32:38,398(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-27 09:32:38,401(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:32:38,402(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:32:40,871(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 09:32:40,883(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-27 09:32:40,945(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page
+['INFO ]2024-04-27 09:44:30,574(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:32,927(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:40,993(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-27 09:44:40,994(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-27 09:44:41,051(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:41,052(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:43,777(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-27 09:44:43,806(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Response Time: 26 milliseconds
+['INFO ]2024-04-27 09:44:43,811(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:43,811(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:46,478(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-27 09:44:46,926(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Valid link found: https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/login
+['INFO ]2024-04-27 09:44:46,934(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:46,935(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:49,596(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-27 09:44:49,597(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-27 09:44:49,643(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:49,645(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:52,310(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-27 09:44:52,372(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:52,372(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:55,012(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-27 09:44:55,112(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:55,113(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:44:57,728(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-27 09:44:57,755(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:44:57,755(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:00,451(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-27 09:45:00,509(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:45:00,509(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:03,237(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-27 09:45:03,320(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-27 09:45:03,325(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:45:03,325(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:05,910(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-27 09:45:05,997(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-27 09:45:06,003(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:45:06,003(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:08,671(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-27 09:45:08,763(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-27 09:45:08,772(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:45:08,772(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:11,546(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in fourth place
+['INFO ]2024-04-27 09:45:11,599(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-27 09:45:11,607(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:45:11,608(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:45:14,332(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 09:45:14,342(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-27 09:45:14,417(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page
+['INFO ]2024-04-27 09:50:50,598(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:50:54,879(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:06,302(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-27 09:51:06,303(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-27 09:51:06,469(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:06,470(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:09,619(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-27 09:51:09,716(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Response Time: 80 milliseconds
+['INFO ]2024-04-27 09:51:09,735(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:09,735(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:12,630(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-27 09:51:13,165(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Valid link found: https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/
+['INFO ]2024-04-27 09:51:13,193(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:13,194(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:16,103(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-27 09:51:16,103(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-27 09:51:16,231(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:16,232(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:19,027(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-27 09:51:19,116(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:19,117(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:22,076(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-27 09:51:22,229(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:22,230(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:24,968(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-27 09:51:25,074(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:25,075(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:28,192(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-27 09:51:28,238(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:28,238(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:31,248(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-27 09:51:31,400(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-27 09:51:31,418(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:31,419(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:34,179(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-27 09:51:34,274(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-27 09:51:34,281(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:34,281(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:37,176(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-27 09:51:37,311(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-27 09:51:37,324(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:37,326(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:40,150(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in fourth place
+['INFO ]2024-04-27 09:51:40,195(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-27 09:51:40,202(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:51:40,203(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:51:43,087(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 09:55:41,428(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:55:46,086(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:55:54,778(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-27 09:55:54,780(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-27 09:55:54,941(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:55:54,942(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:55:58,122(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-27 09:55:58,210(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Response Time: 57 milliseconds
+['INFO ]2024-04-27 09:55:58,224(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:55:58,224(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:01,125(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-27 09:56:01,639(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Valid link found: https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com
+['INFO ]2024-04-27 09:56:01,652(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:01,652(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:04,515(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-27 09:56:04,516(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-27 09:56:04,573(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:04,574(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:07,692(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-27 09:56:07,747(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:07,748(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:10,610(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-27 09:56:10,777(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:10,778(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:13,666(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-27 09:56:13,711(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:13,714(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:16,653(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-27 09:56:16,733(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:16,734(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:19,631(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-27 09:56:19,706(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-27 09:56:19,710(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:19,710(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:22,550(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-27 09:56:22,657(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-27 09:56:22,664(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:22,664(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:25,842(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-27 09:56:25,980(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-27 09:56:25,995(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:25,996(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:28,838(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in fourth place
+['INFO ]2024-04-27 09:56:28,873(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-27 09:56:28,878(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 09:56:28,878(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 09:56:31,670(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 10:04:32,347(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:37,260(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:04:47,051(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees manage program as header
+['INFO ]2024-04-27 10:04:47,053(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the header Text
+['INFO ]2024-04-27 10:04:47,235(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:47,236(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:04:50,342(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation time
+['INFO ]2024-04-27 10:04:50,446(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Response Time: 96 milliseconds
+['INFO ]2024-04-27 10:04:50,472(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:50,473(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:04:53,371(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Verify URL Link
+['INFO ]2024-04-27 10:04:53,822(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Valid link found: https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com
+['INFO ]2024-04-27 10:04:53,835(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:53,835(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:04:56,695(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees LMS Title
+['INFO ]2024-04-27 10:04:56,697(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin see the LMS Title
+['INFO ]2024-04-27 10:04:56,769(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:56,769(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:04:59,525(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title
+['INFO ]2024-04-27 10:04:59,647(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:04:59,648(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:02,700(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees correct spellings
+['INFO ]2024-04-27 10:05:02,925(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:02,925(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:05,722(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate LMS Title Spelling and Space
+['INFO ]2024-04-27 10:05:05,819(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:05,820(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:08,643(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate navigation bar
+['INFO ]2024-04-27 10:05:08,718(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:08,718(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:11,445(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees program in first place
+['INFO ]2024-04-27 10:05:11,523(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Program Header(1st place) is positioned before the batch header
+['INFO ]2024-04-27 10:05:11,527(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:11,527(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:14,389(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees batch in second place
+['INFO ]2024-04-27 10:05:14,498(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The Batch Header(2nd place) is positioned before the user header
+['INFO ]2024-04-27 10:05:14,514(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:14,515(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:17,418(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees user in third place
+['INFO ]2024-04-27 10:05:17,507(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The User Header(3rd place) is positioned before the logout header
+['INFO ]2024-04-27 10:05:17,514(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:17,515(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:20,556(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin sees logout in fourth place
+['INFO ]2024-04-27 10:05:20,601(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-The logout header is positioned at the expected X coordinate.
+['INFO ]2024-04-27 10:05:20,607(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:05:20,607(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:05:23,670(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 10:16:14,978(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:16:23,006(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:16:30,340(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 10:20:34,789(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:20:39,668(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:20:45,571(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 10:20:47,602(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-27 10:20:47,762(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page
+['INFO ]2024-04-27 10:22:48,371(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-setup browser
+['INFO ]2024-04-27 10:22:52,445(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-get driver
+['INFO ]2024-04-27 10:22:58,909(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on dashboard page
+['INFO ]2024-04-27 10:23:00,940(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Admin clicks logout button
+['INFO ]2024-04-27 10:23:01,121(yyyy-MM-ddHH:mm:ss.SSS][main]utilities.LoggerLoad1)-Validate admin is on login page

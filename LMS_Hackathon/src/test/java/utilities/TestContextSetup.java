@@ -1,6 +1,7 @@
 package utilities;
 
 import driverFactory.SetupDriver;
+import pageObjects.DashboardPage;
 import pageObjects.LoginPage;
 import pageObjects.PageObjectManager;
 
@@ -12,6 +13,7 @@ public class TestContextSetup  {
 	private PageObjectManager pageobjectmanager; 
 	private LoginPage loginpage;
 	private GenericUtils genericutils;
+	private DashboardPage dashboardpage;
 	
 	public TestContextSetup()
 	{

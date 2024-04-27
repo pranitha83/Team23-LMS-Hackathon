@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 public class LoginPage {
 
 	@FindBy (id="username") WebElement username;
@@ -22,6 +24,7 @@ public class LoginPage {
 	public void enterUserNPassword(String givenusername, String givenpassword) {
 		username.sendKeys(givenusername);
 		password.sendKeys(givenpassword);
+		
 		
 		
 	}

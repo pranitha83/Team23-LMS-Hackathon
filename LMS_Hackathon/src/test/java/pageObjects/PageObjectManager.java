@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class PageObjectManager {
 
 	public LoginPage loginpage;
+	public DashboardPage dashboardpage;
 	public WebDriver driver;
 	
 	
@@ -15,11 +16,6 @@ public class PageObjectManager {
 		
 	}
 	 
-//	public LoginPage getLoginpage() {
-//		
-//		 loginpage=new LoginPage(driver);
-//		 return  loginpage;
-//	}
 	
 	public LoginPage getloginpage() {
 		if (loginpage==null)
@@ -27,6 +23,11 @@ public class PageObjectManager {
 			loginpage=new LoginPage(driver);
 		}
 		return loginpage;
+	}
+	
+	public DashboardPage getdashboardpage() {
+		dashboardpage=new DashboardPage(driver);
+		return dashboardpage;
 	}
 
 

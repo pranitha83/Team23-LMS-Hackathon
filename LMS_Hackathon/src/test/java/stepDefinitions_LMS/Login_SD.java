@@ -54,8 +54,8 @@ public class Login_SD {
 
 	@Then("Admin should land on dashboard page")
 	public void admin_should_land_on_dashboard_page() {
-	    Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
-		System.out.println(SetupDriver.url());
+	    Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", setupdriver.url());
+		System.out.println(setupdriver.url());
 	}
 
 
