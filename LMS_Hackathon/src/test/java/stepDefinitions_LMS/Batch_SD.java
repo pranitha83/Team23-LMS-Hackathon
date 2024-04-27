@@ -1,5 +1,6 @@
 package stepDefinitions_LMS;
 
+
 import driverFactory.SetupDriver;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -24,6 +25,8 @@ public class Batch_SD {
     protected static String MANAGE_BATCH = "Manage Batch";
 
     protected static String BATCH ="/batch";
+
+    protected static String PAGINATION = "Showing 1 to 5 of ";
 
     TestContextSetup context;
     SetupDriver setupdriver;
@@ -57,20 +60,23 @@ public class Batch_SD {
 
     @Then("Admin should see the Manage Batch in the header")
     public void admin_should_see_the_manage_batch_in_the_header() {
-        String gridTitle = this.batchpage.getGridTitle();
-        Assert.assertTrue(gridTitle.contains(MANAGE_BATCH));
+        Assert.assertTrue(this.batchpage.getGridTitle().contains(MANAGE_BATCH));
     }
 
     @Then("Admin should see the pagination controls under the data table")
-    public void admin_should_see_the_pagination_controls_under_the_data_table() {
+    public void admin_should_see_the_pagination_controls_under_the_data_table() throws InterruptedException {
+        Thread.sleep(3000);
+        Assert.assertTrue(this.batchpage.getPaginatorTitle().contains(PAGINATION));
 
     }
 
     @Then("Admin Should see the data table with headers Batch name, Batch Description,Batch Status, No. of classes, Program Name, EditDelete")
     public void admin_should_see_the_data_table_with_headers_batch_name_batch_description_batch_status_no_of_classes_program_name_edit_delete() {
-
+        Assert.assertTrue(this.batchpage.getGridHeaders().contains("Batch Name "));
+        Assert.assertTrue(this.batchpage.getGridHeaders().contains("Batch Description "));
+        Assert.assertTrue(this.batchpage.getGridHeaders().contains("Batch Status "));
     }
-
+/*
     @Then("Admin should be able to see the delete icon button that is disabled")
     public void admin_should_be_able_to_see_the_delete_icon_button_that_is_disabled() {
     }
@@ -98,6 +104,6 @@ public class Batch_SD {
     @Then("A new pop up with Batch details appears")
     public void a_new_pop_up_with_batch_details_appears() {
 
-    }
+    }*/
 
 }

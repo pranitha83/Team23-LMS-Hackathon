@@ -39,6 +39,14 @@ public class BatchPage {
     By popUpClose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-8 pi pi-times']");
 
     By manageBatchHeader = By.xpath("//*[@class='mat-card-title']");
+
+    By paginator = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
+    By gridHeaders = By.xpath("//*[@class='p-datatable-wrapper ng-star-inserted']");
+
+
+
+
+
     WebDriver driver;
 
 
@@ -58,6 +66,14 @@ public class BatchPage {
 
     public String getGridTitle() {
         return this.driver.findElement(manageBatchHeader).getText();
+    }
+
+    public String getPaginatorTitle(){
+        return this.driver.findElement(paginator).getText();
+    }
+
+    public String getGridHeaders(){
+        return this.driver.findElement(gridHeaders).getText();
     }
 
     public void addNewBatch(String batchName, String batchDescription, String programName, boolean active, String batchNoOfClasses){
