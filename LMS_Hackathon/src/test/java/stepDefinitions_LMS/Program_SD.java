@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driverFactory.SetupDriver;
 import io.cucumber.java.en.Given;
@@ -27,6 +29,7 @@ public class Program_SD {
 	  public WebDriver driver;
       public ProgramPage programpage;
       Excel_Reader excelreader;
+      Alert alert;
 	
  public Program_SD(TestContextSetup context) {
 			
@@ -39,24 +42,10 @@ public class Program_SD {
 
 	@Given("Admin is on Manage Program Page")
 	public void admin_is_on_manage_program_page() throws InterruptedException {
-		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\shanj\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-		System.setProperty("webdriver.http.factory", "jdk-http-client");
-		testcontextsetup.driver=new ChromeDriver();
-		testcontextsetup.driver.get("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/");
-		testcontextsetup.driver.findElement(By.id("username")).sendKeys("sdetorganizers@gmail.com");
-		testcontextsetup.driver.findElement(By.id("password")).sendKeys("UIHackathon@02");
-		testcontextsetup.driver.findElement(By.id("login")).click();*/
-		
-	//	programpage.Username();
-	//	programpage.Password();
-		//programpage.ClickLogin();
-	
-	    
-	}
+		}
 
 	@When("Admin clicks <A New Program>button")
 	public void admin_clicks_a_new_program_button() {
-		//testcontextsetup.driver.findElement(By.xpath("//*[text()='A New Program']")).click();
 		programpage.NewProgram();
 	}
 
@@ -67,9 +56,6 @@ public class Program_SD {
 		
 		String Savebutton=programpage.Savebuttongettext();
 		System.out.println("Savebutton :"  + Savebutton);
-		
-		
-		//Assert.assertTrue(programpage.PopupClose());//Need to check
 	}
 	
 	@Then("Admin should see two input fields and their respective text boxes in the program details window")
@@ -213,26 +199,40 @@ public class Program_SD {
 		    
 		}
 		
-//		@Then("Enter all the required fields with valid values in {string} and  {int} and then click Save button")
-//		public void enter_all_the_required_fields_with_valid_values_in_sheet_name_and_row_no_and_then_click_save_button(String SheetName,Integer rowno) throws IOException {
-//		   
-//			List<Map<String, String>> programData=excelreader.getData(PropertyFileReader.getexcelfilepath(), "ProgramModule");
-//			System.out.println(programData);
-//			
-//			
-//			
-//			String programname = programData.get(rowno).get("programName");
-//			String programdesc = programData.get(rowno).get("programDescription");
-//			
-//			programpage.EnterProNameandDesc(programname, programdesc);
-//			programpage.onlyclickstatus();
-//			programpage.Savebuttonclick();
-//			
-	//
-//		}
 
 		@Then("Admin gets a message {string} alert and able to see the new program added in the data table")
-		public void admin_gets_a_message_alert_and_able_to_see_the_new_program_added_in_the_data_table(String string) {
+		public void admin_gets_a_message_alert_and_able_to_see_the_new_program_added_in_the_data_table(String string) throws InterruptedException {
+			
+			Thread.sleep(3000);
+			 alert = driver.switchTo().alert(); // switch to alert
+
+			String alertMessage= alert.getText(); // capture alert message
+
+			System.out.println(alertMessage); // Print Alert Message
+			
+			 Assert.assertTrue(alert.getText().contains("Successful Program Created"));
+			 
+			 
+//			 WebDriverWait wait = new WebDriverWait(driver, 2);
+//			    wait.until(ExpectedConditions.alertIsPresent());
+//			    Alert alert = driver.switchTo().alert();
+//			    Assert.assertTrue(alert.getText().contains("Thanks."));
+//			    alert.accept();
+			
+//			try {
+//			    WebDriverWait wait = new WebDriverWait(driver, 2);
+//			    wait.until(ExpectedConditions.alertIsPresent());
+//			    Alert alert = driver.switchTo().alert();
+//			    System.out.println(alert.getText());
+//			    alert.accept();
+//			    Assert.assertTrue(alert.getText().contains("Thanks."));
+//			} catch (Exception e) {
+//			    //exception handling
+//			}
+			 
+			 
+			
+			
 		    
 		}
 		

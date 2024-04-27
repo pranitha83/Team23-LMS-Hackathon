@@ -17,12 +17,6 @@ public WebDriver driver;
 		this.driver=SetupDriver.Driver();
 	}
 	
-	/* WebDriver driver;
-
-		public ProgramPage(WebDriver driver) {
-			this.driver=driver;
-			PageFactory.initElements(driver, this);
-		}*/
 	
 	By UserName=By.id("username");
 	By Password=By.id("password");
@@ -122,10 +116,6 @@ public WebDriver driver;
 	public void CancelbuttonClick() {
 		 driver.findElement(Cancelbutton).click();
 		}
-	
-	/*public void enterUserNPassword(String givenusername, String givenpassword) {
-		username.sendKeys(givenusername);
-		password.sendKeys(givenpassword);}*/
 	
 	public void EnterProNameandDesc(String givenprogramname, String givenprodesc) {
 		 driver.findElement(programName).sendKeys(givenprogramname);
