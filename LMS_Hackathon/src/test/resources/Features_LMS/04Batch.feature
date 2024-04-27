@@ -4,9 +4,10 @@
 @batch
 Feature:  Batch page Validation
 
-  Background: Logged on LMS portal
-
-  Scenario: Validate landing in Batch page
+  Background: Admin is on dashboard page after Login and clicks Program on the navigation bar
+    Given Admin is in Home Page
+    When Admin gives the correct LMS portal URL
+    When Admin enter valid credentials  and clicks login button
     Given Admin is on dashboard page after Login
     When Admin clicks Batch from navigation bar
     Then Admin should see the Manage Batch in the URL
@@ -24,10 +25,10 @@ Feature:  Batch page Validation
     Then Admin Should see the data table with headers Batch name, Batch Description,Batch Status, No. of classes, Program Name, EditDelete
 
   Scenario: Validate delete button in Batch page
-    Then Admin should be able to see the Delete icon button that is disabled
+    Then Admin should be able to see the delete icon button that is disabled
 
-  Scenario: Validate "+ A New batch" in Batch Page
-    Then Admin should be able to see the + A New batch button
+  Scenario: Validate A New batch in Batch Page
+    Then Admin should be able to see the A New batch button
 
   Scenario:Validate data rows
     Then Each row in the data table should have a checkbox
@@ -39,5 +40,5 @@ Feature:  Batch page Validation
     Then Each row in the data table should have a edit icon that is enabled
 
   Scenario: Validate pop up for adding batch
-    When Admin clicks + A New Batch button
+    When Admin clicks A New Batch button
     Then A new pop up with Batch details appears

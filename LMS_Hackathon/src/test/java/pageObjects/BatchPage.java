@@ -1,11 +1,14 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BatchPage {
+
+    @FindBy ( id = "batch") WebElement batch;
 
     @FindBy (id = "new")  WebElement newBatch;
 
@@ -29,7 +32,13 @@ public class BatchPage {
 
     //TODO
     //SAVE and CANCEL buttons
+    By Cancelbutton =By.xpath("//*[text()='Cancel']");
 
+    By saveButton =By.xpath("//*[text()='Save']");
+
+    By popUpClose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-8 pi pi-times']");
+
+    By manageBatchHeader = By.xpath("//*[@class='mat-card-title']");
     WebDriver driver;
 
 
@@ -43,6 +52,14 @@ public class BatchPage {
         filterGlobal.sendKeys(searchString);
     }
 
+    public void createNewBatch(){
+        this.newBatch.click();
+    }
+
+    public String getGridTitle() {
+        return this.driver.findElement(manageBatchHeader).getText();
+    }
+
     public void addNewBatch(String batchName, String batchDescription, String programName, boolean active, String batchNoOfClasses){
         this.batchName.sendKeys("batchName");
         this.batchDescription.sendKeys("batchDescription");
@@ -52,6 +69,9 @@ public class BatchPage {
 
     }
 
+    public void navigateToBatch(){
+        this.batch.click();
+    }
 
     public void addNewBatchClick(){
         //this.addNewBatch.click();
