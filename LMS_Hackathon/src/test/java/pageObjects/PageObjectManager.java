@@ -8,6 +8,7 @@ public class PageObjectManager {
 	public LoginPage loginpage;
 	public WebDriver driver;
 	public ProgramPage programpage;
+	public DashboardPage dashboardpage;
 	public BatchPage batchpage;
 
 	
@@ -40,6 +41,11 @@ public class PageObjectManager {
 	public BatchPage getbatchpage() {
 		batchpage=new BatchPage(driver);
 		return   batchpage;
+	}
+
+	public DashboardPage getdashboardpage() {
+		dashboardpage=new DashboardPage(driver);
+		return dashboardpage;
 	}
 
 }
