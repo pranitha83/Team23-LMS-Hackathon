@@ -7,6 +7,9 @@ public class PageObjectManager {
 
 	public LoginPage loginpage;
 	public WebDriver driver;
+	public ProgramPage programpage;
+	public DashboardPage dashboardpage;
+
 	
 	
 	public PageObjectManager(WebDriver driver) {
@@ -28,6 +31,15 @@ public class PageObjectManager {
 		}
 		return loginpage;
 	}
-
+	public ProgramPage getprogrampage() {
+		
+		 programpage=new ProgramPage(driver);
+		 return   programpage;
+	}
+	
+	public DashboardPage getdashboardpage() {
+		dashboardpage=new DashboardPage(driver);
+		return dashboardpage;
+	}
 
 }
