@@ -57,16 +57,16 @@ public class Login_SD {
 
 	@Then("Admin should recieve {int} page not found error")
 	public void admin_should_recieve_page_not_found_error(Integer int1) {
-	  WebElement Title = setupdriver.Driver().findElement(By.id("error-information-popup-container"));
-	  
-	   LoggerLoad.error(Title.getText());
+	 // WebElement Title = setupdriver.Driver().findElement(By.id("error-information-popup-container"));
+	  assert(setupdriver.getTitle().contains("404"));
+	   //LoggerLoad.error(Title.getText());
 	}
 	
 	// Checking broken links
 	
 	@Then("HTTP response >= {int}. Then the link is broken")
 	public void http_response_then_the_link_is_broken(Integer int1) {
-	    
+	    loginpage.brokenLnks();
 	}
 	
 	//login
