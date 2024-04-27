@@ -4,11 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import driverFactory.SetupDriver;
 import io.cucumber.java.en.Given;
@@ -47,26 +44,6 @@ public class Login_SD {
 	public void admin_should_land_on_the_home_page() {
 	    String actualTitle = setupdriver.getTitle();
 	    Assert.assertEquals("LMS", actualTitle);
-	}
-	//open with Invalid Url
-	
-	@When("Admin gives the invalid LMS portal URL")
-	public void admin_gives_the_invalid_lms_portal_url() throws Throwable {
-		setupdriver.openPage(PropertyFileReader.getInvalidUrl());
-	}
-
-	@Then("Admin should recieve {int} page not found error")
-	public void admin_should_recieve_page_not_found_error(Integer int1) {
-	  WebElement Title = setupdriver.Driver().findElement(By.id("error-information-popup-container"));
-	  
-	   LoggerLoad.error(Title.getText());
-	}
-	
-	// Checking broken links
-	
-	@Then("HTTP response >= {int}. Then the link is broken")
-	public void http_response_then_the_link_is_broken(Integer int1) {
-	    
 	}
 	
 	//login
