@@ -1,5 +1,5 @@
 #Author: pranitha
-@login
+
 Feature: Login Validation
 
   Background: Admin is in Home Page

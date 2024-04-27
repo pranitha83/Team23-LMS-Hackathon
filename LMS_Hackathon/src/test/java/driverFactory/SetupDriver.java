@@ -53,7 +53,8 @@ public class SetupDriver {
 	public String getTitle() {
 		return driver.getTitle();
 	}
-
+	
+	
 	public static void navigateBack() {
 		driver.navigate().back();
 	}
