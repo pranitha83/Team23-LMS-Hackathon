@@ -8,6 +8,7 @@ public class PageObjectManager {
 	public LoginPage loginpage;
 	public WebDriver driver;
 	public ProgramPage programpage;
+	public DashboardPage dashboardpage;
 
 	
 	
@@ -36,6 +37,9 @@ public class PageObjectManager {
 		 return   programpage;
 	}
 	
-
+	public DashboardPage getdashboardpage() {
+		dashboardpage=new DashboardPage(driver);
+		return dashboardpage;
+	}
 
 }
