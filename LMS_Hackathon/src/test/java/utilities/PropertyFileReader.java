@@ -41,9 +41,9 @@ public static String getUrl() throws Throwable {
 	String url = getGlobalValue("url");
 	return url;
 }
-public static String getInvalidUrl() throws Throwable {
-	String InvalidUrl = getGlobalValue("InvalidUrl");
-	return InvalidUrl;
-
-}
+//public static String getExcelpath() throws Throwable {
+//	String excelpath = getGlobalValue("excelpath");
+//	return excelpath;
+//
+//}
 }

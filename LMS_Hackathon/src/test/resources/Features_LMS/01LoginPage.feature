@@ -7,6 +7,7 @@ Feature: LoginPage Validation
     When Admin gives the correct LMS portal URL
     Then Admin should land on the home page
 
+
   Scenario: Verify admin is able to land on home page with invalid URL
     Given Admin launch the browser
     When Admin gives the invalid LMS portal URL
@@ -66,3 +67,6 @@ Feature: LoginPage Validation
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
     Then Admin should see * symbol next to password text
+
+   
+

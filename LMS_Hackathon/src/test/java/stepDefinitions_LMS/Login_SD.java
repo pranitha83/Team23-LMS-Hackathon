@@ -6,8 +6,6 @@ import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import driverFactory.SetupDriver;
 import io.cucumber.java.en.Given;
@@ -47,6 +45,7 @@ public class Login_SD {
 		String actualTitle = setupdriver.getTitle();
 		Assert.assertEquals("LMS", actualTitle);
 	}
+
 	// open with Invalid Url
 
 	@When("Admin gives the invalid LMS portal URL")
@@ -70,6 +69,7 @@ public class Login_SD {
 	}
 
 	// login
+
 	@Given("Admin is in Home Page")
 	public void admin_is_in_home_page() {
 
