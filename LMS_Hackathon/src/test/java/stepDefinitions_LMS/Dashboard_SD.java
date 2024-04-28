@@ -142,8 +142,8 @@ public class Dashboard_SD {
 	  dashboardpage.editDeleteButtonsValidation();
 	}
 	
-	@Then("Admin should see Search bar with text as {string}")
-	public void admin_should_see_search_bar_with_text_as(String string) {
+	@Then("Admin should see Search bar with text as Search")
+	public void admin_should_see_search_bar_with_text_as() {
 	    dashboardpage.validateSearchTextBox();
 	}
 }
