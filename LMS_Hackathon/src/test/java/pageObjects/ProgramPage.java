@@ -17,6 +17,12 @@ public WebDriver driver;
 		this.driver=SetupDriver.Driver();
 	}
 	
+	/* WebDriver driver;
+	
+		public ProgramPage(WebDriver driver) {
+			this.driver=driver;
+			PageFactory.initElements(driver, this);
+		}*/
 	
 	By UserName=By.id("username");
 	By Password=By.id("password");
