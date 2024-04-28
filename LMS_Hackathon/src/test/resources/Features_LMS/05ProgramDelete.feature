@@ -23,4 +23,4 @@ Then Admin can see the deletion alert disappears without deleting
 
 Scenario: Validate Cancel/Close(X) icon on Confirm Deletion alert
 When Admin clicks Cancel or Close(X) Icon on Deletion alert	
-Then Admin can see the deletion alert disappears without any changes
+Then Admin can see the deletion alert disappears without any changes 

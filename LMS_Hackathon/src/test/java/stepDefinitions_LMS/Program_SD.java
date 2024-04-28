@@ -433,5 +433,4 @@ public class Program_SD {
 		System.out.println("CapturingfooterentryAfterCliclnochange:"  + CapturingfooterentryAfterCliclnochange);
 	}
 
-	
 }
