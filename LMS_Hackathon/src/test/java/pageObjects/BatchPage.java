@@ -8,59 +8,68 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BatchPage {
 
-    @FindBy ( id = "batch") WebElement batch;
+    @FindBy(id = "batch")
+    WebElement batch;
 
-    @FindBy (id = "new")  WebElement newBatch;
+    @FindBy(id = "new")
+    WebElement newBatch;
 
-    @FindBy (id = "edit")  WebElement editBatch;
+    @FindBy(id = "edit")
+    WebElement editBatch;
 
-    @FindBy (id = "filterGlobal") WebElement filterGlobal;
+    @FindBy(id = "filterGlobal")
+    WebElement filterGlobal;
 
     /*
     Below elements will be used for New Batch creation
     and also for updating batch information
      */
-    @FindBy (id = "batchName") WebElement batchName;
+    @FindBy(id = "batchName")
+    WebElement batchName;
 
-    @FindBy (id = "batchDescription") WebElement batchDescription;
+    @FindBy(id = "batchDescription")
+    WebElement batchDescription;
 
-    @FindBy (id = "programName") WebElement programName;
+    @FindBy(id = "programName")
+    WebElement programName;
 
-    @FindBy (id = "batchStatus") WebElement batchStatus;
+    @FindBy(id = "batchStatus")
+    WebElement batchStatus;
 
-    @FindBy (id = "batchNoOfClasses") WebElement batchNoOfClasses;
-
+    @FindBy(id = "batchNoOfClasses")
+    WebElement batchNoOfClasses;
     //TODO
     //SAVE and CANCEL buttons
-    By Cancelbutton =By.xpath("//*[text()='Cancel']");
-
-    By saveButton =By.xpath("//*[text()='Save']");
-
+    By Cancelbutton = By.xpath("//*[text()='Cancel']");
+    By saveButton = By.xpath("//*[text()='Save']");
     By popUpClose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-8 pi pi-times']");
-
     By manageBatchHeader = By.xpath("//*[@class='mat-card-title']");
-
     By paginator = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
     By gridHeaders = By.xpath("//*[@class='p-datatable-wrapper ng-star-inserted']");
+    By checkbox = By.xpath("//*[@role='checkbox']");
+    By editIcon = By.xpath("//*[@class='p-button-rounded p-button-success p-button p-component p-button-icon-only']");
 
 
+    //p-button-rounded p-button-success p-button p-component p-button-icon-only
+    //By deleteIcon = By.xpath("//*[text()='disabled']");
 
+    //By delete = By.xpath("//*button[contains(@disabled p-button-danger p-button p-component p-button-icon-only)]");
 
 
     WebDriver driver;
 
 
     public BatchPage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
 
-    public void validSearch(String searchString){
+    public void validSearch(String searchString) {
         filterGlobal.sendKeys(searchString);
     }
 
-    public void createNewBatch(){
+    public void createNewBatch() {
         this.newBatch.click();
     }
 
@@ -68,15 +77,44 @@ public class BatchPage {
         return this.driver.findElement(manageBatchHeader).getText();
     }
 
-    public String getPaginatorTitle(){
+    public String getPaginatorTitle() {
         return this.driver.findElement(paginator).getText();
     }
 
-    public String getGridHeaders(){
+    public String getGridHeaders() {
         return this.driver.findElement(gridHeaders).getText();
     }
 
-    public void addNewBatch(String batchName, String batchDescription, String programName, boolean active, String batchNoOfClasses){
+    public String getNewLabel() {
+        return this.newBatch.getText();
+    }
+
+    public boolean checkBoxStatus() {
+        return this.driver.findElement(checkbox).isEnabled();
+    }
+
+    public boolean editIconStatus() {
+        return this.driver.findElement(editIcon).isEnabled();
+    }
+
+    public boolean popUpValidation() {
+        boolean status = (batchName.isDisplayed() && batchDescription.isDisplayed() && programName.isDisplayed()
+                && batchStatus.isDisplayed() && batchNoOfClasses.isDisplayed()) ? Boolean.TRUE : Boolean.FALSE;
+        return status;
+    }
+
+/*    public boolean elementIsEnabled() {
+        boolean status = true;
+        if(driver.findElements(By.xpath("//*button[contains(@p-button-danger p-button p-component p-button-icon-only)]")).size() == 1 ) {
+            status= true;
+        }
+        else if (driver.findElements(By.xpath("//*button[contains(@disabled p-button-danger p-button p-component p-button-icon-only)]")).size() == 1) {
+            status= false;
+        }
+        return status;
+    }*/
+
+    public void addNewBatch(String batchName, String batchDescription, String programName, boolean active, String batchNoOfClasses) {
         this.batchName.sendKeys("batchName");
         this.batchDescription.sendKeys("batchDescription");
         this.programName.sendKeys("programName");
@@ -85,15 +123,15 @@ public class BatchPage {
 
     }
 
-    public void navigateToBatch(){
+    public void navigateToBatch() {
         this.batch.click();
     }
 
-    public void addNewBatchClick(){
+    public void addNewBatchClick() {
         //this.addNewBatch.click();
     }
 
-    public void editBatchClick(){
+    public void editBatchClick() {
         //this.editBatch.click();
     }
 
