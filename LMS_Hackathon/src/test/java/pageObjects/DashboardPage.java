@@ -1,12 +1,15 @@
 package pageObjects;
 
+
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
-
+import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +43,51 @@ public class DashboardPage {
 
 	@FindBy(id = "logout")
 	WebElement logoutHeader;
+	
+	
+	@FindBy(xpath="//tr[@class='ng-star-inserted']")
+	WebElement colHeaders;
+	
+	@FindBy(xpath="//p-sorticon[@field='programName']")
+	WebElement sortProgramName;
+	
+	@FindBy(xpath="//p-sorticon[@field='description']")
+	WebElement sortProgramDesc;
+	
+	@FindBy(xpath="//p-sorticon[@field='status']")
+	WebElement sortProgramStatus;
+	
+	@FindBy(xpath="//p-sorticon[@field=' Edit / Delete ']")
+	WebElement sortIconAbsenceEditDel;
+	
+	@FindBy(xpath="//tbody[@class='p-datatable-tbody']/tr")
+	
+	List<WebElement> rowCnt;
+	
+	
+	@FindBy(xpath="//span[@class='p-checkbox-icon']")
+	WebElement checkBoxes;
+	
+	@FindBy(xpath="//button[@id='editProgram']")
+	WebElement editProgramButton;
+	
+	@FindBy(xpath="//button[@id='deleteProgram']")
+	WebElement deleteProgramButton;
+	
+	@FindBy(xpath="//input[@id='filterGlobal']")
+	WebElement searchbar;
+	
+	@FindBy(xpath="//input[@placeholder='Search...']")
+	WebElement searchText;
+	
+	
+	
+	
+	
+			
+	
+	
+	
 
 	WebDriver driver;
 
@@ -213,7 +261,71 @@ public class DashboardPage {
 
 	}
 	
+	public void verifyCoulmnHeaders() {
+		LoggerLoad.info(colHeaders.getText());
+		
+		
+		String[] columnHeaders = { "Program Name","Program Description","Program Status","Edit / Delete" };
+		 
+		for (String heading : columnHeaders) {
+			boolean isPresent = colHeaders.getText().contains(heading);
+			LoggerLoad.info("Column header " + heading + " is  present.");
+			Assert.assertTrue("Column header " + heading + " is  present.",isPresent);
+		}
+		
+	}
+	
+	public boolean sortIconsValidation() {
+		boolean sortIconsDisplayed = false;
+		try {
+		sortIconsDisplayed = sortProgramName.isDisplayed() && sortProgramDesc.isDisplayed() && sortProgramStatus.isDisplayed() && !(sortIconAbsenceEditDel.isDisplayed());
+	    Assert.assertTrue("Sort arrow icons are not displayed beside each column header except Edit/Delete", sortIconsDisplayed);
+	    LoggerLoad.info("Sort arrow icons are displayed beside each column header except Edit/Delete");
+		}
+	
+	catch (NoSuchElementException e) {
+        LoggerLoad.error("Sort Icon is not found for Edit/Delete column header");
+       
+    }
+		return sortIconsDisplayed;
+	}
 
+	public void checkboxesValidation() {
+		int rows_count = rowCnt.size();
+		LoggerLoad.info("No of rows in Program Table: " + rows_count);
+		for (int i = 0; i < rows_count; i++) {
+		   boolean isPresent=checkBoxes.isDisplayed();
+		   if(isPresent) {
+			   String checkboxalign = checkBoxes.getCssValue("align-items");
+				Assert.assertEquals("center", checkboxalign);
+			   Assert.assertTrue("check boxes are displayed on the left side in all"+rows_count+" rows of the data table ",isPresent);
+			   LoggerLoad.info("Validated checkbox is displayed and aligned properly in all rows of data table.");
+		   }
+		}
+	}
+	
+	public void editDeleteButtonsValidation() {
+		int rows_count = rowCnt.size();
+		LoggerLoad.info("No of rows in Program Table: " + rows_count);
+		for (int i = 0; i < rows_count; i++) {
+		   boolean isPresent=editProgramButton.isDisplayed() && deleteProgramButton.isDisplayed();
+		   if(isPresent) {
+			   Assert.assertTrue("Edit and Delete buttons on all rows "+rows_count+"  of the data table ",isPresent);
+			   LoggerLoad.info("Validated Edit/Delete buttons in each rows of data table.");
+		   }
+		}
+	}
+
+	
+	public void validateSearchTextBox() {
+		
+		boolean isPresent=searchbar.isDisplayed() && searchText.isDisplayed();
+		if(isPresent) {
+			Assert.assertTrue("Search Bar and placeholder seeach text is displayed",isPresent);
+			LoggerLoad.info("Validated Search bar with text as Search...");
+		}
+	}
+	
 
 	public void clickLogout() {
 		logoutHeader.click();
