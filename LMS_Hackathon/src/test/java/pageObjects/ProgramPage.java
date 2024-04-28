@@ -36,6 +36,10 @@ public WebDriver driver;
 	By Programpopupclose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-3 pi pi-times']");
 	By Capturingfooterentry = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
 	
+	//Edit Program
+		By Editbutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[1]/span[1]");
+		By inactive = By.xpath("//*[@id='category' and @class='ng-untouched ng-pristine ng-valid']/div[1]/div[2]");
+	
 	public void NewProgram() {
 		driver.findElement(NewProgram).click();
 		}
@@ -122,7 +126,26 @@ public WebDriver driver;
 		 driver.findElement(programDescription).sendKeys(givenprodesc);
 	}
 		
-		
+	//============================================EditProgram===========================================================
+			public void Editclick() {
+			driver.findElement(Editbutton).click();
+			}
+			
+			public void ProNameclear() {
+				driver.findElement(programName).clear();
+				}
+			public void ProNameupdate() {
+				driver.findElement(programName).sendKeys("Cucumb234");
+				}
+			public void ProDescclear() {
+				 driver.findElement(programDescription).clear();
+				}
+			public void ProDescupdate() {
+				 driver.findElement(programDescription).sendKeys("Team234Selenium");
+				}
+			public void Statuschange() {
+			 driver.findElement(inactive).click();
+			}	
 		
 
 
