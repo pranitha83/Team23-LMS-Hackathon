@@ -33,5 +33,3 @@ Then Admin can see the Program details popup disappears and can see nothing chan
 Scenario: Validate Save button on Edit popup
 When Admin clicks <Save>button on edit popup	
 Then Admin gets a message "Successful Program Updated" alert and able to see the updated details in the table for the particular program
-
-
