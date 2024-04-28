@@ -37,8 +37,15 @@ public WebDriver driver;
 	By Capturingfooterentry = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
 	
 	//Edit Program
-		By Editbutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[1]/span[1]");
-		By inactive = By.xpath("//*[@id='category' and @class='ng-untouched ng-pristine ng-valid']/div[1]/div[2]");
+	By Editbutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[1]/span[1]");
+	By inactive = By.xpath("//*[@id='category' and @class='ng-untouched ng-pristine ng-valid']/div[1]/div[2]");
+		
+	//Delete Program
+	By Deletebutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[2]/span[1]");
+	By DeleteYes = By.xpath("//*[text()='Yes']");
+	By DeleteNo = By.xpath("//*[text()='No']");
+	By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
+	By DeletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
 	
 	public void NewProgram() {
 		driver.findElement(NewProgram).click();
@@ -145,8 +152,32 @@ public WebDriver driver;
 				}
 			public void Statuschange() {
 			 driver.findElement(inactive).click();
-			}	
-		
+			}
+			
+			//=========================================DeleteProgram========================================================================
+			
+			public void DeleteClick() {
+				driver.findElement(Deletebutton).click();
+				}
+			public boolean DeleteYes() {
+			return driver.findElement( DeleteYes).isDisplayed();
+			}
+			
+			public boolean DeleteNo() {
+				return driver.findElement(DeleteNo).isDisplayed();
+				}
+			public  boolean Deletemessage() {
+			return driver.findElement(Deletemessage).isDisplayed();
+	            }
+			public void DeleteYesClick() {
+				 driver.findElement( DeleteYes).click();
+				}
+			public void DeleteNoClick() {
+				 driver.findElement(DeleteNo).click();
+				}
+			public void DeletePopupClose() {
+				 driver.findElement(DeletePopupClose).click();
+				}	
 
 
 }

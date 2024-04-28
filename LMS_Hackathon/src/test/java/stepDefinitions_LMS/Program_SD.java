@@ -351,6 +351,89 @@ public class Program_SD {
 			System.out.println("Capturingfooterentryupdate :"  + Capturingfooterentryupdate);
 		}
 		
+		//====================================================Delete Program===================================================================
+		
+        //	Delete Feature
+	
+	@When("Admin clicks <Delete> button on the data table for any row")
+	public void admin_clicks_delete_button_on_the_data_table_for_any_row() {
+	    programpage.DeleteClick();
+	}
+
+	@Then("Admin should see a alert open with heading {string} along with  <YES> and <NO> button for deletion")
+	public void admin_should_see_a_alert_open_with_heading_along_with_yes_and_no_button_for_deletion(String string) throws InterruptedException {
+		Thread.sleep(2000);
+		Assert.assertTrue(programpage.DeleteNo());
+	  Assert.assertTrue(programpage.DeleteYes());
+	}
+
+	    //Validate details for Confirm Deletion form
+	@Then("Admin should see a message {string}")
+	public void admin_should_see_a_message(String string) throws InterruptedException {
+		Thread.sleep(2000);
+		Assert.assertTrue(programpage.Deletemessage());
+	
+	}
+
+	//Click Yes on deletion window
+	
+	@When("Admin clicks <YES> button on the alert")
+	public void admin_clicks_yes_button_on_the_alert() {
+		
+		String CapturingfooterentryBeforeDeleteYes = programpage.Capturingfooterentry();
+		System.out.println("CapturingfooterentryBeforeDeleteYes :"  + CapturingfooterentryBeforeDeleteYes);
+		
+	    programpage.DeleteYesClick();
+	    
+	    try {
+		    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+		    wait.until(ExpectedConditions.alertIsPresent());
+		     alert = driver.switchTo().alert();
+		    System.out.println("AlertMessage :"  +alert.getText());
+		    alert.accept();
+		    Assert.assertTrue(alert.getText().contains("ProgramUpdated"));
+		} catch (Exception e) {
+		    //exception handling
+		}
+	}
+
+	@Then("Admin gets a message {string} alert and able to see that program deleted in the data table")
+	public void admin_gets_a_message_alert_and_able_to_see_that_program_deleted_in_the_data_table(String string) {
+	    
+		String CapturingfooterentryAfterDeleteYes = programpage.Capturingfooterentry();
+		System.out.println("CapturingfooterentryAfterDeleteYes :"  + CapturingfooterentryAfterDeleteYes);
+	}
+	
+      //Click No on deletion window
+	
+	@When("Admin clicks <NO> button on the alert")
+	public void admin_clicks_no_button_on_the_alert() {
+	    programpage.DeleteNoClick();
+	}
+
+	@Then("Admin can see the deletion alert disappears without deleting")
+	public void admin_can_see_the_deletion_alert_disappears_without_deleting() {
+		
+		String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
+		System.out.println("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
+	    
+	}
+	
+         // Validate Cancel/Close(X) icon on Confirm Deletion alert
+	
+	@When("Admin clicks Cancel or Close\\(X) Icon on Deletion alert")
+	public void admin_clicks_cancel_or_close_x_icon_on_deletion_alert() {
+	    programpage.DeletePopupClose();
+  }
+
+	@Then("Admin can see the deletion alert disappears without any changes")
+	public void admin_can_see_the_deletion_alert_disappears_without_any_changes() {
+	    
+		String CapturingfooterentryAfterCliclnochange = programpage.Capturingfooterentry();
+		System.out.println("CapturingfooterentryAfterCliclnochange:"  + CapturingfooterentryAfterCliclnochange);
+	}
+
+	
 		
 		
 		
