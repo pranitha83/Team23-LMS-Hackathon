@@ -61,6 +61,12 @@ Feature: Dashboard Page
   Scenario: Validate that number of records (rows of data in the table) displayed
     Then Admin should see the number of records (rows of data in the table) displayed on the page are 5
 
+  Scenario: Validate Add New Program
+    Then Admin should see a "A New Program" button with plus icon on the program page above the data table
+
+  Scenario: Validating the default state of Delete button
+    Then Admin should see a Delete button on the top left hand side as Disabled
+
   Scenario: DashboardPage_Verify Logout button function
     Given Admin is in dashboard page
     When Admin click Logout button on navigation bar
