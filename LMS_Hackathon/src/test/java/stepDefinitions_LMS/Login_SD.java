@@ -51,7 +51,7 @@ public class Login_SD {
 	@When("Admin gives the invalid LMS portal URL")
 	public void admin_gives_the_invalid_lms_portal_url() throws Throwable {
 		setupdriver.openPage(PropertyFileReader.getGlobalValue("InvalidUrl"));
-		loginpage.brokenLnks();
+		
 	}
 
 	@Then("Admin should recieve {int} page not found error")
