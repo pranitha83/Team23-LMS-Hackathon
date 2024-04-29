@@ -1,7 +1,5 @@
 package pageObjects;
 
-
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -21,7 +19,6 @@ import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 
 public class DashboardPage {
-	
 
 	@FindBy(xpath = "(//div[@class='box'])[1]")
 	WebElement managepgmheader;
@@ -45,50 +42,49 @@ public class DashboardPage {
 
 	@FindBy(id = "logout")
 	WebElement logoutHeader;
-	
-	
-	@FindBy(xpath="//tr[@class='ng-star-inserted']")
+
+	@FindBy(xpath = "//tr[@class='ng-star-inserted']")
 	WebElement colHeaders;
-	
-	@FindBy(xpath="//p-sorticon[@field='programName']")
+
+	@FindBy(xpath = "//p-sorticon[@field='programName']")
 	WebElement sortProgramName;
-	
-	@FindBy(xpath="//p-sorticon[@field='description']")
+
+	@FindBy(xpath = "//p-sorticon[@field='description']")
 	WebElement sortProgramDesc;
-	
-	@FindBy(xpath="//p-sorticon[@field='status']")
+
+	@FindBy(xpath = "//p-sorticon[@field='status']")
 	WebElement sortProgramStatus;
-	
-	@FindBy(xpath="//p-sorticon[@field=' Edit / Delete ']")
+
+	@FindBy(xpath = "//p-sorticon[@field=' Edit / Delete ']")
 	WebElement sortIconAbsenceEditDel;
-	
-	@FindBy(xpath="//tbody[@class='p-datatable-tbody']/tr")
-	
+
+	@FindBy(xpath = "//tbody[@class='p-datatable-tbody']/tr")
+
 	List<WebElement> rowCnt;
-	
-	
-	@FindBy(xpath="//span[@class='p-checkbox-icon']")
+
+	@FindBy(xpath = "//span[@class='p-checkbox-icon']")
 	WebElement checkBoxes;
-	
-	@FindBy(xpath="//button[@id='editProgram']")
+
+	@FindBy(xpath = "//button[@id='editProgram']")
 	WebElement editProgramButton;
-	
-	@FindBy(xpath="//button[@id='deleteProgram']")
+
+	@FindBy(xpath = "//button[@id='deleteProgram']")
 	WebElement deleteProgramButton;
-	
-	@FindBy(xpath="//input[@id='filterGlobal']")
+
+	@FindBy(xpath = "//input[@id='filterGlobal']")
 	WebElement searchbar;
-	
-	
-	
-	
-	
-	
-	
-			
-	
-	
-	
+
+	@FindBy(xpath = "//span[@class='p-button-icon p-button-icon-left pi pi-plus']")
+	WebElement plusIcon;
+
+	@FindBy(id = "new")
+	WebElement newProgBtn;
+
+	@FindBy(xpath = "//span[@class='p-button-icon pi pi-trash']")
+	WebElement multipleDelIcon;
+
+	@FindBy(xpath = "//div[@class='p-d-flex p-ai-center p-jc-between ng-star-inserted']")
+	WebElement programFooter;
 
 	WebDriver driver;
 
@@ -261,33 +257,34 @@ public class DashboardPage {
 		return lmsTopBar.getText();
 
 	}
-	
+
 	public void verifyCoulmnHeaders() {
 		LoggerLoad.info(colHeaders.getText());
-		
-		
-		String[] columnHeaders = { "Program Name","Program Description","Program Status","Edit / Delete" };
-		 
+
+		String[] columnHeaders = { "Program Name", "Program Description", "Program Status", "Edit / Delete" };
+
 		for (String heading : columnHeaders) {
 			boolean isPresent = colHeaders.getText().contains(heading);
 			LoggerLoad.info("Column header " + heading + " is  present.");
-			Assert.assertTrue("Column header " + heading + " is  present.",isPresent);
+			Assert.assertTrue("Column header " + heading + " is  present.", isPresent);
 		}
-		
+
 	}
-	
+
 	public boolean sortIconsValidation() {
 		boolean sortIconsDisplayed = false;
 		try {
-		sortIconsDisplayed = sortProgramName.isDisplayed() && sortProgramDesc.isDisplayed() && sortProgramStatus.isDisplayed() && !(sortIconAbsenceEditDel.isDisplayed());
-	    Assert.assertTrue("Sort arrow icons are not displayed beside each column header except Edit/Delete", sortIconsDisplayed);
-	    LoggerLoad.info("Sort arrow icons are displayed beside each column header except Edit/Delete");
+			sortIconsDisplayed = sortProgramName.isDisplayed() && sortProgramDesc.isDisplayed()
+					&& sortProgramStatus.isDisplayed() && !(sortIconAbsenceEditDel.isDisplayed());
+			Assert.assertTrue("Sort arrow icons are not displayed beside each column header except Edit/Delete",
+					sortIconsDisplayed);
+			LoggerLoad.info("Sort arrow icons are displayed beside each column header except Edit/Delete");
 		}
-	
-	catch (NoSuchElementException e) {
-        LoggerLoad.error("Sort Icon is not found for Edit/Delete column header");
-       
-    }
+
+		catch (NoSuchElementException e) {
+			LoggerLoad.error("Sort Icon is not found for Edit/Delete column header");
+
+		}
 		return sortIconsDisplayed;
 	}
 
@@ -295,35 +292,36 @@ public class DashboardPage {
 		int rows_count = rowCnt.size();
 		LoggerLoad.info("No of rows in Program Table: " + rows_count);
 		for (int i = 0; i < rows_count; i++) {
-		   boolean isPresent=checkBoxes.isDisplayed();
-		   if(isPresent) {
-			   String checkboxalign = checkBoxes.getCssValue("align-items");
+			boolean isPresent = checkBoxes.isDisplayed();
+			if (isPresent) {
+				String checkboxalign = checkBoxes.getCssValue("align-items");
 				Assert.assertEquals("center", checkboxalign);
-			   Assert.assertTrue("check boxes are displayed on the left side in all"+rows_count+" rows of the data table ",isPresent);
-			   LoggerLoad.info("Validated checkbox is displayed and aligned properly in all rows of data table.");
-		   }
+				Assert.assertTrue(
+						"check boxes are displayed on the left side in all" + rows_count + " rows of the data table ",
+						isPresent);
+				LoggerLoad.info("Validated checkbox is displayed and aligned properly in all rows of data table.");
+			}
 		}
 	}
-	
+
 	public void editDeleteButtonsValidation() {
 		int rows_count = rowCnt.size();
 		LoggerLoad.info("No of rows in Program Table: " + rows_count);
 		for (int i = 0; i < rows_count; i++) {
-		   boolean isPresent=editProgramButton.isDisplayed() && deleteProgramButton.isDisplayed();
-		   if(isPresent) {
-			   Assert.assertTrue("Edit and Delete buttons on all rows "+rows_count+"  of the data table ",isPresent);
-			   LoggerLoad.info("Validated Edit/Delete buttons in each rows of data table.");
-		   }
+			boolean isPresent = editProgramButton.isDisplayed() && deleteProgramButton.isDisplayed();
+			if (isPresent) {
+				Assert.assertTrue("Edit and Delete buttons on all rows " + rows_count + "  of the data table ",
+						isPresent);
+				LoggerLoad.info("Validated Edit/Delete buttons in each rows of data table.");
+			}
 		}
 	}
 
-	
 	public void validateSearchTextBox(String searchTxt) {
-		
-		boolean isPresent=searchbar.isDisplayed() ;
-		
-		
-		if(isPresent) {
+
+		boolean isPresent = searchbar.isDisplayed();
+
+		if (isPresent) {
 			String searchText = "//input[@placeholder='Search...']";
 			WebElement searchInput = driver.findElement(By.xpath(searchText));
 			String placeholderText = searchInput.getAttribute("placeholder");
@@ -334,11 +332,41 @@ public class DashboardPage {
 
 		}
 	}
-	
+
+	public void validateNewProgramButton(String newprog) {
+
+		boolean isPresent = newProgBtn.isDisplayed() && plusIcon.isDisplayed();
+		LoggerLoad.info(plusIcon.getText());
+
+		if (isPresent) {
+			Assert.assertEquals(newProgBtn.getText(), newprog);
+			LoggerLoad.info("Validated New program Button present on manage program page");
+
+		}
+	}
+
+	public void validateMultipleProgramDeleteBtnDisabled() {
+
+		if (multipleDelIcon.isDisplayed()) {
+			String disabledBtn = multipleDelIcon.getAttribute("aria-hidden");
+			Assert.assertEquals(disabledBtn, "true");
+		}
+
+	}
+
 	public void validateTotalRowsDisplayed(int total) {
 		int rows_count = rowCnt.size();
 		LoggerLoad.info("No of rows in Program Table: " + rows_count);
 		Assert.assertEquals(total, rows_count);
+	}
+
+	public void validateFooter(String count) {
+		String totalpgmcnt = programFooter.getText();
+		LoggerLoad.info(totalpgmcnt);
+		count = totalpgmcnt.replaceAll("\\D+", "");
+		Integer.parseInt(count.trim());
+		Assert.assertEquals(totalpgmcnt, "In total there are " + count + " programs.");
+		LoggerLoad.info("Total Program count at footer: " + count);
 	}
 
 	public void clickLogout() {
