@@ -58,6 +58,9 @@ Feature: Dashboard Page
   Scenario: Verify Search bar on the Program page
     Then Admin should see Search bar with text as "Search..."
 
+  Scenario: Validate that number of records (rows of data in the table) displayed
+    Then Admin should see the number of records (rows of data in the table) displayed on the page are 5
+
   Scenario: DashboardPage_Verify Logout button function
     Given Admin is in dashboard page
     When Admin click Logout button on navigation bar

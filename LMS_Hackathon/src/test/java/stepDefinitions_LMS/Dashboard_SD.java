@@ -143,7 +143,12 @@ public class Dashboard_SD {
 	}
 	
 	@Then("Admin should see Search bar with text as {string}")
-	public void admin_should_see_search_bar_with_text_as(String string) {
-	    dashboardpage.validateSearchTextBox();
+	public void admin_should_see_search_bar_with_text_as(String search) {
+	    dashboardpage.validateSearchTextBox(search);
+	}
+	
+	@Then("Admin should see the number of records \\(rows of data in the table) displayed on the page are {int}")
+	public void admin_should_see_the_number_of_records_rows_of_data_in_the_table_displayed_on_the_page_are(Integer totalrows) {
+	   dashboardpage.validateTotalRowsDisplayed(totalrows);
 	}
 }

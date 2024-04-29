@@ -17,12 +17,6 @@ public WebDriver driver;
 		this.driver=SetupDriver.Driver();
 	}
 	
-	/* WebDriver driver;
-
-		public ProgramPage(WebDriver driver) {
-			this.driver=driver;
-			PageFactory.initElements(driver, this);
-		}*/
 	
 	By UserName=By.id("username");
 	By Password=By.id("password");
@@ -37,6 +31,21 @@ public WebDriver driver;
 	By ProNameRequired = By.xpath("//*[text()='Program name is required.']");
 	By ProDescRequired = By.xpath("//*[text()='Description is required.']");
 	By statusrequied=By.xpath("//*[text()='Status is required.']");
+	By PronameSpecialcharerrormsg = By.xpath("//*[text()='This field should start with an alphabet, no special char and min 2 char.']");
+	By ProDesSpecialcharerrormsg = By.xpath("//*[text()='This field should start with an alphabet and min 2 char.']");
+	By Programpopupclose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-3 pi pi-times']");
+	By Capturingfooterentry = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
+	
+	//Edit Program
+	By Editbutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[1]/span[1]");
+	By inactive = By.xpath("//*[@id='category' and @class='ng-untouched ng-pristine ng-valid']/div[1]/div[2]");
+		
+	//Delete Program
+	By Deletebutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[2]/span[1]");
+	By DeleteYes = By.xpath("//*[text()='Yes']");
+	By DeleteNo = By.xpath("//*[text()='No']");
+	By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
+	By DeletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
 	
 	public void NewProgram() {
 		driver.findElement(NewProgram).click();
@@ -89,6 +98,87 @@ public WebDriver driver;
 	public void  onlyenterproDes() {
 		driver.findElement(By.id("programDescription")).sendKeys("Team23");
 		}
+	
+	public void  onlyclickstatus() {
+		driver.findElement(Status).click();
+		}
+	public void  PronameSpecialchar() {
+		 driver.findElement(programName).sendKeys("Java$");
+		}
+	public String PronameSpecialcharerrormsg() {
+		 return driver.findElement(PronameSpecialcharerrormsg).getText();
+		}
+	public void  ProDesSpecialchar() {
+		driver.findElement(programDescription).sendKeys("@@");
+		}
+	public String ProDesSpecialcharerrormsg() {
+		 return driver.findElement(ProDesSpecialcharerrormsg).getText();
+		}
 
+	public void  Programpopupclose() {
+		 driver.findElement(Programpopupclose).click();
+		}
+	
+	public String Capturingfooterentry() {
+		 return driver.findElement(Capturingfooterentry).getText();
+		}
+	
+	
+	public void CancelbuttonClick() {
+		 driver.findElement(Cancelbutton).click();
+		}
+	
+	public void EnterProNameandDesc(String givenprogramname, String givenprodesc) {
+		 driver.findElement(programName).sendKeys(givenprogramname);
+		 driver.findElement(programDescription).sendKeys(givenprodesc);
+	}
+		
+	//============================================EditProgram===========================================================
+			public void Editclick() {
+			driver.findElement(Editbutton).click();
+			}
+			
+			public void ProNameclear() {
+				driver.findElement(programName).clear();
+				}
+			public void ProNameupdate() {
+				driver.findElement(programName).sendKeys("Cucumb234");
+				}
+			public void ProDescclear() {
+				 driver.findElement(programDescription).clear();
+				}
+			public void ProDescupdate() {
+				 driver.findElement(programDescription).sendKeys("Team234Selenium");
+				}
+			public void Statuschange() {
+			 driver.findElement(inactive).click();
+			}
+			
+			//=========================================DeleteProgram========================================================================
+			
+			public void DeleteClick() {
+				driver.findElement(Deletebutton).click();
+				}
+			public boolean DeleteYes() {
+			return driver.findElement( DeleteYes).isDisplayed();
+			}
+			
+			public boolean DeleteNo() {
+				return driver.findElement(DeleteNo).isDisplayed();
+				}
+			public  boolean Deletemessage() {
+			return driver.findElement(Deletemessage).isDisplayed();
+	            }
+			public void DeleteYesClick() {
+				 driver.findElement( DeleteYes).click();
+				}
+			public void DeleteNoClick() {
+				 driver.findElement(DeleteNo).click();
+				}
+			public void DeletePopupClose() {
+				 driver.findElement(DeletePopupClose).click();
+				}	
 
+			
+			
 }

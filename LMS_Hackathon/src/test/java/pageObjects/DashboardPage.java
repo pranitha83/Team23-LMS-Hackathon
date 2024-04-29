@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 
 public class DashboardPage {
+	
 
 	@FindBy(xpath = "(//div[@class='box'])[1]")
 	WebElement managepgmheader;
@@ -77,8 +79,7 @@ public class DashboardPage {
 	@FindBy(xpath="//input[@id='filterGlobal']")
 	WebElement searchbar;
 	
-	@FindBy(xpath="//input[@placeholder='Search...']")
-	WebElement searchText;
+	
 	
 	
 	
@@ -317,15 +318,28 @@ public class DashboardPage {
 	}
 
 	
-	public void validateSearchTextBox() {
+	public void validateSearchTextBox(String searchTxt) {
 		
-		boolean isPresent=searchbar.isDisplayed() && searchText.isDisplayed();
+		boolean isPresent=searchbar.isDisplayed() ;
+		
+		
 		if(isPresent) {
-			Assert.assertTrue("Search Bar and placeholder seeach text is displayed",isPresent);
-			LoggerLoad.info("Validated Search bar with text as Search...");
+			String searchText = "//input[@placeholder='Search...']";
+			WebElement searchInput = driver.findElement(By.xpath(searchText));
+			String placeholderText = searchInput.getAttribute("placeholder");
+			LoggerLoad.info("Placeholder text: " + placeholderText);
+			Assert.assertEquals(placeholderText, searchTxt);
+			Assert.assertTrue("Search input is not displayed", isPresent);
+			LoggerLoad.info("Validated Search bar with text as 'Search...'");
+
 		}
 	}
 	
+	public void validateTotalRowsDisplayed(int total) {
+		int rows_count = rowCnt.size();
+		LoggerLoad.info("No of rows in Program Table: " + rows_count);
+		Assert.assertEquals(total, rows_count);
+	}
 
 	public void clickLogout() {
 		logoutHeader.click();
