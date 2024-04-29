@@ -5,6 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class BatchPage {
 
@@ -36,6 +41,14 @@ public class BatchPage {
     @FindBy(id = "batchStatus")
     WebElement batchStatus;
 
+
+    @FindBy(id = "ACTIVE")
+    WebElement active;
+
+
+    @FindBy(id = "INACTIVE")
+    WebElement inactive;
+
     @FindBy(id = "batchNoOfClasses")
     WebElement batchNoOfClasses;
     //TODO
@@ -48,6 +61,12 @@ public class BatchPage {
     By gridHeaders = By.xpath("//*[@class='p-datatable-wrapper ng-star-inserted']");
     By checkbox = By.xpath("//*[@role='checkbox']");
     By editIcon = By.xpath("//*[@class='p-button-rounded p-button-success p-button p-component p-button-icon-only']");
+
+    By dropdown = By.xpath("//*[@class='p-dropdown-trigger-icon ng-tns-c101-9 pi pi-chevron-down']");
+
+    By pencilIcon = By.xpath("//*[@class='p-button-icon pi pi-pencil']");
+    //
+
 
 
     //p-button-rounded p-button-success p-button p-component p-button-icon-only
@@ -72,6 +91,7 @@ public class BatchPage {
     public void createNewBatch() {
         this.newBatch.click();
     }
+
 
     public String getGridTitle() {
         return this.driver.findElement(manageBatchHeader).getText();
@@ -103,36 +123,74 @@ public class BatchPage {
         return status;
     }
 
-/*    public boolean elementIsEnabled() {
-        boolean status = true;
-        if(driver.findElements(By.xpath("//*button[contains(@p-button-danger p-button p-component p-button-icon-only)]")).size() == 1 ) {
-            status= true;
-        }
-        else if (driver.findElements(By.xpath("//*button[contains(@disabled p-button-danger p-button p-component p-button-icon-only)]")).size() == 1) {
-            status= false;
-        }
-        return status;
-    }*/
 
-    public void addNewBatch(String batchName, String batchDescription, String programName, boolean active, String batchNoOfClasses) {
-        this.batchName.sendKeys("batchName");
-        this.batchDescription.sendKeys("batchDescription");
-        this.programName.sendKeys("programName");
-        this.batchStatus.sendKeys("active");
-        this.batchNoOfClasses.sendKeys("batchNoOfClasses");
+
+
+
+    public void addNewBatch(String name, String description, String pName, String stats, String noc) throws InterruptedException {
+        batchName.sendKeys(name);
+        batchDescription.sendKeys(description);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(dropdown)));
+        driver.findElement(dropdown).click();
+
+        // Find the options within the dropdown
+        List<WebElement> options = driver.findElements( By.xpath("//*[@role='option']"));
+
+
+        // Iterate through the options and select the desired one by text
+        for (WebElement option : options) {
+            System.out.println("option.getText()---> " + option.getText());
+            if (option.getText().equals(pName)) {
+                option.click();
+                break;
+            }
+        }
+        if(stats=="TRUE") {
+            active.click();
+        } else{
+            inactive.click();
+        }
+        batchNoOfClasses.sendKeys(noc);
 
     }
 
     public void navigateToBatch() {
-        this.batch.click();
+        batch.click();
     }
 
     public void addNewBatchClick() {
-        //this.addNewBatch.click();
+        newBatch.click();
     }
 
-    public void editBatchClick() {
-        //this.editBatch.click();
+    public void searchDNDBatch(){
+        filterGlobal.sendKeys("DND");
+        filterGlobal.click();
+    }
+
+    public void editBatchClick() throws InterruptedException {
+        this.driver.findElement(pencilIcon).click();
+        batchDescription.clear();
+        batchNoOfClasses.clear();
+        Thread.sleep(500);
+        batchDescription.sendKeys("Sample Batch Updated 1");
+        batchNoOfClasses.sendKeys("200");
+        Thread.sleep(1000);
+        this.driver.findElement(saveButton).click();
+    }
+
+    public void editBatchClickAndClear() throws InterruptedException {
+        this.driver.findElement(pencilIcon).click();
+        batchDescription.clear();
+        batchNoOfClasses.clear();
+        Thread.sleep(1000);
+        this.driver.findElement(saveButton).click();
+        Thread.sleep(500);
+    }
+
+    public boolean popUpDNDValidation() {
+        boolean status = (batchDescription.getText()=="Sample Batch Updated" && batchNoOfClasses.getText()=="20" ) ? Boolean.TRUE : Boolean.FALSE;
+        return status;
     }
 
 }
