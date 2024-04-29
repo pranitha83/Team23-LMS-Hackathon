@@ -13,6 +13,7 @@ Then Admin should see a alert open with heading "Confirm" along with  <YES> and 
 Scenario: Validate details for Confirm Deletion form
 Then Admin should see a message "Are you sure you want to delete <Program name>?"
 
+
 Scenario: Click Yes on deletion window
 When Admin clicks <YES> button on the alert	
 Then Admin gets a message "Successful Program Deleted" alert and able to see that program deleted in the data table
