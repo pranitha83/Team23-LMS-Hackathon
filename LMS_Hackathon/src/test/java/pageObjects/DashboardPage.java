@@ -80,10 +80,11 @@ public class DashboardPage {
 	@FindBy(id = "new")
 	WebElement newProgBtn;
 
-	// @FindBy(xpath="(//span[@class='p-button-icon pi pi-trash' and
-	// @aria-hidden='true'])[1]")
 	@FindBy(xpath = "//span[@class='p-button-icon pi pi-trash']")
 	WebElement multipleDelIcon;
+
+	@FindBy(xpath = "//div[@class='p-d-flex p-ai-center p-jc-between ng-star-inserted']")
+	WebElement programFooter;
 
 	WebDriver driver;
 
@@ -357,6 +358,15 @@ public class DashboardPage {
 		int rows_count = rowCnt.size();
 		LoggerLoad.info("No of rows in Program Table: " + rows_count);
 		Assert.assertEquals(total, rows_count);
+	}
+
+	public void validateFooter(String count) {
+		String totalpgmcnt = programFooter.getText();
+		LoggerLoad.info(totalpgmcnt);
+		count = totalpgmcnt.replaceAll("\\D+", "");
+		Integer.parseInt(count.trim());
+		Assert.assertEquals(totalpgmcnt, "In total there are " + count + " programs.");
+		LoggerLoad.info("Total Program count at footer: " + count);
 	}
 
 	public void clickLogout() {

@@ -26,7 +26,6 @@ public class Dashboard_SD {
 	@Then("Admin should see manage program as {string} header")
 	public void admin_should_see_manage_program_as_header(String header) throws InterruptedException {
 
-		Thread.sleep(3000);
 		LoggerLoad.info("Validate admin sees manage program as header");
 		String dashboardHeader = dashboardpage.verifyHeaderText();
 		Assert.assertEquals(dashboardHeader, header);
@@ -160,4 +159,25 @@ public class Dashboard_SD {
 	public void admin_should_see_a_delete_button_on_the_top_left_hand_side_as_disabled() {
 		dashboardpage.validateMultipleProgramDeleteBtnDisabled();
 	}
+	@Then("Admin should see URL with {string}")
+	public void admin_should_see_url_with(String programUrl) throws Throwable {
+		Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", setupdriver.url().contains(programUrl));
+	}
+	
+	@Then("Admin should see a heading with text {string} on the page")
+	public void admin_should_see_a_heading_with_text_on_the_page(String header) {
+		
+		LoggerLoad.info("Validate admin sees manage program as header");
+		String dashboardHeader = dashboardpage.verifyHeaderText();
+		Assert.assertEquals(dashboardHeader, header);
+	}
+	@Then("Admin should see the footer as In total there are {string} programs.")
+	public void admin_should_see_the_footer_as_in_total_there_are_programs(String totalprogramcnt) {
+		dashboardpage.validateFooter(totalprogramcnt);
+	}
+	
+	
+
 }
+
+
