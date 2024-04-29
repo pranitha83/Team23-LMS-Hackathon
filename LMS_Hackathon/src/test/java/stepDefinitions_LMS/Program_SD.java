@@ -1,4 +1,4 @@
-package src.test.java.stepDefinitions_LMS;
+package stepDefinitions_LMS;
 
 import java.io.IOException;
 import java.time.Duration;
