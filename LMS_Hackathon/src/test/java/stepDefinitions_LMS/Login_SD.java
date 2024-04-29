@@ -51,6 +51,9 @@ public class Login_SD {
 	@When("Admin gives the invalid LMS portal URL")
 	public void admin_gives_the_invalid_lms_portal_url() throws Throwable {
 		setupdriver.openPage(PropertyFileReader.getGlobalValue("InvalidUrl"));
+
+		
+
 	}
 
 	@Then("Admin should recieve {int} page not found error")
@@ -93,7 +96,7 @@ public class Login_SD {
 	public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button(String string,
 			Integer int1) throws InvalidFormatException, IOException, InterruptedException {
 
-		List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Test");
+		List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
 		System.out.println(Data);
 		String userName = Data.get(int1).get("username");
 		String passWord = Data.get(int1).get("password");
@@ -157,31 +160,31 @@ public class Login_SD {
 
 	// user text field
 
-	@Then("Admin should {string} in the first text field")
-	public void admin_should_in_the_first_text_field(String string) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@Then("Admin should see {string} in the first text field")
+	public void admin_should_see_in_the_first_text_field(String string) {
+		loginpage.checkUserTxt();
+		
+		Assert.assertTrue(string, true);
 	}
 
 //user* symbol
 	@Then("Admin should see * symbol next to user text")
 	public void admin_should_see_symbol_next_to_user_text() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		loginpage.checkUserAsterik();
 	}
 
 //password text field
-	@Then("Admin should {string} in the second text field")
-	public void admin_should_in_the_second_text_field(String string) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@Then("Admin should see {string} in the second text field")
+	public void admin_should_see_in_the_second_text_field(String string) {
+		loginpage.checkPwrdTxt();
+		LoggerLoad.info(loginpage.checkPwrdTxt());
+		Assert.assertTrue(string, true);
 	}
 
 //password* symbol
 	@Then("Admin should see * symbol next to password text")
-	public void admin_should_see_symbol_next_to_password_text() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	public void admin_should_see_symbol_next_to_password_text() throws InterruptedException {
+		loginpage.checkPasswordAsterik();
 	}
 
 }
