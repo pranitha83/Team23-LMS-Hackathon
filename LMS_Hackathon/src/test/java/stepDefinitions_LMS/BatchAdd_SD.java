@@ -56,7 +56,7 @@ public class BatchAdd_SD {
     }
 
     @When("Fill in all the fields except description with valid values and click save for given {string} and rowNumber {int}")
-    public void fill_in_all_the_fields_except_description_with_valid_values_and_click_save_for_given_and_row_number(String string, Integer int1) {
+    public void fill_in_all_the_fields_except_description_with_valid_values_and_click_save_for_given_and_row_number(String string,Integer int1) {
         this.batchpage.addNewBatchClick();
         List<Map<String, String>> data = null;
         try {

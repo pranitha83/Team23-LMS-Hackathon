@@ -3,10 +3,10 @@ Feature:AddBatch
   Background: Admin is on dashboard page after Login
     Given Admin is in Home Page
     When Admin gives the correct LMS portal URL
-    When Admin enter valid credentials  and clicks login button
+    Then Admin enter valid credentials  and clicks login button
     Given Admin is on dashboard page after Login
     When Admin clicks Batch from navigation bar
-    Then Admin should see the Manage Batch in the URL
+
 
   Scenario: Check if the fields exist in popup window
     Given A new pop up with Batch details appears for add

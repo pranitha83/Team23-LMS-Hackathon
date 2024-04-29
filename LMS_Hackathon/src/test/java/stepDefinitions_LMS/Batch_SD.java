@@ -38,6 +38,7 @@ public class Batch_SD {
 
     @When("Admin clicks Batch from navigation bar")
     public void admin_clicks_batch_from_navigation_bar() {
+
         batchpage.navigateToBatch();
     }
 

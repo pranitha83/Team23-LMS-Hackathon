@@ -134,6 +134,11 @@ public class BatchPage {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(dropdown)));
         driver.findElement(dropdown).click();
 
+//        public void selectDropDownUsingText(WebElement eleDropDown, String value) {
+//            new Select(eleDropDown).selectByVisibleText(value);
+//        }
+
+
         // Find the options within the dropdown
         List<WebElement> options = driver.findElements( By.xpath("//*[@role='option']"));
 

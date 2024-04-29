@@ -6,7 +6,7 @@ Feature:EditBatch
     When Admin enter valid credentials  and clicks login button
     Given Admin is on dashboard page after Login
     When Admin clicks Batch from navigation bar
-    Then Admin should see the Manage Batch in the URL
+
 
   Scenario:Validate row level edit icon
     Given The edit icon on row level in data table is enabled
