@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,13 +63,35 @@ public class BatchPage {
     By checkbox = By.xpath("//*[@role='checkbox']");
     By editIcon = By.xpath("//*[@class='p-button-rounded p-button-success p-button p-component p-button-icon-only']");
 
-    By dropdown = By.xpath("//*[@class='p-dropdown-trigger-icon ng-tns-c101-9 pi pi-chevron-down']");
+    By programDropDown = By.id("programName");
+
+    By programOptionsDropdown = By.xpath("//li[@role='option']");
+
+
 
     By pencilIcon = By.xpath("//*[@class='p-button-icon pi pi-pencil']");
+
+
+    //Delete Program
+    By Deletebutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[2]/span[1]");
+    By DeleteYes = By.xpath("//*[text()='Yes']");
+    By DeleteNo = By.xpath("//*[text()='No']");
+    By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
+    By DeletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
+
+    By programNameText = By.xpath("//*[@class='p-dropdown-label p-inputtext ng-tns-c101-30 ng-star-inserted']");
+
+    /*
+    validation items
+     */
+    By batchNameRequired = By.xpath("//*[text()='Batch Name is required.']");
+    By batchDescriptionRequired = By.xpath("//*[text()='Batch Description is required.']");
+    By programNameRequired = By.xpath("//*[text()='Program Name is required.']");
+    By statusRequired = By.xpath("//*[text()='Status is required.']");
+    By noOfClassesRequired = By.xpath("//*[text()='Number of classes is required.']");
+
     //
-
-
-
+    //
     //p-button-rounded p-button-success p-button p-component p-button-icon-only
     //By deleteIcon = By.xpath("//*[text()='disabled']");
 
@@ -131,26 +154,29 @@ public class BatchPage {
         batchName.sendKeys(name);
         batchDescription.sendKeys(description);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(dropdown)));
-        driver.findElement(dropdown).click();
-
-//        public void selectDropDownUsingText(WebElement eleDropDown, String value) {
-//            new Select(eleDropDown).selectByVisibleText(value);
-//        }
-
-
-        // Find the options within the dropdown
-        List<WebElement> options = driver.findElements( By.xpath("//*[@role='option']"));
-
-
-        // Iterate through the options and select the desired one by text
-        for (WebElement option : options) {
-            System.out.println("option.getText()---> " + option.getText());
-            if (option.getText().equals(pName)) {
-                option.click();
-                break;
+        WebElement ele1 = wait.until(ExpectedConditions.visibilityOfElementLocated(programDropDown));
+        ele1.click();
+    /*    try {
+            List<WebElement> roleStatusOptions = driver.findElements((By.cssSelector("li[role='option']")));
+            roleStatusOptions = driver.findElements((By.xpath()//div[@role="button"])));
+            for (WebElement roleStatus : roleStatusOptions) {
+                if (roleStatus.getText().equalsIgnoreCase(pName)) {
+                    roleStatus.click();
+                    break;
+                }
             }
-        }
+
+        } catch (StaleElementReferenceException e) {
+            List<WebElement> roleStatusOptions = driver.findElements((By.cssSelector("li[role='option']")));
+            for (WebElement roleStatus : roleStatusOptions) {
+                if (roleStatus.getText().equalsIgnoreCase(pName)) {
+                    roleStatus.click();
+                    break;
+                }
+            }
+
+        }*/
+
         if(stats=="TRUE") {
             active.click();
         } else{
@@ -158,6 +184,11 @@ public class BatchPage {
         }
         batchNoOfClasses.sendKeys(noc);
 
+    }
+
+    public void save(){
+
+        this.driver.findElement(saveButton).click();
     }
 
     public void navigateToBatch() {
@@ -196,6 +227,47 @@ public class BatchPage {
     public boolean popUpDNDValidation() {
         boolean status = (batchDescription.getText()=="Sample Batch Updated" && batchNoOfClasses.getText()=="20" ) ? Boolean.TRUE : Boolean.FALSE;
         return status;
+    }
+
+    public String validateBatchNameRequired(){
+        return batchName.getText();
+    }
+
+    public String validateBatchDescriptionRequired(){
+        return this.driver.findElement(batchDescriptionRequired).getText();
+    }
+
+    public String validateProgramNameRequired(){
+        return this.driver.findElement(programNameRequired).getText();
+    }
+
+    public String validateStatusRequired(){
+        return this.driver.findElement(statusRequired).getText();
+    }
+    public String validateNoOfClassesRequired(){
+        return this.driver.findElement(noOfClassesRequired).getText();
+    }
+    public void DeleteClick() {
+        driver.findElement(Deletebutton).click();
+    }
+    public boolean DeleteYes() {
+        return driver.findElement( DeleteYes).isDisplayed();
+    }
+
+    public boolean DeleteNo() {
+        return driver.findElement(DeleteNo).isDisplayed();
+    }
+    public  boolean Deletemessage() {
+        return driver.findElement(Deletemessage).isDisplayed();
+    }
+    public void DeleteYesClick() {
+        driver.findElement( DeleteYes).click();
+    }
+    public void DeleteNoClick() {
+        driver.findElement(DeleteNo).click();
+    }
+    public void DeletePopupClose() {
+        driver.findElement(DeletePopupClose).click();
     }
 
 }

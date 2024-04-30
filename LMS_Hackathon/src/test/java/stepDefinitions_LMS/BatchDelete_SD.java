@@ -22,28 +22,22 @@ public class BatchDelete_SD {
     }
 
 
-    @Given("The delete icon on row level in data table is enabled")
-    public void the_delete_icon_on_row_level_in_data_table_is_enabled() {
-        
-        
-    }
-
-   /* @When("Admin clicks the delete icon")
-    public void admin_clicks_the_delete_icon() {
-        
-        
-    }*/
+//    @Given("The delete icon on row level in data table is enabled")
+//    public void the_delete_icon_on_row_level_in_data_table_is_enabled() {
+//
+//
+//    }
 
     @Then("Alert appears with yes and No option")
     public void alert_appears_with_yes_and_no_option() {
-        
+        //batchpage.DeleteClick();
         
     }
 
     @Given("Admin clicks the delete icon")
     public void admin_clicks_the_delete_icon() {
-        
-        
+
+        batchpage.DeleteClick();
     }
 
     @When("You click yes option")

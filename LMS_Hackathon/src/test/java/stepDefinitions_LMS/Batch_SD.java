@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObjects.BatchPage;
+import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
@@ -33,7 +34,7 @@ public class Batch_SD {
 
     @Given("Admin is on dashboard page after Login")
     public void admin_is_on_dashboard_page_after_login() {
-
+        LoggerLoad.info(this.getClass().getName()  + " Admin is on dashboard page after Login " );
     }
 
     @When("Admin clicks Batch from navigation bar")

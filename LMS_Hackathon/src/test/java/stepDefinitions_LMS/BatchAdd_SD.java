@@ -46,7 +46,7 @@ public class BatchAdd_SD {
     @When("Admin clicks + A New Batch button")
     public void admin_clicks_a_new_batch_button() throws InterruptedException {
 
-        this.batchpage.addNewBatchClick();
+        batchpage.addNewBatchClick();
     }
 
     @Then("The pop up should include the fields Name, Number of classes and Description")
@@ -57,13 +57,13 @@ public class BatchAdd_SD {
 
     @When("Fill in all the fields except description with valid values and click save for given {string} and rowNumber {int}")
     public void fill_in_all_the_fields_except_description_with_valid_values_and_click_save_for_given_and_row_number(String string,Integer int1) {
-        this.batchpage.addNewBatchClick();
+        batchpage.addNewBatchClick();
         List<Map<String, String>> data = null;
         try {
             data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
             batchpage.addNewBatch(data.get(int1).get("name"), data.get(int1).get("description"),
                     data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
-            Thread.sleep(2000);
+
         } catch (InvalidFormatException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -93,8 +93,14 @@ public class BatchAdd_SD {
 
     @Then("Error message should appear")
     public void error_message_should_appear() {
-        
-        
+        batchpage.addNewBatchClick();
+        batchpage.save();
+        Assert.assertEquals("Batch Name is required.", batchpage.validateBatchNameRequired());
+        Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
+        Assert.assertEquals("Program Name is required.", batchpage.validateProgramNameRequired());
+        Assert.assertEquals("Status is required.", batchpage.validateStatusRequired());
+        Assert.assertEquals("Number of classes is required.", batchpage.validateNoOfClassesRequired());
+
     }
 
     @When("Any of the mandatory fields are blank")
