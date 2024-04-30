@@ -56,6 +56,8 @@ public class BatchPage {
     //SAVE and CANCEL buttons
     By Cancelbutton = By.xpath("//*[text()='Cancel']");
     By saveButton = By.xpath("//*[text()='Save']");
+
+    By submitBtn = By.xpath("//button[@label='Save']");
     By popUpClose = By.xpath("//*[@class='p-dialog-header-close-icon ng-tns-c132-8 pi pi-times']");
     By manageBatchHeader = By.xpath("//*[@class='mat-card-title']");
     By paginator = By.xpath("//*[@class='p-paginator-current ng-star-inserted']");
@@ -73,7 +75,9 @@ public class BatchPage {
 
 
     //Delete Program
-    By Deletebutton= By.xpath("//div[@class='p-datatable-wrapper ng-star-inserted']/table/tbody/tr[1]/td[5]/div/span/button[2]/span[1]");
+
+
+    By Deletebutton= By.xpath("//*[@class='p-button-rounded p-button-danger p-button p-component p-button-icon-only']");
     By DeleteYes = By.xpath("//*[text()='Yes']");
     By DeleteNo = By.xpath("//*[text()='No']");
     By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
@@ -187,8 +191,7 @@ public class BatchPage {
     }
 
     public void save(){
-
-        this.driver.findElement(saveButton).click();
+        this.driver.findElement(submitBtn).click();
     }
 
     public void navigateToBatch() {
@@ -230,7 +233,7 @@ public class BatchPage {
     }
 
     public String validateBatchNameRequired(){
-        return batchName.getText();
+        return this.driver.findElement(batchNameRequired).getText();
     }
 
     public String validateBatchDescriptionRequired(){

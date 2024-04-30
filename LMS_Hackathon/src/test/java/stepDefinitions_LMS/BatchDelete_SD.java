@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import driverFactory.SetupDriver;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObjects.BatchPage;
 import utilities.TestContextSetup;
@@ -22,21 +23,24 @@ public class BatchDelete_SD {
     }
 
 
-//    @Given("The delete icon on row level in data table is enabled")
-//    public void the_delete_icon_on_row_level_in_data_table_is_enabled() {
-//
-//
-//    }
+    @Given("The delete icon on row level in data table is enabled")
+    public void the_delete_icon_on_row_level_in_data_table_is_enabled() {
+
+
+    }
 
     @Then("Alert appears with yes and No option")
-    public void alert_appears_with_yes_and_no_option() {
-        //batchpage.DeleteClick();
+    public void alert_appears_with_yes_and_no_option() throws InterruptedException {
+
+        Thread.sleep(2000);
+        Assert.assertTrue(batchpage.DeleteNo());
+        Assert.assertTrue(batchpage.DeleteYes());
         
     }
 
     @Given("Admin clicks the delete icon")
-    public void admin_clicks_the_delete_icon() {
-
+    public void admin_clicks_the_delete_icon() throws InterruptedException {
+        Thread.sleep(1000);
         batchpage.DeleteClick();
     }
 

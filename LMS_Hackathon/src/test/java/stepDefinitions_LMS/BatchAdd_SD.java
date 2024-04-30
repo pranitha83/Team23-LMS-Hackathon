@@ -92,9 +92,10 @@ public class BatchAdd_SD {
     }
 
     @Then("Error message should appear")
-    public void error_message_should_appear() {
+    public void error_message_should_appear() throws InterruptedException {
         batchpage.addNewBatchClick();
         batchpage.save();
+        Thread.sleep(1000);
         Assert.assertEquals("Batch Name is required.", batchpage.validateBatchNameRequired());
         Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
         Assert.assertEquals("Program Name is required.", batchpage.validateProgramNameRequired());
