@@ -51,7 +51,7 @@ Feature: LoginPage Validation
   Scenario: Verify text on the first text field
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should "user" in the first text field
+    Then Admin should see "user" in the first text field
 
   Scenario: Verify asterik next to user text
     Given Admin launch the browser
@@ -61,7 +61,7 @@ Feature: LoginPage Validation
   Scenario: Verify text on the second text field
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should "password" in the second text field
+    Then Admin should see "password" in the second text field
 
   Scenario: Verify asterik next to password text
     Given Admin launch the browser
