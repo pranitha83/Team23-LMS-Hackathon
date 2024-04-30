@@ -43,6 +43,27 @@ Feature: Dashboard Page
   Scenario: DashboardPage_Validate navigation bar order 4th Logout
     Then Admin should see logout in the 4th place
 
+  Scenario: Validate landing in Program page
+    Then Admin should see URL with "Manage Program"
+
+  Scenario: Validate the heading
+    Then Admin should see a heading with text "Manage Program" on the page
+
+  Scenario: Validate the footer
+    Then Admin should see the footer as In total there are "<totalprogramcount>" programs.
+
+  Scenario: Validate the text and pagination icon below the data table
+    Then Admin should see the text as "Showing x to y of z entries" along with Pagination icon below the table.
+
+  Scenario: Validating the default state of Delete button
+    Then Admin should see a Delete button on the top left hand side as Disabled
+
+  Scenario: Validate Add New Program
+    Then Admin should see a "A New Program" button with plus icon on the program page above the data table
+
+  Scenario: Validate that number of records (rows of data in the table) displayed
+    Then Admin should see the number of records (rows of data in the table) displayed on the page are 5
+
   Scenario: Verify data table on the Program page
     Then Admin should see data table on the Manage Program Page with following column headers (Program Name, Program Description, Program Status, Edit,Delete)
 
@@ -57,9 +78,6 @@ Feature: Dashboard Page
 
   Scenario: Verify Search bar on the Program page
     Then Admin should see Search bar with text as "Search..."
-
-  Scenario: Validate that number of records (rows of data in the table) displayed
-    Then Admin should see the number of records (rows of data in the table) displayed on the page are 5
 
   Scenario: DashboardPage_Verify Logout button function
     Given Admin is in dashboard page
