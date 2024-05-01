@@ -46,6 +46,7 @@ public class UserModule {
 	By roleOptnsDrpdwn = By.xpath("//li[@role='option']");
 	By roleStatsOptnsDrpdwn = By.xpath("//li[@role='option']");
 	By visaStatsOptnsDrpdwn = By.xpath("//li[@role='option']");
+	
 	public WebDriver driver;
 
 	public UserModule(WebDriver driver) {
