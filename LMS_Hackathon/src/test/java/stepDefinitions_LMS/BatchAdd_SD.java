@@ -45,7 +45,6 @@ public class BatchAdd_SD {
 
     @When("Admin clicks + A New Batch button")
     public void admin_clicks_a_new_batch_button() throws InterruptedException {
-
         batchpage.addNewBatchClick();
     }
 
@@ -61,7 +60,7 @@ public class BatchAdd_SD {
         List<Map<String, String>> data = null;
         try {
             data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
-            batchpage.addNewBatch(data.get(int1).get("name"), data.get(int1).get("description"),
+            batchpage.addNewBatch(data.get(int1).get("name"), "",
                     data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
 
         } catch (InvalidFormatException e) {
@@ -73,21 +72,65 @@ public class BatchAdd_SD {
         }
     }
 
-    @Then("The newly added batch should be present in the data table in Manage Batch page")
-    public void the_newly_added_batch_should_be_present_in_the_data_table_in_manage_batch_page() {
-        
+    @Then("Error message should appear for description")
+    public void error_message_should_appear_for_description() throws InterruptedException {
+        Thread.sleep(1000);
+        Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
+    }
+
+    @Then("The newly added batch should be present in the data table {string} in Manage Batch page {int}")
+    public void the_newly_added_batch_should_be_present_in_the_data_table_in_manage_batch_page(String string, Integer int1) {
+        List<Map<String, String>> data = null;
+        try {
+            data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
+            batchpage.searchBatch(data.get(int1).get("name"));
+            Assert.assertTrue(batchpage.popUpBatchValidation(data.get(int1).get("name"),data.get(int1).get("description"),data.get(int1).get("noc")));
+
+        } catch (InvalidFormatException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         
     }
 
-    @When("Fill in all the fields with valid values and click save")
-    public void fill_in_all_the_fields_with_valid_values_and_click_save() {
-        
+    @When("Fill in all the fields with valid values {string} and click save {int}")
+    public void fill_in_all_the_fields_with_valid_values_and_click_save(String string, Integer int1) {
+        batchpage.addNewBatchClick();
+        List<Map<String, String>> data = null;
+        try {
+            data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
+            batchpage.addNewBatch(data.get(int1).get("name"), data.get(int1).get("description"),
+                    data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
+
+        } catch (InvalidFormatException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         
     }
 
-    @When("Any of the fields have invalid values")
-    public void any_of_the_fields_have_invalid_values() {
-        
+    @When("Any of the fields have invalid values {string} {int}")
+    public void any_of_the_fields_have_invalid_values(String string, Integer int1) {
+        batchpage.addNewBatchClick();
+        List<Map<String, String>> data = null;
+        try {
+            data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
+            batchpage.addNewBatch(data.get(int1).get("name"), data.get(int1).get("description"),
+                    data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
+
+        } catch (InvalidFormatException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         
     }
 
@@ -95,7 +138,6 @@ public class BatchAdd_SD {
     public void error_message_should_appear() throws InterruptedException {
         batchpage.addNewBatchClick();
         batchpage.save();
-        Thread.sleep(1000);
         Assert.assertEquals("Batch Name is required.", batchpage.validateBatchNameRequired());
         Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
         Assert.assertEquals("Program Name is required.", batchpage.validateProgramNameRequired());
@@ -106,8 +148,12 @@ public class BatchAdd_SD {
 
     @When("Any of the mandatory fields are blank")
     public void any_of_the_mandatory_fields_are_blank() {
-        
-        
+        batchpage.addNewBatchClick();
+        batchpage.save();
+        Assert.assertEquals("Batch Name is required.", batchpage.validateBatchNameRequired());
+        Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
+
+
     }
 
 

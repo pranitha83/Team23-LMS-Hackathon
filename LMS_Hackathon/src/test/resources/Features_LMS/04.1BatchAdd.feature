@@ -15,20 +15,30 @@ Feature:AddBatch
 
   Scenario Outline: Check if description is optional field
     When Fill in all the fields except description with valid values and click save for given "<sheetName>" and rowNumber <rowNo>
-    Then The newly added batch should be present in the data table in Manage Batch page
+    Then Error message should appear for description
 
      Examples:
       |sheetName|rowNo|
       |BatchModule|0  |
+      |BatchModule|1  |
+      |BatchModule|2  |
 
 
-  Scenario: Check if the program details are added in data table
-    When Fill in all the fields with valid values and click save
-    Then The newly added batch should be present in the data table in Manage Batch page
+  Scenario Outline: Check if the program details are added in data table
+    When Fill in all the fields with valid values "<sheetName>" and click save <rowNo>
+    Then The newly added batch should be present in the data table "<sheetName>" in Manage Batch page <rowNo>
+    Examples:
+      | sheetName   | rowNo |
+      | BatchModule | 0     |
+      | BatchModule | 1     |
+      | BatchModule | 2     |
 
-  Scenario: Check for error messages for invalid fields
-    When Any of the fields have invalid values
+  Scenario Outline: Check for error messages for invalid fields
+    When Any of the fields have invalid values "<sheetName>" <rowNo>
     Then Error message should appear
+    Examples:
+      | sheetName   | rowNo |
+      | BatchModule | 3     |
 
   Scenario: Check for error messages for mandatory fields
     When Any of the mandatory fields are blank

@@ -8,16 +8,25 @@ Feature:EditBatch
     When Admin clicks Batch from navigation bar
 
 
-  Scenario:Validate row level edit icon
+  Scenario Outline:Validate row level edit icon
     Given The edit icon on row level in data table is enabled
-    When Admin clicks the edit icon
+    When Admin clicks the edit icon "<sheetName>" <rowNo>
     Then A new pop up with Batch details appears
+    Examples:
+      | sheetName   | rowNo |
+      | BatchModule | 0     |
+      | BatchModule | 1     |
+      | BatchModule | 2     |
 
-  Scenario: Check if the fields are updated
-    Given Admin clicks the edit icon
-    When Update the fields with valid values and click save
-    Then The updated batch details should appear on the data table
-
+  Scenario Outline: Check if the fields are updated
+    Given Admin clicks the edit icon "<sheetName>" <rowNo>
+    When Update the fields with valid values and click save "<sheetName>" <rowNo>
+    Then The updated batch details should appear on the data table "<sheetName>" <rowNo>
+    Examples:
+      | sheetName   | rowNo |
+      | BatchModule | 0     |
+      | BatchModule | 1     |
+      | BatchModule | 2     |
   Scenario: Check if the update throws error with invalid values
     When Update the fields with invalid values and click save
     Then Error message should appear
