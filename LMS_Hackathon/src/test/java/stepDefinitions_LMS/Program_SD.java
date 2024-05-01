@@ -25,7 +25,6 @@ import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
-
   public class Program_SD {
 	
 	 TestContextSetup context;
@@ -35,6 +34,7 @@ import utilities.TestContextSetup;
       Excel_Reader excelreader;
       Alert alert;
 	
+      
  public Program_SD(TestContextSetup context) {
 			
 		this.context=context;
@@ -611,6 +611,91 @@ import utilities.TestContextSetup;
 	    	 LoggerLoad.info("Admin is on the Login Page ");
 	    	 LoggerLoad.info("Program Navigation Completed");
 	     }
+	     
+	     
+	   //=============================================Sorting==============================================================
+	     
+	     @When("Admin clicks the sort icon of program name column")
+	     public void admin_clicks_the_sort_icon_of_program_name_column() {
+	    	 
+	       programpage.Programnamesort();
+	    	
+	      }
+	    @Then("The data get sorted on the table based on the program name column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_ascending_order() {
+	    	 
+	     programpage.programnamesortgettext();
+	     System.out.println("SortedProgramNameAscendingList:"  +programpage.programnamesortgettext());
+	    	}
 
-		
+	     @Given("The data is in the ascending order on the table based on Program Name column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_name_column() throws InterruptedException {
+	    	
+	    	 programpage.Programnamesort();
+	    	 Thread.sleep(2000);
+	    	 programpage.Programnamesort();
+	    	 Thread.sleep(2000);
+	    	 programpage.Programnamesort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program name column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_descending_order() {
+	    	
+	    	 programpage.programnamesortgettext();
+	         System.out.println("SortedProgramNameDecendingList:"  +programpage.programnamesortgettext());
+	    	 
+	     }
+
+	     @When("Admin clicks the sort icon of program Desc column")
+	     public void admin_clicks_the_sort_icon_of_program_desc_column() {
+	    	 
+	    	 programpage.ProgramDescsort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program description column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_ascending_order() {
+	    	
+	    	 programpage.programDescsortgettext();
+	    	 System.out.println("SortedProgramDescAscendingList:"  +programpage.programDescsortgettext());
+	     }
+
+	     @Given("The data is in the ascending order on the table based on Program Description column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_description_column() throws InterruptedException {
+	    	 
+	    	 programpage.ProgramDescsort();
+	    	 Thread.sleep(2000);
+	    	 programpage.ProgramDescsort();
+	    	 Thread.sleep(2000);
+	    	 programpage.ProgramDescsort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program description column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_descending_order() {
+	        
+	    	 programpage.programDescsortgettext();
+	        System.out.println("SortedProgramDescDecendingList:"  +programpage.programDescsortgettext());
+	     }
+
+	     @When("Admin clicks the sort icon of program Status column")
+	     public void admin_clicks_the_sort_icon_of_program_status_column() {
+	         
+	    	 programpage.Programstatussort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program status column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_ascending_order() {
+	         
+	     }
+
+	     @Given("The data is in the ascending order on the table based on Program Status column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_status_column() {
+	    	 programpage.Programstatussort();
+	    	 programpage.Programstatussort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program status column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_descending_order() {
+	        
+	     }
+
 }
