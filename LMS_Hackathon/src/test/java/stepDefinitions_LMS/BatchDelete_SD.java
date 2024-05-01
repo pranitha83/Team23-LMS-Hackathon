@@ -7,6 +7,7 @@ import driverFactory.SetupDriver;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObjects.BatchPage;
+import utilities.LoggerLoad;
 import utilities.TestContextSetup;
 
 public class BatchDelete_SD {
@@ -46,7 +47,11 @@ public class BatchDelete_SD {
 
     @When("You click yes option")
     public void you_click_yes_option() {
-        
+
+
+        batchpage.DeleteYesClick();
+
+        //programpage.AlertProgramUpdate();
         
     }
 
@@ -58,6 +63,7 @@ public class BatchDelete_SD {
 
     @When("you click No option")
     public void you_click_no_option() {
+        batchpage.DeleteNoClick();
         
         
     }

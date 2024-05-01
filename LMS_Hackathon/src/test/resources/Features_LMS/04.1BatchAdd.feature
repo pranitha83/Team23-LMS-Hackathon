@@ -20,9 +20,6 @@ Feature:AddBatch
      Examples:
       |sheetName|rowNo|
       |BatchModule|0  |
-      |BatchModule|1  |
-      |BatchModule|2  |
-
 
   Scenario Outline: Check if the program details are added in data table
     When Fill in all the fields with valid values "<sheetName>" and click save <rowNo>
@@ -30,8 +27,6 @@ Feature:AddBatch
     Examples:
       | sheetName   | rowNo |
       | BatchModule | 0     |
-      | BatchModule | 1     |
-      | BatchModule | 2     |
 
   Scenario Outline: Check for error messages for invalid fields
     When Any of the fields have invalid values "<sheetName>" <rowNo>

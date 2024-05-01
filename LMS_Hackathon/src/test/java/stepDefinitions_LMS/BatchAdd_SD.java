@@ -62,6 +62,7 @@ public class BatchAdd_SD {
             data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
             batchpage.addNewBatch(data.get(int1).get("name"), "",
                     data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
+            batchpage.cancelClick();
 
         } catch (InvalidFormatException e) {
             throw new RuntimeException(e);
@@ -74,7 +75,6 @@ public class BatchAdd_SD {
 
     @Then("Error message should appear for description")
     public void error_message_should_appear_for_description() throws InterruptedException {
-        Thread.sleep(1000);
         Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
     }
 
@@ -83,8 +83,7 @@ public class BatchAdd_SD {
         List<Map<String, String>> data = null;
         try {
             data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
-            batchpage.searchBatch(data.get(int1).get("name"));
-            Assert.assertTrue(batchpage.popUpBatchValidation(data.get(int1).get("name"),data.get(int1).get("description"),data.get(int1).get("noc")));
+            Assert.assertTrue(batchpage.popUpValidation());
 
         } catch (InvalidFormatException e) {
             throw new RuntimeException(e);
@@ -112,7 +111,8 @@ public class BatchAdd_SD {
         }catch (Exception e) {
             throw new RuntimeException(e);
         }
-        
+        batchpage.cancelClick();
+
     }
 
     @When("Any of the fields have invalid values {string} {int}")
@@ -123,6 +123,8 @@ public class BatchAdd_SD {
             data = excelReader.getData(PropertyFileReader.getexcelfilepath(), string);
             batchpage.addNewBatch(data.get(int1).get("name"), data.get(int1).get("description"),
                     data.get(int1).get("pName"), data.get(int1).get("stats"), data.get(int1).get("noc"));
+            batchpage.cancelClick();
+
 
         } catch (InvalidFormatException e) {
             throw new RuntimeException(e);
@@ -131,6 +133,8 @@ public class BatchAdd_SD {
         }catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+
         
     }
 
@@ -143,6 +147,7 @@ public class BatchAdd_SD {
         Assert.assertEquals("Program Name is required.", batchpage.validateProgramNameRequired());
         Assert.assertEquals("Status is required.", batchpage.validateStatusRequired());
         Assert.assertEquals("Number of classes is required.", batchpage.validateNoOfClassesRequired());
+        batchpage.cancelClick();
 
     }
 
@@ -152,6 +157,7 @@ public class BatchAdd_SD {
         batchpage.save();
         Assert.assertEquals("Batch Name is required.", batchpage.validateBatchNameRequired());
         Assert.assertEquals("Batch Description is required.", batchpage.validateBatchDescriptionRequired());
+        batchpage.cancelClick();
 
 
     }

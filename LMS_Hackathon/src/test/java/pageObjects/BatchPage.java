@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -82,8 +83,10 @@ public class BatchPage {
 
     By pencilIcon = By.xpath("//*[@class='p-button-icon pi pi-pencil']");
 
+    
 
-    //Delete Program
+
+    //Delete batch
 
 
     By Deletebutton= By.xpath("//*[@class='p-button-rounded p-button-danger p-button p-component p-button-icon-only']");
@@ -98,6 +101,10 @@ public class BatchPage {
     validation items
      */
     By batchNameRequired = By.xpath("//*[text()='Batch Name is required. ']");
+
+    By batchNameExists = By.xpath("//*[text()='Batch already exists with given Batch Name. ']");
+
+
     By batchDescriptionRequired = By.xpath("//*[text()='Batch Description is required.']");
     By programNameRequired = By.xpath("//*[text()='Program Name is required.']");
     By statusRequired = By.xpath("//*[text()='Status is required.']");
@@ -110,9 +117,15 @@ public class BatchPage {
 
     //By delete = By.xpath("//*button[contains(@disabled p-button-danger p-button p-component p-button-icon-only)]");
 
-
+//Navigation to other pages
+    @FindBy(id = "program")
+     WebElement programLink;
+    @FindBy(id = "user")
+    WebElement userLink;
+    @FindBy(id = "logout")
+    WebElement logoutLink;
     WebDriver driver;
-
+    List<WebElement> rowCnt;
 
     public BatchPage(WebDriver driver) {
         this.driver = driver;
@@ -206,7 +219,7 @@ public class BatchPage {
             driver.findElement(inActive).click();
         }
         batchNoOfClasses.sendKeys(noc);
-        this.driver.findElement(saveButton).click();
+        save();
 
     }
 
@@ -220,6 +233,11 @@ public class BatchPage {
         batch.click();
     }
 
+    public void cancelClick(){
+        LoggerLoad.info("Cancelling the operation");
+        this.driver.findElement(Cancelbutton).click();
+    }
+
     public void addNewBatchClick() {
         LoggerLoad.info(this.getClass().getName() + " Entering addNewBatchClick Method" );
         newBatch.click();
@@ -231,17 +249,18 @@ public class BatchPage {
         filterGlobal.click();
     }
 
-    public void searchBatch(String batchName){
+    public void searchBatch(String batchName) throws InterruptedException {
         LoggerLoad.info(this.getClass().getName() + " Entering searchBatch Method" );
+        Thread.sleep(2000);
         filterGlobal.sendKeys(batchName);
-        filterGlobal.click();
     }
 
-    public boolean popUpBatchValidation(String strBatchName, String strBatchDescription, String strNoOfClasses) {
+    public boolean popUpBatchValidation(String strBatchName, String strBatchDescription, String strNoOfClasses) throws InterruptedException {
         LoggerLoad.info(this.getClass().getName() + " Entering popUpBatchValidation Method" );
         searchBatch(strBatchName);
         this.driver.findElement(pencilIcon).click();
-        LoggerLoad.info(this.getClass().getName() + " - " +  strBatchName + " - " +batchDescription.getText());
+        Thread.sleep(1000);
+        LoggerLoad.info(this.getClass().getName() + " - " +  strBatchName + " - " + batchName.getText());
         LoggerLoad.info(this.getClass().getName() + " - " + strBatchDescription+ " - " + batchName.getText());
         LoggerLoad.info(this.getClass().getName() + " - " + strNoOfClasses+ " - " +batchNoOfClasses.getText());
 
@@ -261,14 +280,30 @@ public class BatchPage {
         this.driver.findElement(saveButton).click();
     }
 
+    public void editBatchClick() throws InterruptedException {
+        LoggerLoad.info(this.getClass().getName() + " Entering editBatchClick Method" );
+        this.driver.findElement(pencilIcon).click();
+    }
+
     public void editBatchClickAndClear() throws InterruptedException {
         LoggerLoad.info(this.getClass().getName() + " Entering editBatchClickAndClear Method" );
         this.driver.findElement(pencilIcon).click();
         batchDescription.clear();
-        batchNoOfClasses.clear();
         Thread.sleep(1000);
         this.driver.findElement(saveButton).click();
         Thread.sleep(500);
+        Assert.assertEquals("This field should start with an alphabet and min 2 character.", validateBatchDescriptionRequired());
+    }
+
+    public void editBatchName() throws InterruptedException {
+        LoggerLoad.info(this.getClass().getName() + " Entering editBatchClickAndClear Method" );
+        this.driver.findElement(pencilIcon).click();
+        batchName.clear();
+        Thread.sleep(1000);
+        this.driver.findElement(saveButton).click();
+        Thread.sleep(500);
+        Assert.assertEquals("Customize Toolbar...", validateBatchNameRequired());
+
     }
 
     public boolean popUpDNDValidation() {
@@ -280,6 +315,11 @@ public class BatchPage {
     public String validateBatchNameRequired(){
         LoggerLoad.info(this.getClass().getName() + " Entering validateBatchNameRequired Method" );
         return this.driver.findElement(batchNameRequired).getText();
+    }
+
+    public String validateBatchNameExists(){
+        LoggerLoad.info(this.getClass().getName() + " Entering validateBatchNameExists Method" );
+        return this.driver.findElement(batchNameExists).getText();
     }
 
     public String validateBatchDescriptionRequired(){
@@ -331,4 +371,18 @@ public class BatchPage {
     }
 
 
-}
+//Navigation to other page
+
+    public void navigateToProgram() {
+        LoggerLoad.info(this.getClass().getName() + " Entering navigateToProgram Method");
+        programLink.click();
+    }
+        public void navigateToUser() {
+            LoggerLoad.info(this.getClass().getName() + " Entering navigateToUser Method");
+            userLink.click();
+        }
+            public void navigateToLogout() {
+                LoggerLoad.info(this.getClass().getName() + " Entering navigateToLogout Method");
+                logoutLink.click();
+            }
+        }

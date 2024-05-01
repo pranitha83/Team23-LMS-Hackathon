@@ -102,4 +102,38 @@ public class Batch_SD {
         Assert.assertTrue(batchpage.popUpValidation());
     }
 
+
+
+//Navigation to other pages.
+@When("Admin clicks on Program link on Manage Batch page")
+public void admin_clicks_on_program_link_on_manage_batch_page() {
+batchpage.navigateToProgram();
 }
+
+@Then("Admin is re-directed to Program page")
+public void admin_is_re_directed_to_program_page() {
+
+}
+
+@When("Admin clicks on User link on Manage Batch page")
+public void admin_clicks_on_user_link_on_manage_batch_page() {
+batchpage.navigateToUser();
+}
+
+@Then("Admin is re-directed to User page")
+public void admin_is_re_directed_to_user_page() {
+
+}
+
+@When("Admin clicks on logout link on Manage Batch page")
+public void admin_clicks_on_logout_link_on_manage_batch_page() {
+    batchpage.navigateToLogout();
+}
+
+@Then("Admin is re-directed to logout page")
+public void admin_is_re_directed_to_logout_page() {
+
+}
+}
+
+

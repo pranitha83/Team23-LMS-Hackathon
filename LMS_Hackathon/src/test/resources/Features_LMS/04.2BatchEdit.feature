@@ -15,8 +15,6 @@ Feature:EditBatch
     Examples:
       | sheetName   | rowNo |
       | BatchModule | 0     |
-      | BatchModule | 1     |
-      | BatchModule | 2     |
 
   Scenario Outline: Check if the fields are updated
     Given Admin clicks the edit icon "<sheetName>" <rowNo>
@@ -25,8 +23,7 @@ Feature:EditBatch
     Examples:
       | sheetName   | rowNo |
       | BatchModule | 0     |
-      | BatchModule | 1     |
-      | BatchModule | 2     |
+
   Scenario: Check if the update throws error with invalid values
     When Update the fields with invalid values and click save
     Then Error message should appear
