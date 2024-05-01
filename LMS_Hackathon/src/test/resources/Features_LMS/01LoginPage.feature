@@ -7,7 +7,6 @@ Feature: LoginPage Validation
     When Admin gives the correct LMS portal URL
     Then Admin should land on the home page
 
-
   Scenario: Verify admin is able to land on home page with invalid URL
     Given Admin launch the browser
     When Admin gives the invalid LMS portal URL
@@ -36,12 +35,12 @@ Feature: LoginPage Validation
   Scenario: Verify company name
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should see company name below the app name
+    Then Admin should see company name as "NumpyNinja" below the app name
 
   Scenario: Validate sign in content
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should see Please login to LMS application
+    Then Admin should see "Please login to LMS application"
 
   Scenario: Verify text field is present
     Given Admin launch the browser
@@ -51,7 +50,7 @@ Feature: LoginPage Validation
   Scenario: Verify text on the first text field
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should "user" in the first text field
+    Then Admin should see "user" in the first text field
 
   Scenario: Verify asterik next to user text
     Given Admin launch the browser
@@ -61,12 +60,9 @@ Feature: LoginPage Validation
   Scenario: Verify text on the second text field
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
-    Then Admin should "password" in the second text field
+    Then Admin should see "password" in the second text field
 
   Scenario: Verify asterik next to password text
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
     Then Admin should see * symbol next to password text
-
-   
-

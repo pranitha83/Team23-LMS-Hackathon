@@ -11,6 +11,7 @@ import driverFactory.SetupDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.sourceforge.tess4j.TesseractException;
 import pageObjects.LoginPage;
 import utilities.Excel_Reader;
 import utilities.LoggerLoad;
@@ -51,6 +52,9 @@ public class Login_SD {
 	@When("Admin gives the invalid LMS portal URL")
 	public void admin_gives_the_invalid_lms_portal_url() throws Throwable {
 		setupdriver.openPage(PropertyFileReader.getGlobalValue("InvalidUrl"));
+
+		
+
 	}
 
 	@Then("Admin should recieve {int} page not found error")
@@ -82,28 +86,8 @@ public class Login_SD {
 		Thread.sleep(3000);
 	}
 
-	@Then("Admin should land on dashboard page")
-	public void admin_should_land_on_dashboard_page() {
-		Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
-		System.out.println(SetupDriver.url());
-	}
-//login credentials from excel
+	
 
-	@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button")
-	public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button(String string,
-			Integer int1) throws InvalidFormatException, IOException, InterruptedException {
-
-		List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Test");
-		System.out.println(Data);
-		String userName = Data.get(int1).get("username");
-		String passWord = Data.get(int1).get("password");
-
-		System.out.println(userName);
-		loginpage.enterUserNPassword(userName, passWord);
-		loginpage.loginBtnClk();
-		Thread.sleep(2000);
-
-	}
 
 	// Spell check
 
@@ -126,23 +110,23 @@ public class Login_SD {
 	// Cheking Application Name
 
 	@Then("Admin should see  {string}")
-	public void admin_should_see(String string) {
-		loginpage.logoText();
+	public void admin_should_see(String string) throws Throwable {
+		loginpage.applicationText(string);
 
 	}
 
 	// Company name
-	@Then("Admin should see company name below the app name")
-	public void admin_should_see_company_name_below_the_app_name() {
-
+	@Then("Admin should see company name as {string} below the app name")
+	public void admin_should_see_company_name_as_below_the_app_name(String string) throws Throwable {
+loginpage.companyNameText(string);
 	}
 
 //Signin content
-	@Then("Admin should see Please login to LMS application")
-	public void admin_should_see_please_login_to_lms_application() {
+	@Then("Admin should see {string}")
+	public void admin_should_see_please_login_to_lms_application(String string) {
 		String Text = loginpage.signinContentText();
 		LoggerLoad.info(Text);
-		Assert.assertEquals(Text, "Please login to LMS application");
+		Assert.assertEquals(Text, string);
 	}
 
 //Text fields
@@ -157,31 +141,151 @@ public class Login_SD {
 
 	// user text field
 
-	@Then("Admin should {string} in the first text field")
-	public void admin_should_in_the_first_text_field(String string) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@Then("Admin should see {string} in the first text field")
+	public void admin_should_see_in_the_first_text_field(String string) {
+		loginpage.checkUserTxt();
+		
+		Assert.assertTrue(string, true);
 	}
 
 //user* symbol
 	@Then("Admin should see * symbol next to user text")
 	public void admin_should_see_symbol_next_to_user_text() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		loginpage.checkUserAsterik();
 	}
 
 //password text field
-	@Then("Admin should {string} in the second text field")
-	public void admin_should_in_the_second_text_field(String string) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	@Then("Admin should see {string} in the second text field")
+	public void admin_should_see_in_the_second_text_field(String string) {
+		loginpage.checkPwrdTxt();
+		LoggerLoad.info(loginpage.checkPwrdTxt());
+		Assert.assertTrue(string, true);
 	}
 
 //password* symbol
 	@Then("Admin should see * symbol next to password text")
-	public void admin_should_see_symbol_next_to_password_text() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	public void admin_should_see_symbol_next_to_password_text() throws InterruptedException {
+		loginpage.checkPasswordAsterik();
+		
+		
+	
+	}
+	//Allingment of text field
+	
+	@Then("Admin should see input field on the centre of the page")
+	public void admin_should_see_input_field_on_the_centre_of_the_page() {
+	    loginpage.checkAllignmentOfTextFld();
+	}
+//Login button verify
+	
+	@Then("Admin should see login button")
+	public void admin_should_see_login_button() {
+	    loginpage.verifyLogin();
+	}
+//Login Alignment
+	
+	@Then("Admin should see login button on the centre of the page")
+	public void admin_should_see_login_button_on_the_centre_of_the_page() {
+	    loginpage.checkLoginAlign();
 	}
 
+	@Then("Admin should see user in gray color")
+	public void admin_should_see_user_in_gray_color() {
+	    loginpage.checkUserTxtClr();
+	}
+
+	@Then("Admin should see password in gray color")
+	public void admin_should_see_password_in_gray_color() {
+	    loginpage.checkPasswordTxtClr();
+	}
+	
+	
+	
+	
+//---------------------------------login validation--------------------------------
+	
+	
+	@When("Admin enter only password from given sheetname {string} and rowNumber {int} and clicks login button")
+	public void admin_enter_only_password_from_given_sheetname_and_row_number_and_clicks_login_button(String string, Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+	  
+		List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+		
+		String userName = Data.get(int1).get("username");
+		String passWord = Data.get(int1).get("password");
+
+		
+		loginpage.enterUserNPassword(userName, passWord);
+		loginpage.loginBtnClk();
+		Thread.sleep(3000);
+	}
+
+	@Then("Admin should see Error message {string}")
+	public void admin_should_see_error_message(String string) {
+	 String error =  loginpage.getUserError();
+	   
+	   Assert.assertEquals(string, error);
+	}
+
+	@When("Admin enter password null from given sheetname {string} and rowNumber {int} and clicks login button")
+	public void admin_enter_password_null_from_given_sheetname_and_row_number_and_clicks_login_button(String string, Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+		
+		String userName = Data.get(int1).get("username");
+		String passWord = Data.get(int1).get("password");
+
+		
+		loginpage.enterUserNPassword(userName, passWord);
+		loginpage.loginBtnClk();
+	}
+
+	@When("Admin enter invalid credentials from given sheetname {string} and rowNumber {int} and clicks login button")
+	public void admin_enter_invalid_credentials_from_given_sheetname_and_row_number_and_clicks_login_button(String string, Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+		
+		String userName = Data.get(int1).get("username");
+		String passWord = Data.get(int1).get("password");
+
+		
+		loginpage.enterUserNPassword(userName, passWord);
+		loginpage.loginBtnClk();
+	}
+	@Then("Admin should see Error message please check username\\/password")
+	public void admin_should_see_error_message_please_check_username_password() {
+	    loginpage.getErrorMsg();
+	}
+	//login credentials from excel
+
+		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button")
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button(String string,
+				Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+
+			List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+			
+			String userName = Data.get(int1).get("username");
+			String passWord = Data.get(int1).get("password");
+
+			
+			loginpage.enterUserNPassword(userName, passWord);
+			loginpage.loginBtnClk();
+			Thread.sleep(3000);
+
+		}
+
+
+		@Then("Admin should land on dashboard page")
+		public void admin_should_land_on_dashboard_page() {
+			Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
+			
+		}
+		
+		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through keyboard")
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_keyboard(String string, Integer int1) {
+		   
+		}
+
+		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through mouse")
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_mouse(String string, Integer int1) {
+		    
+		}
+	
 }

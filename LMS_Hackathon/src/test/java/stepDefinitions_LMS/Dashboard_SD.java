@@ -161,7 +161,7 @@ public class Dashboard_SD {
 	}
 	@Then("Admin should see URL with {string}")
 	public void admin_should_see_url_with(String programUrl) throws Throwable {
-		Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", setupdriver.url().contains(programUrl));
+		Assert.assertEquals(PropertyFileReader.getGlobalValue("dashboardurl"), setupdriver.url().contains(programUrl));
 	}
 	
 	@Then("Admin should see a heading with text {string} on the page")
@@ -177,7 +177,10 @@ public class Dashboard_SD {
 	}
 	
 	
-
+	@Then("Admin should see the text as {string} along with Pagination icon below the table.")
+	public void admin_should_see_the_text_as_along_with_pagination_icon_below_the_table(String validateFooterText) {
+	    dashboardpage.validatePaginationTextandIcons(validateFooterText);
+	}
 }
 
 

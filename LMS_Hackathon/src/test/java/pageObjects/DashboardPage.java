@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -85,6 +88,25 @@ public class DashboardPage {
 
 	@FindBy(xpath = "//div[@class='p-d-flex p-ai-center p-jc-between ng-star-inserted']")
 	WebElement programFooter;
+	
+	@FindBy(xpath="//span[@class='p-paginator-current ng-star-inserted']")
+	WebElement paginator;
+	
+	
+	@FindBy(xpath="//button[@class='p-paginator-first p-paginator-element p-link p-disabled p-ripple ng-star-inserted']")
+	WebElement prevSetofPagesMove;
+	
+	@FindBy(xpath="//button[@class='p-paginator-last p-paginator-element p-link p-ripple ng-star-inserted']")
+	WebElement nextSetofPagesMove;
+	
+	@FindBy(xpath="//span[@class='p-paginator-icon pi pi-angle-right']")
+	WebElement nextPageMove;
+	
+	@FindBy(xpath="//span[@class='p-paginator-icon pi pi-angle-left']")
+	WebElement  prevPageMove;
+	
+	//span[@class='p-paginator-icon pi pi-angle-left']
+	
 
 	WebDriver driver;
 
@@ -367,6 +389,28 @@ public class DashboardPage {
 		Integer.parseInt(count.trim());
 		Assert.assertEquals(totalpgmcnt, "In total there are " + count + " programs.");
 		LoggerLoad.info("Total Program count at footer: " + count);
+	}
+	
+	
+	public void validatePaginationTextandIcons(String text) {
+		boolean isPresent = prevPageMove.isDisplayed() && prevSetofPagesMove.isDisplayed() && nextPageMove.isDisplayed() && prevSetofPagesMove.isDisplayed();
+		try {
+		if(isPresent) {
+		String textValidation=paginator.getText();
+		Pattern pattern = Pattern.compile("\\d+");
+		Matcher matcher = pattern.matcher(textValidation);
+		List<Integer> numericValues = new ArrayList<Integer>();
+		while (matcher.find()) {
+		    int numericValue = Integer.parseInt(matcher.group());
+		    numericValues.add(numericValue);
+		}
+		text = String.format("Showing %d to %d of %d entries", numericValues.get(0), numericValues.get(1), numericValues.get(2));
+		LoggerLoad.info(text);
+		Assert.assertEquals(text,textValidation);
+		}
+		}catch(Exception e) {
+			LoggerLoad.error("Pagination Icons are not displayed"+e);
+		}
 	}
 
 	public void clickLogout() {
