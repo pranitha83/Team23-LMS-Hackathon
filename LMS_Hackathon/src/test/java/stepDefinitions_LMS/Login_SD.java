@@ -277,5 +277,15 @@ List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcel
 			Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
 			
 		}
+		
+		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through keyboard")
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_keyboard(String string, Integer int1) {
+		   
+		}
+
+		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through mouse")
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_mouse(String string, Integer int1) {
+		    
+		}
 	
 }
