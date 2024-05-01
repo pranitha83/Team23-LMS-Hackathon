@@ -28,7 +28,7 @@ Feature: Login Validation
 
     Examples: 
       | sheetName | rowNo |
-      | Login     |     1|
+      | Login     |     1 |
 
   Scenario Outline: Validate login with  invalid credentials
     Given Admin is in Home Page
@@ -46,21 +46,22 @@ Feature: Login Validation
 
     Examples: 
       | sheetName | rowNo |
-      | Login     |     3|
-    Scenario Outline: verify login button action through keyboard
+      | Login     |     3 |
+
+  Scenario Outline: verify login button action through keyboard
     Given Admin is in Home Page
     When Admin enter valid credentials fromgiven sheetname "<sheetName>" and rowNumber <rowNo> and clicks login button through keyboard
     Then Admin should land on dashboard page
 
     Examples: 
       | sheetName | rowNo |
-      | Login     |     3|  
+      | Login     |     3 |
 
-      Scenario Outline: verify login button action through mouse
+  Scenario Outline: verify login button action through mouse
     Given Admin is in Home Page
     When Admin enter valid credentials fromgiven sheetname "<sheetName>" and rowNumber <rowNo> and clicks login button through mouse
     Then Admin should land on dashboard page
 
     Examples: 
       | sheetName | rowNo |
-      | Login     |     3|  
+      | Login     |     3 |
