@@ -26,7 +26,7 @@ import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
 
-public class Program_SD {
+  public class Program_SD {
 	
 	 TestContextSetup context;
 	 SetupDriver setupdriver;
@@ -490,6 +490,127 @@ public class Program_SD {
 			LoggerLoad.info("Program Pagination Completed");
 		}
 
+		//===========================================Multiple Delete==================================================
+		
+		// Validate Common Delete button enabled after clicking on any checkbox
+		
+		@When("Admin clicks any checkbox in the data table")
+		public void admin_clicks_any_checkbox_in_the_data_table() {
+			LoggerLoad.info("Program Multiple Delete Started");
+		    programpage.Multipledelsingleclick();
+		}
+
+		@Then("Admin should see common delete option enabled under header Manage Program")
+		public void admin_should_see_common_delete_option_enabled_under_header_manage_program() {
+			Assert.assertTrue(programpage.ToprowDeleteisenabled());
+		}
+	     
+		//Validate multiple program deletion by selecting Single checkbox 
+		
+		@Given("Admin clicks delete button under header after selecting the check box in the data table")
+		public void admin_clicks_delete_button_under_header_after_selecting_the_check_box_in_the_data_table() {
+			 programpage.Multipledelsingleclick();
+			 programpage.ToprowDeleteClick();
+		}
+
+		@When("Admin is on Confirm Deletion alert")
+		public void admin_is_on_confirm_deletion_alert() throws InterruptedException {
+			
+			//String Multipledelpopupmessage = programpage.Multipledelpopupmessage();
+			//System.out.println("Multipledelpopupmessage :"  +  Multipledelpopupmessage); 
+		    
+		}
+
+		@When("Admin clicks program deletion YES button on the alert")
+		public void admin_clicks_program_deletion_yes_button_on_the_alert() {
+			programpage.DeleteYesClick();
+		}
+		
+		@Then("Admin should land on Manage Program page and can see the selected program is deleted from the data table")
+		public void admin_should_land_on_manage_program_page_and_can_see_the_selected_program_is_deleted_from_the_data_table() {
+			
+			String CapturingfooterentryAfterDeleteYes = programpage.Capturingfooterentry();
+			LoggerLoad.info("CapturingfooterentryAfterDeleteYes :"  + CapturingfooterentryAfterDeleteYes);
+		}
+
+		  @When("Admin clicks program deletion NO button on the alert")
+		public void admin_clicks_program_deletion_no_button_on_the_alert() {
+		    programpage.DeleteNoClick();
+		}
+	   
+	   @Then("Admin should land on Manage Program page and can see the selected program is not deleted from the data table")
+	   public void admin_should_land_on_manage_program_page_and_can_see_the_selected_program_is_not_deleted_from_the_data_table() {
+	       
+		   String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
+		   LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
+	   }
+	       
+	   // Validate multiple program deletion by selecting multiple check boxes
+	   
+	     @Given("Admin clicks delete button under header after selecting multiple checkboxes in the data table")
+		public void admin_clicks_delete_button_under_header_after_selecting_multiple_checkboxes_in_the_data_table() {
+		              programpage.TopDelCheckboxclick();
+		              programpage.ToprowDeleteClick();
+		}
+	     
+	     @Then("Admin should land on Manage Program page and can see the selected programs are deleted from the data table")
+	     public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_deleted_from_the_data_table() {
+	    	
+	    	 String CapturingfooterentryAfterDeleteYes = programpage.Capturingfooterentry();
+	    	 LoggerLoad.info("CapturingfooterentryAfterDeleteYes :"  + CapturingfooterentryAfterDeleteYes);
+	     }
+
+	     @Then("Admin should land on Manage Program page and can see the selected programs are not deleted from the data table")
+	     public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_not_deleted_from_the_data_table() {
+	    	
+	    	 String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
+	    	 LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
+	    	 LoggerLoad.info("Program Multiple Delete Completed");
+	     }
+
+	    // ==============================================Navigation====================================================
+	     
+	     //Batch link on navigation bar
+	     
+	     @When("Admin clicks on Batch link on Manage Program page")
+	     public void admin_clicks_on_batch_link_on_manage_program_page() {
+	    	 LoggerLoad.info("Program Navigation Started");
+	    	 programpage.Clickmodulelink("Batch");
+	     }
+
+	     @Then("Admin is re-directed to Batch page")
+	     public void admin_is_re_directed_to_batch_page() {
+	    	
+	    	 LoggerLoad.info("Admin is on the Batch Page ");
+	     }
+	     //User link on navigation bar
+	     
+	     @When("Admin clicks on User link on Manage Program page")
+	     public void admin_clicks_on_user_link_on_manage_program_page() {
+	    	
+	    	 programpage.Clickmodulelink("User");
+	     }
+
+	     @Then("Admin is re-directed to User page")
+	     public void admin_is_re_directed_to_user_page() {
+	    	 
+	    	 LoggerLoad.info("Admin is on the User Page ");
+	     }
+	       
+	     // Logout link on navigation bar 
+	     
+	     @When("Admin clicks on Logout link on Manage Program page")
+	     public void admin_clicks_on_logout_link_on_manage_program_page() {
+	    	 
+	    	 programpage.Clickmodulelink("Logout");
+	     }
+
+	     @Then("Admin is re-directed to Login page")
+	     public void admin_is_re_directed_to_login_page() {
+	    	 
+	    	 LoggerLoad.info("Admin is on the Login Page ");
+	    	 LoggerLoad.info("Program Navigation Completed");
+	     }
 
 		
 }
