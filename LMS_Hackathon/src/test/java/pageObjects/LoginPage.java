@@ -30,7 +30,16 @@ public class LoginPage {
 	@FindBy (className ="image-container") WebElement logo;
 	@FindBy (xpath = "//p[text()='Please login to LMS application']") WebElement signinContent;
 	@FindBy(xpath = "//div[@class='signin-content']//input") List<WebElement> textFields;
-	 WebDriver driver;
+	@FindBy (xpath = "//span[text()='User']") WebElement userText;
+	@FindBy (xpath = "//span[text()='Password']") WebElement passwordText;
+	@FindBy (xpath = "//span[text()=' *']") WebElement userasterik;
+	@FindBy (xpath ="//span[text()=' *']") WebElement passwordasterik;
+	
+	
+	
+	
+	
+	WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -165,5 +174,41 @@ public String signinContentText() {
 
 public int checkTxtFields() {
 	 return textFields.size();
+}
+//Checking user text
+public boolean checkUserTxt() {
+	 return userText.isDisplayed();
+	 
+	 
+}
+
+//Checking password text
+
+public String checkPwrdTxt() {
+	return passwordText.getText();
+}
+
+//Checkin user asterik symbol
+
+public void checkUserAsterik() {
+	 String textFieldValue = userasterik.getText();
+	 if (textFieldValue.contains("*")) {
+		 LoggerLoad.info("Asterisk symbol is present in the User text field.");
+     } else {
+    	 LoggerLoad.info("Asterisk symbol is not present in the User text field.");
+     }
+
+}
+//checking password asterik
+
+public void checkPasswordAsterik() throws InterruptedException {
+	Thread.sleep(3000);
+	 String textFieldValue = passwordasterik.getText();
+	 if (textFieldValue.contains("*")) {
+         LoggerLoad.info("Asterisk symbol is present in the password text field.");
+     } else {
+    	 LoggerLoad.info("Asterisk symbol is not present in the password text field.");
+     }
+
 }
 }
