@@ -13,6 +13,9 @@ public class PageObjectManager {
 	public ProgramPage programpage;
 	public DashboardPage dashboardpage;
 	public BatchPage batchpage;
+	public AddUser usermodule;
+	public EditUser edituser;
+	public DeleteUser deleteuser;
 
 	
 	
@@ -75,6 +78,20 @@ public class PageObjectManager {
 	public DashboardPage getdashboardpage() {
 		dashboardpage=new DashboardPage(driver);
 		return dashboardpage;
+	}
+	public AddUser getUserpage() {
+		usermodule=new AddUser(driver);
+		return usermodule;
+	}
+	
+	public EditUser getEditUserPage() {
+		edituser = new EditUser(driver);
+		return edituser;
+	}
+	
+	public DeleteUser getDeleteUser() {
+		deleteuser = new DeleteUser(driver);
+		return deleteuser;
 	}
 
 
