@@ -1,8 +1,16 @@
 package pageObjects;
 
+import java.time.Duration;
+
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driverFactory.SetupDriver;
 
@@ -10,14 +18,15 @@ import driverFactory.SetupDriver;
 public class ProgramPage {
 	
 public WebDriver driver;
+Alert alert;
 	
-	public ProgramPage(WebDriver driver) 
+ public ProgramPage(WebDriver driver) 
 	{
 		this.driver=driver;
 		this.driver=SetupDriver.Driver();
 	}
 	
-	
+	//Add Program
 	By UserName=By.id("username");
 	By Password=By.id("password");
 	By ClickLogin=By.id("login");
@@ -47,6 +56,34 @@ public WebDriver driver;
 	By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
 	By DeletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
 	
+	//Pagination
+		By nextpagesingle =By.xpath("//*[@class='p-paginator-next p-paginator-element p-link p-ripple']");
+		By firstpagesingle =By.cssSelector("span[class='p-paginator-icon pi pi-angle-left']");
+		By lastpagedouble =By.cssSelector("span[class='p-paginator-icon pi pi-angle-double-right']");
+		By startpagedouble =By.xpath("//*[@class='p-paginator-icon pi pi-angle-double-left']");
+	
+		 //Multiple Delete
+		  
+		  By Multipledelsingle = By.xpath("//app-program[@class='ng-star-inserted']/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[1]/p-tablecheckbox/div/div[2]");
+		  By ToprowDelete = By.xpath("/html/body/app-root/app-program/div/mat-card/mat-card-title/div[2]/div[1]/button/span[1]");
+		  By Multipledelpopupmessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-19']");
+		  By TopDelCheckboxclick = By.xpath("//div[@class='p-checkbox-box']");
+		  
+		  //Navigation
+		  By Program = By.id("program");
+		  By Batch = By.id("batch");
+		  By User = By.id("user");
+		  By Logout = By.id("logout");
+		  
+		  //Sorting
+		  By Programnamesort = By.xpath("//*[@class='p-datatable-thead']/tr/th[2]/p-sorticon/i");
+		  By ProgramDescsort = By.xpath("//*[@class='p-datatable-thead']/tr/th[3]/p-sorticon/i");
+		  By Programstatussort = By.xpath("//*[@class='p-datatable-thead']/tr/th[4]/p-sorticon/i");
+		  By programnamesortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[2]");
+		  By programDescsortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[3]");
+		  By programstatussortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[4]");
+		
+	//===================================AddProgram=====================================================
 	public void NewProgram() {
 		driver.findElement(NewProgram).click();
 		}
@@ -132,7 +169,20 @@ public WebDriver driver;
 		 driver.findElement(programName).sendKeys(givenprogramname);
 		 driver.findElement(programDescription).sendKeys(givenprodesc);
 	}
-		
+	
+	public void AlertProgramcreation() {
+	try {
+	    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+	    wait.until(ExpectedConditions.alertIsPresent());
+	     alert = driver.switchTo().alert();
+	    System.out.println("AlertMessage :"  +alert.getText());
+	    alert.accept();
+	    Assert.assertTrue(alert.getText().contains("Successful Program Created"));
+	} catch (Exception e) {
+	    //exception handling
+	}
+	}
+
 	//============================================EditProgram===========================================================
 			public void Editclick() {
 			driver.findElement(Editbutton).click();
@@ -154,6 +204,19 @@ public WebDriver driver;
 			 driver.findElement(inactive).click();
 			}
 			
+			public void AlertProgramUpdate() {
+			try {
+			    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+			    wait.until(ExpectedConditions.alertIsPresent());
+			     alert = driver.switchTo().alert();
+			    System.out.println("AlertMessage :"  +alert.getText());
+			    alert.accept();
+			    Assert.assertTrue(alert.getText().contains("ProgramUpdated"));
+			} catch (Exception e) {
+			    //exception handling
+			}
+			}
+			
 			//=========================================DeleteProgram========================================================================
 			
 			public void DeleteClick() {
@@ -164,10 +227,18 @@ public WebDriver driver;
 			}
 			
 			public boolean DeleteNo() {
-				return driver.findElement(DeleteNo).isDisplayed();
+				
+				 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(DeleteNo));
+				 return element.isDisplayed();
+				
 				}
 			public  boolean Deletemessage() {
-			return driver.findElement(Deletemessage).isDisplayed();
+				
+				 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Deletemessage));
+				 return element.isDisplayed();
+			
 	            }
 			public void DeleteYesClick() {
 				 driver.findElement( DeleteYes).click();
@@ -177,7 +248,100 @@ public WebDriver driver;
 				}
 			public void DeletePopupClose() {
 				 driver.findElement(DeletePopupClose).click();
-				}	
+				}
+			
+			//====================================Pagination========================================================
+			
+			public void Nextpageclick() 
+			    {
+				 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(nextpagesingle));
+				  element.click();
+				}
+			
+			public boolean Nextpagelinkisenabled() 
+			  {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(nextpagesingle));
+				 return element.isEnabled();
+				}
+			
+			public void lastpageclick()
+			{
+				
+				 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(lastpagedouble));
+				  element.click();
+				
+			}
+			
+			public void firstpageclick()
+			   {
+				
+				 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(firstpagesingle));
+				  element.click();
+				
+				}
+			public void startpageclick() 
+			     {
+				
+				  WebElement element = driver.findElement(startpagedouble);
+				  Actions actions = new Actions(driver);
+				  actions.moveToElement(element).click().perform();
+				
+				}
+			
+			public boolean Previouspagelinkisenabled() 
+			  {
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable( firstpagesingle));
+				 return element.isEnabled();
+				
+				}
+			
+			//====================================================Multiple delete=========================================	
+			
+			public void Multipledelsingleclick() {
+				 driver.findElement(Multipledelsingle).click();
+				}
+			
+			public boolean ToprowDeleteisenabled() {
+				 return driver.findElement(ToprowDelete).isEnabled();
+				}
+			public void ToprowDeleteClick() {
+				 driver.findElement(ToprowDelete).click();
+				}
+			
+			public String Multipledelpopupmessage() {
+				
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Multipledelpopupmessage));
+				 return element.getText();
+				}
+			public void TopDelCheckboxclick() {
+				 driver.findElement(TopDelCheckboxclick).click();
+				}
+			
+			//===============================================Navigation===========================================
+			
+
+		       public void Clickmodulelink(String module) {
+					
+					 switch(module) {
+					case "Program" :  
+						 driver.findElement(Program).click();
+					 case "Batch"	: 
+						 driver.findElement(Batch).click();
+					case "User"	: 
+						 driver.findElement(User).click();
+					 case "Logout" :				 
+						 driver.findElement(Logout).click();
+					 }
+		}
+	
+			
+			
 
 			
 			
