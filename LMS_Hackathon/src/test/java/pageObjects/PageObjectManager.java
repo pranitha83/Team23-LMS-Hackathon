@@ -2,7 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-
 public class PageObjectManager {
 
 	public LoginPage loginpage;
@@ -13,34 +12,25 @@ public class PageObjectManager {
 	public ProgramPage programpage;
 	public DashboardPage dashboardpage;
 	public BatchPage batchpage;
+	public UserModule usermodule;
 
-	
-	
 	public PageObjectManager(WebDriver driver) {
-		
-		this.driver=driver;
-		
-	}
-	 
-//	public LoginPage getLoginpage() {
-//		
-//		 loginpage=new LoginPage(driver);
-//		 return  loginpage;
-//	}
-	
 
-	
+		this.driver = driver;
+
+	}
+
 	public LoginPage getloginpage() {
-		if (loginpage==null)
-		{
-			loginpage=new LoginPage(driver);
+		if (loginpage == null) {
+			loginpage = new LoginPage(driver);
 		}
 		return loginpage;
 	}
+
 	public ProgramPage getprogrampage() {
-		
-		 programpage=new ProgramPage(driver);
-		 return   programpage;
+
+		programpage = new ProgramPage(driver);
+		return programpage;
 	}
 
 
@@ -68,13 +58,19 @@ public class PageObjectManager {
 
 
 	public BatchPage getbatchpage() {
-		batchpage=new BatchPage(driver);
-		return   batchpage;
+		batchpage = new BatchPage(driver);
+		return batchpage;
 	}
 
 	public DashboardPage getdashboardpage() {
-		dashboardpage=new DashboardPage(driver);
+		dashboardpage = new DashboardPage(driver);
 		return dashboardpage;
+	}
+
+
+	public UserModule getUserpage() {
+		usermodule = new UserModule(driver);
+		return usermodule;
 	}
 
 
