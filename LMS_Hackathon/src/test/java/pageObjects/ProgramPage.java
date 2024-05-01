@@ -61,6 +61,27 @@ Alert alert;
 		By firstpagesingle =By.cssSelector("span[class='p-paginator-icon pi pi-angle-left']");
 		By lastpagedouble =By.cssSelector("span[class='p-paginator-icon pi pi-angle-double-right']");
 		By startpagedouble =By.xpath("//*[@class='p-paginator-icon pi pi-angle-double-left']");
+	
+		 //Multiple Delete
+		  
+		  By Multipledelsingle = By.xpath("//app-program[@class='ng-star-inserted']/div/mat-card/mat-card-content/p-table/div/div[1]/table/tbody/tr[1]/td[1]/p-tablecheckbox/div/div[2]");
+		  By ToprowDelete = By.xpath("/html/body/app-root/app-program/div/mat-card/mat-card-title/div[2]/div[1]/button/span[1]");
+		  By Multipledelpopupmessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-19']");
+		  By TopDelCheckboxclick = By.xpath("//div[@class='p-checkbox-box']");
+		  
+		  //Navigation
+		  By Program = By.id("program");
+		  By Batch = By.id("batch");
+		  By User = By.id("user");
+		  By Logout = By.id("logout");
+		  
+		  //Sorting
+		  By Programnamesort = By.xpath("//*[@class='p-datatable-thead']/tr/th[2]/p-sorticon/i");
+		  By ProgramDescsort = By.xpath("//*[@class='p-datatable-thead']/tr/th[3]/p-sorticon/i");
+		  By Programstatussort = By.xpath("//*[@class='p-datatable-thead']/tr/th[4]/p-sorticon/i");
+		  By programnamesortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[2]");
+		  By programDescsortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[3]");
+		  By programstatussortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[4]");
 		
 	//===================================AddProgram=====================================================
 	public void NewProgram() {
@@ -279,7 +300,46 @@ Alert alert;
 				
 				}
 			
+			//====================================================Multiple delete=========================================	
 			
+			public void Multipledelsingleclick() {
+				 driver.findElement(Multipledelsingle).click();
+				}
+			
+			public boolean ToprowDeleteisenabled() {
+				 return driver.findElement(ToprowDelete).isEnabled();
+				}
+			public void ToprowDeleteClick() {
+				 driver.findElement(ToprowDelete).click();
+				}
+			
+			public String Multipledelpopupmessage() {
+				
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(Multipledelpopupmessage));
+				 return element.getText();
+				}
+			public void TopDelCheckboxclick() {
+				 driver.findElement(TopDelCheckboxclick).click();
+				}
+			
+			//===============================================Navigation===========================================
+			
+
+		       public void Clickmodulelink(String module) {
+					
+					 switch(module) {
+					case "Program" :  
+						 driver.findElement(Program).click();
+					 case "Batch"	: 
+						 driver.findElement(Batch).click();
+					case "User"	: 
+						 driver.findElement(User).click();
+					 case "Logout" :				 
+						 driver.findElement(Logout).click();
+					 }
+		}
+	
 			
 			
 
