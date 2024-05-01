@@ -10,6 +10,10 @@ public class PageObjectManager {
 	public UserStaffPage userStaffpage;
 	public UserSortPage userSortpage;
 	public WebDriver driver;
+	public ProgramPage programpage;
+	public DashboardPage dashboardpage;
+	public BatchPage batchpage;
+
 	
 	
 	public PageObjectManager(WebDriver driver) {
@@ -33,6 +37,12 @@ public class PageObjectManager {
 		}
 		return loginpage;
 	}
+	public ProgramPage getprogrampage() {
+		
+		 programpage=new ProgramPage(driver);
+		 return   programpage;
+	}
+
 
 	public UserStudentPage getUserStudentpage() {
 		if (userStudentpage==null)
@@ -54,6 +64,17 @@ public class PageObjectManager {
 			userSortpage=new UserSortPage(driver);
 		}
 		return userSortpage;
+	}
+
+
+	public BatchPage getbatchpage() {
+		batchpage=new BatchPage(driver);
+		return   batchpage;
+	}
+
+	public DashboardPage getdashboardpage() {
+		dashboardpage=new DashboardPage(driver);
+		return dashboardpage;
 	}
 
 
