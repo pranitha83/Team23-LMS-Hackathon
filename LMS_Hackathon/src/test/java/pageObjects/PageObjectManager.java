@@ -16,6 +16,7 @@ public class PageObjectManager {
 	public AddUser usermodule;
 	public EditUser edituser;
 	public DeleteUser deleteuser;
+	public DeleteMultiUsers dltmultiuser;
 
 	public UserModule usermodule;
 
@@ -85,6 +86,11 @@ public class PageObjectManager {
 	public DeleteUser getDeleteUser() {
 		deleteuser = new DeleteUser(driver);
 		return deleteuser;
+	}
+	
+	public DeleteMultiUsers getDeleteMultiUsers() {
+		dltmultiuser = new DeleteMultiUsers(driver);
+		return dltmultiuser;
 	}
 
 
