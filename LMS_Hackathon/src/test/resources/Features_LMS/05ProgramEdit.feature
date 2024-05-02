@@ -1,5 +1,5 @@
 #AuthorVinothini
-@ProgramEdit
+@Program
 Feature: Edit New Program
 
   Background: Admin is on dashboard page after Login and clicks Program on the navigation bar

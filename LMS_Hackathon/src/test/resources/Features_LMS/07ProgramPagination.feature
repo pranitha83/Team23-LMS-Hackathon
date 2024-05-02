@@ -1,12 +1,12 @@
 #AuthorVinothini
-@Programpagination
+@Program
 Feature: Program Pagination
 
   Background: Admin is on Manage Program Page after logged in
     Given Admin is in Home Page
     When Admin gives the correct LMS portal URL
     When Admin enter valid credentials  and clicks login button
-    Given Admin is on Manage Program Page 
+    Given Admin is on Manage Program Page
 
   #Pagination
   Scenario: Verify Next page link

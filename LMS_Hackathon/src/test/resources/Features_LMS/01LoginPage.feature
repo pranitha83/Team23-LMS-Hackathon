@@ -66,3 +66,13 @@ Feature: LoginPage Validation
     Given Admin launch the browser
     When Admin gives the correct LMS portal URL
     Then Admin should see * symbol next to password text
+
+  Scenario: Verify input descriptive test in user field
+    Given Admin launch the browser
+    When Admin gives the correct LMS portal URL
+    Then Admin should see user in gray color
+
+  Scenario: Verify input descriptive test in password field
+    Given Admin launch the browser
+    When Admin gives the correct LMS portal URL
+    Then Admin should see password in gray color
