@@ -43,7 +43,7 @@ public class DeleteUser_SD {
 	@When("Admin clicks the delete icon of the user from the given {string} and rownumber {int}")
 	public void admin_clicks_the_delete_icon_of_the_user_from_the_given_and_rownumber(String SheetName, Integer RowNum)
 			throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		deleteuser.getUserFrmExcel(fName);
 	}
@@ -53,15 +53,15 @@ public class DeleteUser_SD {
 		deleteuser.clickYesOptn();
 	}
 
-	@Then("Admin gets a message {string} alert")
-	public void admin_gets_a_message_alert(String msg) throws InterruptedException {
+	@Then("Admin gets a message {string} alert on userpage")
+	public void admin_gets_a_message_alert_on_userpage(String msg) throws InterruptedException {
 		Assert.assertEquals(deleteuser.verifySucssDelMsg(msg), true);
 	}
 
 	@Then("Admin do not see the user from the given {string} and rownumber {int}")
 	public void admin_do_not_see_the_user_from_the_given_and_rownumber(String SheetName, Integer RowNum)
 			throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String lName = testData.get(RowNum).get("LastName");
 		Assert.assertEquals(deleteuser.chkUsrAftrDeletn(fName, lName), true);
@@ -77,8 +77,8 @@ public class DeleteUser_SD {
 		deleteuser.clickNoOptn();
 	}
 
-	@Then("Admin can see the deletion alert disappears without deleting")
-	public void admin_can_see_the_deletion_alert_disappears_without_deleting() throws InterruptedException {
+	@Then("Admin can see the deletion alert disappears without deleting the user")
+	public void admin_can_see_the_deletion_alert_disappears_without_deleting_the_user() throws InterruptedException {
 		Assert.assertEquals(deleteuser.isAlertBoxDisappear(), true);
 	}
 
@@ -87,8 +87,8 @@ public class DeleteUser_SD {
 		deleteuser.clickClseBtn();
 	}
 
-	@Then("Admin can see the deletion alert disappears without any changes")
-	public void admin_can_see_the_deletion_alert_disappears_without_any_changes() throws InterruptedException {
+	@Then("Admin can see the deletion alert disappears without any changes in the user")
+	public void admin_can_see_the_deletion_alert_disappears_without_any_changes_in_the_user() throws InterruptedException {
 		Assert.assertEquals(deleteuser.isAlertBoxDisappear(), true);
 	}
 

@@ -51,8 +51,8 @@ public class Login_SD {
 
 	@When("Admin gives the invalid LMS portal URL")
 	public void admin_gives_the_invalid_lms_portal_url() throws Throwable {
-		setupdriver.openPage(PropertyFileReader.getGlobalValue("InvalidUrl"));
-
+		//setupdriver.openPage(PropertyFileReader.getGlobalValue("InvalidUrl"));
+loginpage.verifyLinks(PropertyFileReader.getGlobalValue("InvalidUrl"));
 		
 
 	}
@@ -273,19 +273,34 @@ List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcel
 
 
 		@Then("Admin should land on dashboard page")
-		public void admin_should_land_on_dashboard_page() {
-			Assert.assertEquals("https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/", SetupDriver.url());
+		public void admin_should_land_on_dashboard_page() throws Throwable {
+			Assert.assertEquals(PropertyFileReader.getGlobalValue("dashboardurl"), SetupDriver.url());
 			
 		}
 		
 		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through keyboard")
-		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_keyboard(String string, Integer int1) {
-		   
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_keyboard(String string, Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+
+			List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+			
+			String userName = Data.get(int1).get("username");
+			String passWord = Data.get(int1).get("password");
+
+			
+			loginpage.enterUserNPassword(userName, passWord);
+			loginpage.keyboardEnter();
 		}
 
 		@When("Admin enter valid credentials fromgiven sheetname {string} and rowNumber {int} and clicks login button through mouse")
-		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_mouse(String string, Integer int1) {
-		    
+		public void admin_enter_valid_credentials_fromgiven_sheetname_and_row_number_and_clicks_login_button_through_mouse(String string, Integer int1) throws InvalidFormatException, IOException, InterruptedException {
+List<Map<String, String>> Data = excelreader.getData(PropertyFileReader.getexcelfilepath(), "Login");
+			
+			String userName = Data.get(int1).get("username");
+			String passWord = Data.get(int1).get("password");
+
+			
+			loginpage.enterUserNPassword(userName, passWord);
+			loginpage.mouseActionsClick();
 		}
 	
 }

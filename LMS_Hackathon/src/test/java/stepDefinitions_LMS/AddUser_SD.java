@@ -26,7 +26,7 @@ public class AddUser_SD {
 
 	public AddUser_SD(TestContextSetup context) {
 		this.context = context;
-		usermodule = context.getpageobjectmanager().getUserpage();
+		usermodule = context.getpageobjectmanager().getAddUserpage();
 		excelreader = context.getexcelreader();
 		driver = SetupDriver.Driver();
 	}
@@ -38,7 +38,7 @@ public class AddUser_SD {
 	}
 
 	@When("Admin clicks + A New User button")
-	public void admin_clicks_a_new_user_button() {
+	public void admin_clicks_a_new_user_button() throws InterruptedException {
 		usermodule.clickAddUser();
 	}
 
@@ -52,8 +52,8 @@ public class AddUser_SD {
 		Assert.assertEquals(usermodule.isTextBoxesDisplayed(), true);
 	}
 
-	@Then("Admin should see drop downs for the fields User Role, Role status, Visa status")
-	public void admin_should_see_drop_downs_for_the_fields_user_role_role_status_visa_status() {
+	@Then("Admin should see drop downs in userform for the fields User Role, Role status, Visa status")
+	public void admin_should_see_drop_downs_in_userform_for_the_fields_user_role_role_status_visa_status() {
 		Assert.assertEquals(usermodule.isDropdownsDisplayed(), true);
 	}
 
@@ -65,7 +65,7 @@ public class AddUser_SD {
 	@When("Admin fills mandatory fields in the form from the given sheetname {string} and rownumber {int}")
 	public void admin_fills_mandatory_fields_in_the_form_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws IOException, InvalidFormatException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String mName = testData.get(RowNum).get("MiddleName");
 		String lName = testData.get(RowNum).get("LastName");
@@ -100,7 +100,7 @@ public class AddUser_SD {
 	@When("Admin fills optional fields in the form from the given sheetname {string} and rownumber {int}")
 	public void admin_fills_optional_fields_in_the_form_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws IOException, InvalidFormatException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String mName = testData.get(RowNum).get("MiddleName");
 		String linkdUrl = testData.get(RowNum).get("LinkedUrl");
 		String emailadress = testData.get(RowNum).get("Email");
@@ -122,7 +122,7 @@ public class AddUser_SD {
 	@When("Admin fills invalid data in all of the fields from the given sheetname {string} and rownumber {int}")
 	public void admin_fills_invalid_data_in_all_of_the_fields_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws IOException, InvalidFormatException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String mName = testData.get(RowNum).get("MiddleName");
 		String lName = testData.get(RowNum).get("LastName");
@@ -159,8 +159,8 @@ public class AddUser_SD {
 		usermodule.clickCancel();
 	}
 
-	@Then("User Details popup window should be closed without saving")
-	public void user_details_popup_window_should_be_closed_without_saving() throws InterruptedException {
+	@Then("User Details popup window should be closed without saving details")
+	public void user_details_popup_window_should_be_closed_without_saving_details() throws InterruptedException {
 		Assert.assertEquals(usermodule.verifyPopUpWindowClosed(), true);
 	}
 
@@ -172,7 +172,7 @@ public class AddUser_SD {
 	@When("Fill in all the fields with valid datas from the given sheetname {string} and rownumber {int}")
 	public void fill_in_all_the_fields_with_valid_datas_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws IOException, InvalidFormatException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String mName = testData.get(RowNum).get("MiddleName");
 		String lName = testData.get(RowNum).get("LastName");
@@ -197,7 +197,7 @@ public class AddUser_SD {
 	@Then("The newly added user from the excel with sheetname {string} and rownumber {int} should be present in the User page")
 	public void the_newly_added_user_from_the_excel_with_sheetname_and_rownumber_should_be_present_in_the_user_page(
 			String SheetName, Integer RowNum) throws InterruptedException, InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		Assert.assertEquals(usermodule.verifyUserCreated(fName), true);
 	}

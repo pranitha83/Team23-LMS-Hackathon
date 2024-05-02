@@ -42,7 +42,7 @@ public class EditUser_SD {
 	@When("Update the user that created from the given sheetname {string} and rownumber {int}")
 	public void update_the_user_that_created_from_the_given_sheetname_and_rownumber_and_click_submit(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		edituser.getDataFrmExcel(fName);
 		edituser.updateFields();
@@ -57,7 +57,7 @@ public class EditUser_SD {
 	@When("Update the user from the given sheetname {string} and rownumber {int} with invalid values")
 	public void update_the_user_from_the_given_sheetname_and_rownumber_with_invalid_values(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		edituser.getDataFrmExcel(fName);
 		edituser.updateFieldsWithInvalidValues();
@@ -71,7 +71,7 @@ public class EditUser_SD {
 	@When("Update the mandatory fields of the user from the given sheetname {string} and rownumber {int}")
 	public void update_the_mandatory_fields_of_the_user_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		edituser.getDataFrmExcel(fName);
 		edituser.updateMandFields();
@@ -90,7 +90,7 @@ public class EditUser_SD {
 	@Then("Admin can see the updated values of user from the given sheetname {string} and rownumber {int}")
 	public void admin_can_see_the_updated_values_of_user_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String lName = testData.get(RowNum).get("LastName");
 		// String fullname = fName+" "+"Mony";
@@ -100,7 +100,7 @@ public class EditUser_SD {
 	@When("Update the optional fields of the user from the given sheetname {string} and rownumber {int}")
 	public void update_the_optional_fields_of_the_user_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		edituser.getDataFrmExcel(fName);
 		edituser.updateOptinalFields();
@@ -109,7 +109,7 @@ public class EditUser_SD {
 	@When("Admin gives only numbers or special char in the text fields of the user from given sheetname {string} and rownumber {int}")
 	public void admin_gives_only_numbers_or_special_char_in_the_text_fields_of_the_user_from_given_sheetname_and_rownumber(
 			String SheetName, Integer RowNum) throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		edituser.getDataFrmExcel(fName);
 		edituser.updateWithNumAndChars();
@@ -118,7 +118,7 @@ public class EditUser_SD {
 	@When("Admin clicks edit button of the user from the given sheetname {string} and rownumber {int}")
 	public void admin_clicks_edit_button_of_the_user_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String lName = testData.get(RowNum).get("LastName");
 		edituser.getDataFrmExcel(fName);
@@ -139,7 +139,7 @@ public class EditUser_SD {
 	@Then("User can see nothing changed for User from the given sheetname {string} and rownumber {int}")
 	public void user_can_see_nothing_changed_for_user_from_the_given_sheetname_and_rownumber(String SheetName,
 			Integer RowNum) throws InvalidFormatException, IOException, InterruptedException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String lName = testData.get(RowNum).get("LastName");
 		String locatn = testData.get(RowNum).get("Location");

@@ -70,8 +70,8 @@ public void admin_should_see_two_radio_button_for_status() {
 }
 
 
-@Then("Admin gets a Error message alert")
-public void admin_gets_a_error_message_alert() throws InterruptedException {
+@Then("Admin gets a Error message alert for assign staff")
+public void admin_gets_a_error_message_alert_for_assign_staff() throws InterruptedException {
 	usp.save();
 	usp.emptyFormErrorMessage1();
 	usp.noEmailId();
