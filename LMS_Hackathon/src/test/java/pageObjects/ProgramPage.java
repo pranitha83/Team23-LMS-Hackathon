@@ -1,6 +1,8 @@
 package pageObjects;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -20,6 +22,7 @@ public class ProgramPage {
 public WebDriver driver;
 Alert alert;
 	
+
  public ProgramPage(WebDriver driver) 
 	{
 		this.driver=driver;
@@ -82,6 +85,8 @@ Alert alert;
 		  By programnamesortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[2]");
 		  By programDescsortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[3]");
 		  By programstatussortgettext =  By.xpath("//*[@class='p-datatable-tbody']/tr/td[4]");
+		  
+		  
 		
 	//===================================AddProgram=====================================================
 	public void NewProgram() {
@@ -338,11 +343,53 @@ Alert alert;
 					 case "Logout" :				 
 						 driver.findElement(Logout).click();
 					 }
-		}
+		        }
 	
+		     //============================================Sorting=========================================================
+		       
+				
+		       public void Programnamesort() {
+					 driver.findElement(Programnamesort).click();
+					}
 			
-			
+		       public void ProgramDescsort() {
+					 driver.findElement(ProgramDescsort).click();
+					}
+		       public void Programstatussort() {
+					 driver.findElement(TopDelCheckboxclick).click();
+					}
+		       
+		       public List<String> programnamesortgettext() {
+		         
+		    	   //Capature all the webelements in the list
+		    	List<WebElement> elementlist = driver.findElements(programnamesortgettext);
+		    	
+		    	 //Capature the webelements(text) in to original list
+		    	List<String> originallist = elementlist.stream().map(s->s.getText()).collect(Collectors.toList());
+		    	
+		    	 //Sort of the original list from 3
+		    	List<String> Sortedlist = originallist.stream().sorted().collect(Collectors.toList());
+		    	
+		    	 //Compare original list to sorted list
+		         Assert.assertFalse(originallist.equals(Sortedlist));
+				
+		         return Sortedlist;
+				 }
+	      
+		       
+		       public List<String> programDescsortgettext() {
 
-			
-			
-}
+			    	   List<WebElement> elementlist = driver.findElements(programDescsortgettext);
+			    	
+			    List<String> originallist = elementlist.stream().map(s->s.getText()).collect(Collectors.toList());
+			    	
+			 List<String> Sortedlist = originallist.stream().sorted().collect(Collectors.toList());
+			    	
+			         Assert.assertFalse(originallist.equals(Sortedlist));
+			         
+			         return Sortedlist;
+			       
+		       }
+		      
+		       
+		}

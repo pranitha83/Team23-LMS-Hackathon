@@ -2,7 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-
 public class PageObjectManager {
 
 	public LoginPage loginpage;
@@ -14,33 +13,31 @@ public class PageObjectManager {
 	public DashboardPage dashboardpage;
 	public BatchPage batchpage;
 
-	
-	
-	public PageObjectManager(WebDriver driver) {
-		
-		this.driver=driver;
-		
-	}
-	 
-//	public LoginPage getLoginpage() {
-//		
-//		 loginpage=new LoginPage(driver);
-//		 return  loginpage;
-//	}
-	
+	public AddUser addUsermodule;
+	public EditUser edituser;
+	public DeleteUser deleteuser;
+	public DeleteMultiUsers dltmultiuser;
 
 	
+
+
+	public PageObjectManager(WebDriver driver) {
+
+		this.driver = driver;
+
+	}
+
 	public LoginPage getloginpage() {
-		if (loginpage==null)
-		{
-			loginpage=new LoginPage(driver);
+		if (loginpage == null) {
+			loginpage = new LoginPage(driver);
 		}
 		return loginpage;
 	}
+
 	public ProgramPage getprogrampage() {
-		
-		 programpage=new ProgramPage(driver);
-		 return   programpage;
+
+		programpage = new ProgramPage(driver);
+		return programpage;
 	}
 
 
@@ -68,14 +65,35 @@ public class PageObjectManager {
 
 
 	public BatchPage getbatchpage() {
-		batchpage=new BatchPage(driver);
-		return   batchpage;
+		batchpage = new BatchPage(driver);
+		return batchpage;
 	}
 
 	public DashboardPage getdashboardpage() {
-		dashboardpage=new DashboardPage(driver);
+		dashboardpage = new DashboardPage(driver);
 		return dashboardpage;
 	}
+	public AddUser getAddUserpage() {
+		addUsermodule=new AddUser(driver);
+		return addUsermodule;
+	}
+	
+	public EditUser getEditUserPage() {
+		edituser = new EditUser(driver);
+		return edituser;
+	}
+	
+	public DeleteUser getDeleteUser() {
+		deleteuser = new DeleteUser(driver);
+		return deleteuser;
+	}
+	
+	public DeleteMultiUsers getDeleteMultiUsers() {
+		dltmultiuser = new DeleteMultiUsers(driver);
+		return dltmultiuser;
+	}
 
+
+	
 
 }

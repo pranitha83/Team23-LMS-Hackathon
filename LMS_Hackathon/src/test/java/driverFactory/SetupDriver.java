@@ -22,6 +22,7 @@ public class SetupDriver {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.setAcceptInsecureCerts(false);
+		options.addArguments("--headless");
 		try {
 			br =  PropertyFileReader.getbrowser();
 		} catch (Throwable e) {
@@ -40,7 +41,7 @@ public class SetupDriver {
 		
 		//driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		return driver;
 
