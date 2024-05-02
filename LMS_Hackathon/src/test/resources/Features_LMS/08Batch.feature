@@ -42,7 +42,7 @@ Feature: Batch page Validation
 
    Scenario:  Validating User link on navigation bar
      When Admin clicks on User link on Manage Batch page
-     Then Admin is re-directed to User page
+     Then Admin is redirected to userpage
 
   Scenario:  Validating Logout link on navigation bar
     When Admin clicks on logout link on Manage Batch page

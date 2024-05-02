@@ -91,8 +91,8 @@ import utilities.TestContextSetup;
 		
 		}
 		
-		@Then("Admin gets a Error message alert")
-		public void admin_gets_a_error_message_alert() {
+		@Then("Admin gets a Error message alert popup")
+		public void admin_gets_a_error_message_alert_popup() {
 			
 			String ProNameRequired=programpage.ProNameRequired();
 			LoggerLoad.info("ProNameRequired :"  + ProNameRequired);

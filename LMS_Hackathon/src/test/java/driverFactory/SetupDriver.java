@@ -22,6 +22,7 @@ public class SetupDriver {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.setAcceptInsecureCerts(false);
+		options.addArguments("--headless");
 		try {
 			br =  PropertyFileReader.getbrowser();
 		} catch (Throwable e) {

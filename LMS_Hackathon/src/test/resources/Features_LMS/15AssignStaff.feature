@@ -8,7 +8,7 @@ Feature: User Assign Staff Page
  		When  Admin gives the correct LMS portal URL
     And   Admin enter valid credentials  and clicks login button
     Then Admin should land on dashboard page
-    Then  Admin clicks User button
+    Then  Admin clicks User button on dashboard
   
     
   Scenario: Validate Assign Staff Popup window
