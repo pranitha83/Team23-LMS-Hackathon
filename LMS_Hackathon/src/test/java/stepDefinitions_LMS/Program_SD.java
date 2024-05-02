@@ -25,7 +25,8 @@ import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
-  public class Program_SD {
+
+public class Program_SD {
 	
 	 TestContextSetup context;
 	 SetupDriver setupdriver;
@@ -34,7 +35,6 @@ import utilities.TestContextSetup;
       Excel_Reader excelreader;
       Alert alert;
 	
-      
  public Program_SD(TestContextSetup context) {
 			
 		this.context=context;
@@ -70,9 +70,6 @@ import utilities.TestContextSetup;
 	public void admin_should_see_two_input_fields_and_their_respective_text_boxes_in_the_program_details_window() throws InterruptedException {
 		Thread.sleep(3000);
 		Assert.assertTrue(programpage.proNamedisplay());
-
-		Thread.sleep(3000);
-
 		Assert.assertTrue(programpage.proDesdisplay());
 		
 	}
@@ -226,8 +223,8 @@ import utilities.TestContextSetup;
 	    
 		//Validate Cancel button on Program Details form
 		
-		@Then("Admin clicks Cancel button on program popup")
-		public void admin_clicks_cancel_button_on_program_popup() throws InterruptedException {
+		@Then("Admin clicks <Cancel>button")
+		public void admin_clicks_cancel_button() throws InterruptedException {
 			Thread.sleep(2000);
 		   programpage.CancelbuttonClick();
 		}
@@ -264,22 +261,11 @@ import utilities.TestContextSetup;
 	          
 		//Edit Program Name 
 		
-		@When("Admin edits the Name column in given sheetname {string} and rowNumber {int} and then click Save button")
-		public void admin_edits_the_name_column_in_given_sheetname_and_row_number_and_then_click_save_button(String string, Integer int1) throws InvalidFormatException, IOException {
-			LoggerLoad.info("Editing Program Name and getting values from excel reader");
-			
-			programpage.ProNameclear();
-			
-			List<Map<String, String>> programData=excelreader.getData(PropertyFileReader.getexcelfilepath(), "ProgramModule");
-			System.out.println(programData);
-			
-			String programname = programData.get(int1).get("programName");
-			String programdesc = programData.get(int1).get("programDescription");
-			
-			programpage.EnterProNameandDesc(programname, programdesc);
-	    
+		@When("Admin edits the Name column and clicks save button")
+		public void admin_edits_the_name_column_and_clicks_save_button() {
+		    programpage.ProNameclear();
+		    programpage.ProNameupdate();
 		    programpage.Savebuttonclick();
-			
 		}
 
 		@Then("Admin gets a message {string} alert and able to see the updated name in the table for the particular program")
@@ -288,24 +274,15 @@ import utilities.TestContextSetup;
 			 programpage.AlertProgramUpdate();
 		    
 		}
+	           //Edit Program description 
 		
-		           //Edit Program description 
-		
-		@When("Admin edits the Description column in given sheetname {string} and rowNumber {int} and then click Save button")
-		public void admin_edits_the_description_column_in_given_sheetname_and_row_number_and_then_click_save_button(String string, Integer int1) throws InvalidFormatException, IOException {
-			LoggerLoad.info("Editing Program Descrption and getting value from the excel reader");
-			
-			programpage.ProDescclear();
-			 
-			 List<Map<String, String>> programData=excelreader.getData(PropertyFileReader.getexcelfilepath(), "ProgramModule");
-				System.out.println(programData);
-				
-				String programname = programData.get(int1).get("programName");
-				String programdesc = programData.get(int1).get("programDescription");
-				
-				programpage.EnterProNameandDesc(programname, programdesc);
-			   
+		@When("Admin edits the Description column and clicks save button")
+		public void admin_edits_the_description_column_and_clicks_save_button() throws InterruptedException {
+			Thread.sleep(2000);
+			    programpage.ProDescclear();
+			    programpage.ProDescupdate();
 			    programpage.Savebuttonclick();
+		    
 		}
 
 		@Then("Admin gets a message {string} alert and able to see the updated description in the table for the particular program")
@@ -406,8 +383,8 @@ import utilities.TestContextSetup;
 	    programpage.DeleteNoClick();
 	}
 
-	@Then("Admin can see the deletion alert disappears without deleting in program")
-	public void admin_can_see_the_deletion_alert_disappears_without_deleting_in_program() {
+	@Then("Admin can see the deletion alert disappears without deleting")
+	public void admin_can_see_the_deletion_alert_disappears_without_deleting() {
 		
 		String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
 		LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
@@ -421,8 +398,8 @@ import utilities.TestContextSetup;
 	    programpage.DeletePopupClose();
   }
 
-	@Then("Admin can see the deletion alert disappears without any changes in program")
-	public void admin_can_see_the_deletion_alert_disappears_without_any_changes_in_programe() {
+	@Then("Admin can see the deletion alert disappears without any changes")
+	public void admin_can_see_the_deletion_alert_disappears_without_any_changes() {
 	    
 		String CapturingfooterentryAfterCliclnochange = programpage.Capturingfooterentry();
 		LoggerLoad.info("CapturingfooterentryAfterCliclnochange:"  + CapturingfooterentryAfterCliclnochange);
@@ -513,214 +490,6 @@ import utilities.TestContextSetup;
 			LoggerLoad.info("Program Pagination Completed");
 		}
 
-		//===========================================Multiple Delete==================================================
+
 		
-		// Validate Common Delete button enabled after clicking on any checkbox
-		
-		@When("Admin clicks any checkbox in the data table")
-		public void admin_clicks_any_checkbox_in_the_data_table() {
-			LoggerLoad.info("Program Multiple Delete Started");
-		    programpage.Multipledelsingleclick();
-		}
-
-		@Then("Admin should see common delete option enabled under header Manage Program")
-		public void admin_should_see_common_delete_option_enabled_under_header_manage_program() {
-			Assert.assertTrue(programpage.ToprowDeleteisenabled());
-		}
-	     
-		//Validate multiple program deletion by selecting Single checkbox 
-		
-		@Given("Admin clicks delete button under header after selecting the check box in the data table")
-		public void admin_clicks_delete_button_under_header_after_selecting_the_check_box_in_the_data_table() {
-			 programpage.Multipledelsingleclick();
-			 programpage.ToprowDeleteClick();
-		}
-
-		@When("Admin is on Confirm Deletion alert")
-		public void admin_is_on_confirm_deletion_alert() throws InterruptedException {
-			
-			//String Multipledelpopupmessage = programpage.Multipledelpopupmessage();
-			//System.out.println("Multipledelpopupmessage :"  +  Multipledelpopupmessage); 
-		    
-		}
-
-		@When("Admin clicks program deletion YES button on the alert")
-		public void admin_clicks_program_deletion_yes_button_on_the_alert() {
-			programpage.DeleteYesClick();
-		}
-		
-		@Then("Admin should land on Manage Program page and can see the selected program is deleted from the data table")
-		public void admin_should_land_on_manage_program_page_and_can_see_the_selected_program_is_deleted_from_the_data_table() {
-			
-			String CapturingfooterentryAfterDeleteYes = programpage.Capturingfooterentry();
-			LoggerLoad.info("CapturingfooterentryAfterDeleteYes :"  + CapturingfooterentryAfterDeleteYes);
-		}
-
-		  @When("Admin clicks program deletion NO button on the alert")
-		public void admin_clicks_program_deletion_no_button_on_the_alert() {
-		    programpage.DeleteNoClick();
-		}
-	   
-	   @Then("Admin should land on Manage Program page and can see the selected program is not deleted from the data table")
-	   public void admin_should_land_on_manage_program_page_and_can_see_the_selected_program_is_not_deleted_from_the_data_table() {
-	       
-		   String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
-		   LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
-	   }
-	       
-	   // Validate multiple program deletion by selecting multiple check boxes
-	   
-	     @Given("Admin clicks delete button under header after selecting multiple checkboxes in the data table")
-		public void admin_clicks_delete_button_under_header_after_selecting_multiple_checkboxes_in_the_data_table() {
-		              programpage.TopDelCheckboxclick();
-		              programpage.ToprowDeleteClick();
-		}
-	     
-	     @Then("Admin should land on Manage Program page and can see the selected programs are deleted from the data table")
-	     public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_deleted_from_the_data_table() {
-	    	
-	    	 String CapturingfooterentryAfterDeleteYes = programpage.Capturingfooterentry();
-	    	 LoggerLoad.info("CapturingfooterentryAfterDeleteYes :"  + CapturingfooterentryAfterDeleteYes);
-	     }
-
-	     @Then("Admin should land on Manage Program page and can see the selected programs are not deleted from the data table")
-	     public void admin_should_land_on_manage_program_page_and_can_see_the_selected_programs_are_not_deleted_from_the_data_table() {
-	    	
-	    	 String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
-	    	 LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
-	    	 LoggerLoad.info("Program Multiple Delete Completed");
-	     }
-
-	    // ==============================================Navigation====================================================
-	     
-	     //Batch link on navigation bar
-	     
-	     @When("Admin clicks on Batch link on Manage Program page")
-	     public void admin_clicks_on_batch_link_on_manage_program_page() {
-	    	 LoggerLoad.info("Program Navigation Started");
-	    	 programpage.Clickmodulelink("Batch");
-	     }
-
-	     @Then("Admin is re-directed to Batch page")
-	     public void admin_is_re_directed_to_batch_page() {
-	    	
-	    	 LoggerLoad.info("Admin is on the Batch Page ");
-	     }
-	     //User link on navigation bar
-	     
-	     @When("Admin clicks on User link on Manage Program page")
-	     public void admin_clicks_on_user_link_on_manage_program_page() {
-	    	
-	    	 programpage.Clickmodulelink("User");
-	     }
-
-	     @Then("Admin is re-directed to User page")
-	     public void admin_is_re_directed_to_user_page() {
-	    	 
-	    	 LoggerLoad.info("Admin is on the User Page ");
-	     }
-	       
-	     // Logout link on navigation bar 
-	     
-	     @When("Admin clicks on Logout link on Manage Program page")
-	     public void admin_clicks_on_logout_link_on_manage_program_page() {
-	    	 
-	    	 programpage.Clickmodulelink("Logout");
-	     }
-
-	     @Then("Admin is re-directed to Login page")
-	     public void admin_is_re_directed_to_login_page() {
-	    	 
-	    	 LoggerLoad.info("Admin is on the Login Page ");
-	    	 LoggerLoad.info("Program Navigation Completed");
-	     }
-	     
-	     
-	   //=============================================Sorting==============================================================
-	     
-	     @When("Admin clicks the sort icon of program name column")
-	     public void admin_clicks_the_sort_icon_of_program_name_column() {
-	    	 LoggerLoad.info("Program Sorting Started");
-	    	    programpage.Programnamesort();
-	    	
-	      }
-	    @Then("The data get sorted on the table based on the program name column values in ascending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_ascending_order() {
-	    	LoggerLoad.info("Program Sorting using program name ascending order");
-	     programpage.programnamesortgettext();
-	     LoggerLoad.info("SortedProgramNameAscendingList:"  +programpage.programnamesortgettext());
-	    	}
-
-	     @Given("The data is in the ascending order on the table based on Program Name column")
-	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_name_column() throws InterruptedException {
-	    	
-	    	 programpage.Programnamesort();
-	    	 Thread.sleep(2000);
-	    	 programpage.Programnamesort();
-	    	 Thread.sleep(2000);
-	    	 programpage.Programnamesort();
-	     }
-
-	     @Then("The data get sorted on the table based on the program name column values in descending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_descending_order() {
-	    	 LoggerLoad.info("Program Sorting using program name Descending order");
-	    	 programpage.programnamesortgettext();
-	    	 LoggerLoad.info("SortedProgramNameDecendingList:"  +programpage.programnamesortgettext());
-	    	 
-	     }
-
-	     @When("Admin clicks the sort icon of program Desc column")
-	     public void admin_clicks_the_sort_icon_of_program_desc_column() {
-	    	 
-	    	 programpage.ProgramDescsort();
-	     }
-
-	     @Then("The data get sorted on the table based on the program description column values in ascending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_ascending_order() {
-	    	 LoggerLoad.info("Program Sorting using program Desc ascending order");
-	    	 programpage.programDescsortgettext();
-	    	 LoggerLoad.info("SortedProgramDescAscendingList:"  +programpage.programDescsortgettext());
-	     }
-
-	     @Given("The data is in the ascending order on the table based on Program Description column")
-	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_description_column() throws InterruptedException {
-	    	 
-	    	 programpage.ProgramDescsort();
-	    	 Thread.sleep(2000);
-	    	 programpage.ProgramDescsort();
-	    	 Thread.sleep(2000);
-	    	 programpage.ProgramDescsort();
-	     }
-
-	     @Then("The data get sorted on the table based on the program description column values in descending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_descending_order() {
-	    	 LoggerLoad.info("Program Sorting using program Decp Descending order");
-	    	 programpage.programDescsortgettext();
-	    	 LoggerLoad.info("SortedProgramDescDecendingList:"  +programpage.programDescsortgettext());
-	     }
-
-	     @When("Admin clicks the sort icon of program Status column")
-	     public void admin_clicks_the_sort_icon_of_program_status_column() {
-	         
-	    	 programpage.Programstatussort();
-	     }
-
-	     @Then("The data get sorted on the table based on the program status column values in ascending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_ascending_order() {
-	         
-	     }
-
-	     @Given("The data is in the ascending order on the table based on Program Status column")
-	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_status_column() throws InterruptedException {
-	    	 programpage.Programstatussort();
-	    	 Thread.sleep(2000);
-	    	 programpage.Programstatussort();
-	     }
-
-	     @Then("The data get sorted on the table based on the program status column values in descending order")
-	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_descending_order() {
-	        
-	    	 LoggerLoad.info("Program Sorting Completed");
-	     }
-
 }

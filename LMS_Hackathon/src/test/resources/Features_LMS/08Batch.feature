@@ -34,3 +34,16 @@ Feature: Batch page Validation
   Scenario: Validate pop up for adding batch
     When Admin clicks A New Batch button
     Then A new pop up with Batch details appears
+
+   @navigationToDifferentPages
+  Scenario:  Validating program link on navigation bar
+     When Admin clicks on Program link on Manage Batch page
+     Then Admin is re-directed to Program page
+
+   Scenario:  Validating User link on navigation bar
+     When Admin clicks on User link on Manage Batch page
+     Then Admin is re-directed to User page
+
+  Scenario:  Validating Logout link on navigation bar
+    When Admin clicks on logout link on Manage Batch page
+    Then Admin is re-directed to logout page
