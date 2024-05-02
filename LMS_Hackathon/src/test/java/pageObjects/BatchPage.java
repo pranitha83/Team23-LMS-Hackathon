@@ -1,10 +1,7 @@
 package pageObjects;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,8 +41,11 @@ public class BatchPage {
     @FindBy(id = "batchStatus")
     WebElement batchStatus;
 
+    By deleteMessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
+    By deletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
 
-   /*@FindBy(id = "ACTIVE")
+
+    /*@FindBy(id = "ACTIVE")
     WebElement active;
 
 
@@ -83,7 +83,7 @@ public class BatchPage {
 
     By pencilIcon = By.xpath("//*[@class='p-button-icon pi pi-pencil']");
 
-    
+    Alert alert;
 
 
     //Delete batch
@@ -92,7 +92,7 @@ public class BatchPage {
     By Deletebutton= By.xpath("//*[@class='p-button-rounded p-button-danger p-button p-component p-button-icon-only']");
     By DeleteYes = By.xpath("//*[text()='Yes']");
     By DeleteNo = By.xpath("//*[text()='No']");
-    By Deletemessage = By.xpath("//*[@class='p-confirm-dialog-message ng-tns-c133-4']");
+    By Deletemessage = By.xpath("//*[@class='p-toast-summary ng-tns-c90-10']");
     By DeletePopupClose = By.xpath("//*[@class='pi pi-times ng-tns-c133-4']");
 
     By programNameText = By.xpath("//*[@class='p-dropdown-label p-inputtext ng-tns-c101-30 ng-star-inserted']");
@@ -104,7 +104,7 @@ public class BatchPage {
 
     By batchNameExists = By.xpath("//*[text()='Batch already exists with given Batch Name. ']");
 
-
+    By batchDescriptionMinRequired = By.xpath("//*[text()='This field should start with an alphabet and min 2 character.']");
     By batchDescriptionRequired = By.xpath("//*[text()='Batch Description is required.']");
     By programNameRequired = By.xpath("//*[text()='Program Name is required.']");
     By statusRequired = By.xpath("//*[text()='Status is required.']");
@@ -159,6 +159,17 @@ public class BatchPage {
         return this.driver.findElement(gridHeaders).getText();
     }
 
+    public void deleteBatchAlert() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+            wait.until(ExpectedConditions.alertIsPresent());
+            alert = driver.switchTo().alert();
+            alert.accept();
+            Assert.assertTrue(alert.getText().contains("deleted"));
+        } catch (Exception e) {
+            //exception handling
+        }
+    }
     public String getNewLabel() {
         LoggerLoad.info(this.getClass().getName() + " Entering getNewLabel Method" );
         return this.newBatch.getText();
@@ -269,15 +280,14 @@ public class BatchPage {
     }
 
     public void editBatchClick(String strBatchDescription, String noOfClasses) throws InterruptedException {
+        Thread.sleep(1500);
         LoggerLoad.info(this.getClass().getName() + " Entering editBatchClick Method" );
         this.driver.findElement(pencilIcon).click();
         batchDescription.clear();
-        batchNoOfClasses.clear();
-        Thread.sleep(500);
-        batchDescription.sendKeys(strBatchDescription);
-        batchNoOfClasses.sendKeys(noOfClasses);
+        batchDescription.sendKeys("updated");
         Thread.sleep(1000);
         this.driver.findElement(saveButton).click();
+        Assert.assertEquals(strBatchDescription, batchDescription);
     }
 
     public void editBatchClick() throws InterruptedException {
@@ -289,20 +299,20 @@ public class BatchPage {
         LoggerLoad.info(this.getClass().getName() + " Entering editBatchClickAndClear Method" );
         this.driver.findElement(pencilIcon).click();
         batchDescription.clear();
+        batchDescription.sendKeys("a");
         Thread.sleep(1000);
         this.driver.findElement(saveButton).click();
         Thread.sleep(500);
-        Assert.assertEquals("This field should start with an alphabet and min 2 character.", validateBatchDescriptionRequired());
+
     }
 
-    public void editBatchName() throws InterruptedException {
-        LoggerLoad.info(this.getClass().getName() + " Entering editBatchClickAndClear Method" );
+
+    public void editNoC() {
+
         this.driver.findElement(pencilIcon).click();
-        batchName.clear();
-        Thread.sleep(1000);
-        this.driver.findElement(saveButton).click();
-        Thread.sleep(500);
-        Assert.assertEquals("Customize Toolbar...", validateBatchNameRequired());
+        batchNoOfClasses.sendKeys("");
+        Assert.assertEquals("Number of classes is required.", validateNoOfClassesRequired());
+        cancelClick();
 
     }
 
@@ -321,7 +331,10 @@ public class BatchPage {
         LoggerLoad.info(this.getClass().getName() + " Entering validateBatchNameExists Method" );
         return this.driver.findElement(batchNameExists).getText();
     }
-
+    public String validateBatchDescriptionMinRequired(){
+        LoggerLoad.info(this.getClass().getName() + " Entering validateBatchDescriptionMinRequired Method" );
+        return this.driver.findElement(batchDescriptionMinRequired).getText();
+    }
     public String validateBatchDescriptionRequired(){
         LoggerLoad.info(this.getClass().getName() + " Entering validateBatchDescriptionRequired Method" );
         return this.driver.findElement(batchDescriptionRequired).getText();

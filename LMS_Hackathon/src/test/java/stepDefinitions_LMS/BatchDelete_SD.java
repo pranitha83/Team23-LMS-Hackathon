@@ -47,17 +47,12 @@ public class BatchDelete_SD {
 
     @When("You click yes option")
     public void you_click_yes_option() {
-
-
         batchpage.DeleteYesClick();
-
-        //programpage.AlertProgramUpdate();
-        
     }
 
     @Then("Batch deleted alert pops and batch is no more available in data table")
     public void batch_deleted_alert_pops_and_batch_is_no_more_available_in_data_table() {
-        
+       batchpage.deleteBatchAlert();
         
     }
 

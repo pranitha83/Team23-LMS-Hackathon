@@ -26,15 +26,15 @@ Feature:EditBatch
 
   Scenario: Check if the update throws error with invalid values
     When Update the fields with invalid values and click save
-    Then Error message should appear
+    Then Error message should appear edit
 
   Scenario: Check if you get error message when mandatory fields are erased
-    When Erase data from mandatory field
-    Then Error message should appear
+    When Erase data from mandatory field noc
+    Then Error message should appear edit field
 
   Scenario: Check if description field is optional in update
     When Erase data from mandatory field
-    Then The updated batch details should appear on the data table
+    Then Error message should appear edit
 
 
 
