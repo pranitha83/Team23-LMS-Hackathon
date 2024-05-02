@@ -70,7 +70,9 @@ import utilities.TestContextSetup;
 	public void admin_should_see_two_input_fields_and_their_respective_text_boxes_in_the_program_details_window() throws InterruptedException {
 		Thread.sleep(3000);
 		Assert.assertTrue(programpage.proNamedisplay());
+
 		Thread.sleep(3000);
+
 		Assert.assertTrue(programpage.proDesdisplay());
 		
 	}
@@ -224,8 +226,8 @@ import utilities.TestContextSetup;
 	    
 		//Validate Cancel button on Program Details form
 		
-		@Then("Admin clicks <Cancel>button")
-		public void admin_clicks_cancel_button() throws InterruptedException {
+		@Then("Admin clicks Cancel button on program popup")
+		public void admin_clicks_cancel_button_on_program_popup() throws InterruptedException {
 			Thread.sleep(2000);
 		   programpage.CancelbuttonClick();
 		}
@@ -404,8 +406,8 @@ import utilities.TestContextSetup;
 	    programpage.DeleteNoClick();
 	}
 
-	@Then("Admin can see the deletion alert disappears without deleting")
-	public void admin_can_see_the_deletion_alert_disappears_without_deleting() {
+	@Then("Admin can see the deletion alert disappears without deleting in program")
+	public void admin_can_see_the_deletion_alert_disappears_without_deleting_in_program() {
 		
 		String CapturingfooterentryAfterDeleteNo = programpage.Capturingfooterentry();
 		LoggerLoad.info("CapturingfooterentryAfterDeleteNo :"  + CapturingfooterentryAfterDeleteNo);
@@ -419,8 +421,8 @@ import utilities.TestContextSetup;
 	    programpage.DeletePopupClose();
   }
 
-	@Then("Admin can see the deletion alert disappears without any changes")
-	public void admin_can_see_the_deletion_alert_disappears_without_any_changes() {
+	@Then("Admin can see the deletion alert disappears without any changes in program")
+	public void admin_can_see_the_deletion_alert_disappears_without_any_changes_in_programe() {
 	    
 		String CapturingfooterentryAfterCliclnochange = programpage.Capturingfooterentry();
 		LoggerLoad.info("CapturingfooterentryAfterCliclnochange:"  + CapturingfooterentryAfterCliclnochange);

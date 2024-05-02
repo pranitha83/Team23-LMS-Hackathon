@@ -1,3 +1,4 @@
+@User
 Feature: Add new User
 
   Background: Admin is on dashboard page after Login and clicks User on the navigation bar
@@ -12,7 +13,7 @@ Feature: Add new User
     Then Admin should see text boxes for the fields
 
   Scenario: Validate drop downs in new user form
-    Then Admin should see drop downs for the fields User Role, Role status, Visa status
+    Then Admin should see drop downs in userform for the fields User Role, Role status, Visa status
 
   #bug
   Scenario Outline: Check if user is created when only mandatory fields are entered with valid data
@@ -48,7 +49,7 @@ Feature: Add new User
 
   Scenario: Validate Cancel/Close(X) icon on User Details form
     When Admin clicks Cancel Icon on User Details form
-    Then User Details popup window should be closed without saving
+    Then User Details popup window should be closed without saving details
 
   Scenario: Validate Cancel button on User Details form
     When Admin clicks Cancel Icon on User Details form
@@ -63,3 +64,4 @@ Feature: Add new User
       | SheetName | RowNum |
       | AddUser   |      3 |
       | AddUser   |      4 |
+      | AddUser   |      5 |

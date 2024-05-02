@@ -12,11 +12,8 @@ public class TestContextSetup  {
 	private SetupDriver setupdriver;
 	private PageObjectManager pageobjectmanager; 
 
-	private UserStudentPage assignStaffpage;
-	private UserStaffPage userStaffpage;
-	private UserSortPage userSortpage;
-
-	private GenericUtils genericutils;
+	
+	
     private Excel_Reader excelreader;
     
 	public TestContextSetup()
@@ -24,7 +21,7 @@ public class TestContextSetup  {
 		setupdriver = new SetupDriver();
 		pageobjectmanager = new PageObjectManager(SetupDriver.Driver());
 		excelreader = new Excel_Reader();
-		 
+		
 	}
 	
 	public SetupDriver getsetupdriver() {

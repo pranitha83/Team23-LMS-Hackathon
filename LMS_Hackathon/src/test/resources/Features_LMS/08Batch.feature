@@ -1,8 +1,6 @@
 #Author: Rekha Thulasiram
-
-
 @batch
-Feature:  Batch page Validation
+Feature: Batch page Validation
 
   Background: Admin is on dashboard page after Login
     Given Admin is in Home Page
@@ -27,10 +25,10 @@ Feature:  Batch page Validation
   Scenario: Validate A New batch in Batch Page
     Then Admin should be able to see the A New batch button
 
-  Scenario:Validate data rows
+  Scenario: Validate data rows
     Then Each row in the data table should have a checkbox
 
-  Scenario:Validate data rows
+  Scenario: Validate data rows
     Then Each row in the data table should have a edit icon that is enabled
 
   Scenario: Validate pop up for adding batch

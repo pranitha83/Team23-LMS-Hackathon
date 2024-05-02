@@ -1,15 +1,17 @@
 #AuthorVinothini
-@Programpagination
+
+@Program
+
+
 Feature: Program Pagination Navigation Sorting MultipleDelete
+
 
   Background: Admin is on Manage Program Page after logged in
     Given Admin is in Home Page
     When Admin gives the correct LMS portal URL
     When Admin enter valid credentials  and clicks login button
     Given Admin is on Manage Program Page
-  
-    
- #Pagination
+
   Scenario: Verify Next page link
     When Admin clicks Next page link on the program table
     Then Admin should see the Pagination has "Next" active link

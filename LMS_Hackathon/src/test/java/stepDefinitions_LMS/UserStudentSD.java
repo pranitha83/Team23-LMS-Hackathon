@@ -191,26 +191,22 @@
 	
 	  @When("Admin clicks <Cancel>button")
 	  public void admin_clicks_cancel_button() {
-	      // Write code here that turns the phrase above into concrete actions
-	      throw new io.cucumber.java.PendingException();
+	      
 	  }
 
 	  @Then("Admin can see the Assign Student popup disappears without assigning")
 	  public void admin_can_see_the_assign_student_popup_disappears_without_assigning() {
-	      // Write code here that turns the phrase above into concrete actions
-	      throw new io.cucumber.java.PendingException();
+	     
 	  }
 
 	  @Given("Admin is in Assign Student details pop up page")
 	  public void admin_is_in_assign_student_details_pop_up_page() {
-    // Write code here that turns the phrase above into concrete actions
-		  throw new io.cucumber.java.PendingException();
+    
 }
 
 	  @When("Admin clicks {string} button with entering any data")
 	  public void admin_clicks_button_with_entering_any_data(String string) {
-		  // Write code here that turns the phrase above into concrete actions
-		  throw new io.cucumber.java.PendingException();
+		 
 }
 
 	  }

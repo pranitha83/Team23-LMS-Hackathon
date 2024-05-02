@@ -13,12 +13,12 @@ public class PageObjectManager {
 	public DashboardPage dashboardpage;
 	public BatchPage batchpage;
 
-	public AddUser usermodule;
+	public AddUser addUsermodule;
 	public EditUser edituser;
 	public DeleteUser deleteuser;
 	public DeleteMultiUsers dltmultiuser;
 
-	public UserModule usermodule;
+	
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -73,9 +73,9 @@ public class PageObjectManager {
 		dashboardpage = new DashboardPage(driver);
 		return dashboardpage;
 	}
-	public AddUser getUserpage() {
-		usermodule=new AddUser(driver);
-		return usermodule;
+	public AddUser getAddUserpage() {
+		addUsermodule=new AddUser(driver);
+		return addUsermodule;
 	}
 	
 	public EditUser getEditUserPage() {
@@ -94,10 +94,6 @@ public class PageObjectManager {
 	}
 
 
-	public UserModule getUserpage() {
-		usermodule = new UserModule(driver);
-		return usermodule;
-	}
-
+	
 
 }

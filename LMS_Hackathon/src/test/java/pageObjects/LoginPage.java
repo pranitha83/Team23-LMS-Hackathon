@@ -12,9 +12,11 @@ import org.junit.Assert;
 import org.languagetool.JLanguageTool;
 import org.languagetool.language.AmericanEnglish;
 import org.languagetool.rules.RuleMatch;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +25,7 @@ import org.openqa.selenium.support.PageFactory;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
+import utilities.GenericUtils;
 import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 
@@ -109,7 +112,7 @@ public class LoginPage {
 			httpURLconnection.setConnectTimeout(5000);
 			httpURLconnection.connect();
 			if (httpURLconnection.getResponseCode() >= 400) {
-				System.out.println(linkUrl + "--" + httpURLconnection.getResponseMessage() + "is a broken link");
+				System.out.println(linkUrl + "--" + httpURLconnection.getResponseMessage());
 			} else {
 				System.out.println(linkUrl + "--" + httpURLconnection.getResponseMessage());
 			}
@@ -328,35 +331,6 @@ public class LoginPage {
 
 	}
 
-//public Color convertRGBAToColor(int red, int green, int blue, float alpha) {
-//    // Ensure that RGB values are within the valid range (0 to 255)
-//    red = Math.min(255, Math.max(0, red));
-//    green = Math.min(255, Math.max(0, green));
-//    blue = Math.min(255, Math.max(0, blue));
-//
-//    // Create a Color object with the specified RGB values and alpha value
-//    return new Color(red, green, blue, alpha);
-//}
-
-//public  Color parseCssColor(String cssColor) {
-//    // Parse CSS color string (e.g., "rgba(0, 0, 0, 0.54)")
-//    String[] components = cssColor.replace("rgba(", "").replace(")", "").split(",");
-//    int red = Integer.parseInt(components[0].trim());
-//    int green = Integer.parseInt(components[1].trim());
-//    int blue = Integer.parseInt(components[2].trim());
-//    float alpha = Float.parseFloat(components[3].trim());
-//
-//    // Convert RGBA values to Color object
-//    return convertRGBAToColor(red, green, blue, alpha);
-//    
-//    
-//}
-//public void colorConverter() {
-//	ColorConverter converter = new ColorConverter();
-//    String textColor = "rgba(0, 0, 0, 0.54)"; // Example CSS color value
-//    Color color = converter.parseCssColor(textColor);
-//    System.out.println("Color object: " + color);
-//}
 
 	public void checkPasswordTxtClr() {
 		String textColor = passwordText.getCssValue("color");
@@ -382,5 +356,38 @@ public class LoginPage {
 
 		return userError.getText();
 	}
-
+//public void loginClkWithKeyboardActions() throws InterruptedException {
+//	 
+//	GenericUtils.keyboardEnter(loginButton);
+//	Thread.sleep(2000);
+//	
+//}
+//public void loginClkWithMouseActions() throws InterruptedException {
+//	 
+//	GenericUtils.mouseActionsClick(loginButton);
+//	Thread.sleep(2000);
+//}
+	
+	
+	public  void keyboardEnter() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		actions.click(loginButton).sendKeys(Keys.ENTER).perform();
+		 Thread.sleep(2000);
+		 try {
+	            Thread.sleep(2000); // Wait for 2 seconds
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	}
+	
+	public  void mouseActionsClick() throws InterruptedException {
+		Actions actions = new Actions(driver);
+		 actions.moveToElement(loginButton).click().perform();
+		 Thread.sleep(2000);
+		 try {
+	            Thread.sleep(2000); // Wait for 2 seconds
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	}
 }

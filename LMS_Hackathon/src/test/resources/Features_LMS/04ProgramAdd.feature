@@ -56,5 +56,5 @@ Feature: Add New Program
       | ProgramPage |     0 |
 
   Scenario: Validate Cancel button on Program Details form
-    Then Admin clicks <Cancel>button
+    Then Admin clicks Cancel button on program popup
     And Admin can see the Program details popup disappears without creating any program

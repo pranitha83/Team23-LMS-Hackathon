@@ -60,11 +60,13 @@ public class AddUser {
 		driver.findElement(user).click();
 	}
 
-	public void clickAddUser() {
+	public void clickAddUser() throws InterruptedException {
 		driver.findElement(addNewUser).click();
+		Thread.sleep(2000);
 	}
 
 	public boolean verifyPopupWindowWithUsrDetails() {
+		boolean flag = true;
 		String[] expctdText = { "First name", "Middle name", "Last name", "Location", "Phone no", "LinkedIn Url",
 				"User Role", "Select Role", "User Role Status", "Select Role Status", "User Visa Status",
 				"Select Visa Status", " ", "Under Graduate", "Post Graduate", "Time Zone", "User Comments", "Cancel",
@@ -73,10 +75,11 @@ public class AddUser {
 		for (int i = 0; i < expctdText.length; i++) {
 
 			if (!elements.contains(expctdText[i]) || !driver.findElement(popUpWindow).isDisplayed()) {
-				return false;
+				
+				flag=false;
 			}
 		}
-		return true;
+		return flag;
 	}
 
 	public boolean isTextBoxesDisplayed() throws InterruptedException {
