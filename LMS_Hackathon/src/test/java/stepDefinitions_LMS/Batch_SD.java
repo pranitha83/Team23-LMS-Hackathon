@@ -124,8 +124,8 @@ public void admin_clicks_on_user_link_on_manage_batch_page() {
 batchpage.navigateToUser();
 }
 
-@Then("Admin is re-directed to User page")
-public void admin_is_re_directed_to_user_page() {
+@Then("Admin is redirected to userpage")
+public void Admin_is_redirected_to_userpage() {
 
 }
 

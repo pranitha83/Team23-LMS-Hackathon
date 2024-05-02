@@ -21,7 +21,7 @@ Feature: Add New Program
 
   Scenario: Empty form submission
     Then Admin clicks <Save>button without entering any data
-    And Admin gets a Error message alert
+    And Admin gets a Error message alert popup
 
   Scenario: Enter only Program Name
     Then Admin enters only<Program Name> in text box and clicks Save button

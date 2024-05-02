@@ -4,9 +4,7 @@ import driverFactory.SetupDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageObjects.UserSortPage;
 import pageObjects.UserStaffPage;
-import pageObjects.UserStudentPage;
 import utilities.Excel_Reader;
 import utilities.TestContextSetup;
 
