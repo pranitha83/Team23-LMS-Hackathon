@@ -29,7 +29,16 @@
 		  	public void admin_clicks_user_button() throws InterruptedException {
 		  		Thread.sleep(3000);
 		  	    usp.userClick();
+		  	    
 		  	}  
+		  	@Given("Admin is in manage user page")
+		  	public void admin_is_in_manage_user_page() {
+		  	   
+		  	}
+		  	@When("Admin clicks Assign student button")
+		  	public void admin_clicks_assign_student_button() {
+		  		usp.assignStudent();
+		  	}
 		  	  @Then("Admin should see a pop up open for assign student details with empty form along with Save and Cancel button and close \\(X) icon on the top right corner of the window")
 			  public void admin_should_see_a_pop_up_open_for_assign_student_details_with_empty_form_along_with_save_and_cancel_button_and_close_x_icon_on_the_top_right_corner_of_the_window() throws InterruptedException {
 			     usp.formValidation();
@@ -60,11 +69,11 @@
 		  	 	System.out.println("Diplayed");
 		  	}
 
-		  	@When("Admin clicks Assign Student button")
-		  	public void admin_clicks_assign_student_button() {
-		  		usp.assignStudent();
-		  	 
-		  	}
+//		  	@When("Admin clicks Assign Student button")
+//		  	public void admin_clicks_assign_student_button() {
+//		  		usp.assignStudent();
+//		  	 
+//		  	}
 
 		  	@Then("Admin should see a pop up open for assign student details")
 		  	public void admin_should_see_a_pop_up_open_for_assign_student_details() throws InterruptedException {
@@ -191,7 +200,7 @@
 
 
 		
-		  @When("Admin clicks <Cancel>button")
+		  @When("Admin clicks Cancel button")
 		  public void admin_clicks_cancel_button() throws InterruptedException {
 		     usp.cancel();
 		     }

@@ -27,8 +27,8 @@ public class UserStaffSD {
   	  		
   	  	    }
 
-  	  	@When("Admin clicks User button")
-  	  	public void admin_clicks_user_button() throws InterruptedException {
+  	  	@When("Admin clicks User button on dashboard")
+  	  	public void admin_clicks_user_button_on_dashboard() throws InterruptedException {
   	  	 	
   	  		Thread.sleep(3000);
   	  	    usp.userClick();
