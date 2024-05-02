@@ -13,12 +13,12 @@ Feature: User Page
   @1
   Scenario: Validate Assign Student Popup window
     Given Admin is in manage user page
-    When Admin clicks User button
+    When Admin clicks Assign student button
     Then Admin should see a pop up open for assign student details with empty form along with Save and Cancel button and close (X) icon on the top right corner of the window
 
   Scenario: Validate input fields and their text boxes in Assign Student form
     Given Admin is in manage user page
-    When Admin clicks Assign Student button
+    When Admin clicks Assign student button
     Then Admin should see User Role as R03,and other fields Student Email id,Program Name,Batch Name and Status with respective input boxes.
 
   @3
