@@ -29,11 +29,57 @@ Feature: User Assign Staff Page
 		Scenario:  Validate radio button in Assign Staff Form
 		Given Admin is in manage user page 
 		When Admin clicks "Assign Staff" button
-	  Then Admin should see two radio button for Status
+	  Then Admin should see two radio button for Status 
 	
 	Scenario:Empty Form Submission
 	Given Admin is in manage user page 
-	When Admin clicks "Assign Staff" button
-	Then Admin gets a Error message alert 
+	When Admin clicks "Assign Staff" button 
+	Then Admin gets a Error message alert for staff 
+	
+	Scenario:Validate the Assign Staff form page without giving Student Email id
+	Given Admin is in Assign Staff details pop up page 
+	When Admin clicks "Save" button without entering Student Email id for staff 
+	Then Admin gets a Error message alert as "Student Email id is required" for staff
+	
+	Scenario:Validate the Assign Staff form page without giving Skill
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks "Save" button without entering Skill
+	Then Admin gets a Error messages alert as "Skill is required" for staff
+	
+	Scenario:Validate the Assign Staff form page without selecting Program
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks "Save" button without selecting program for staff
+	Then Admin gets a Error messaged alert as "Program is required" for staff	
+
+	Scenario:Validate the Assign Staff form page without selecting batch
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks "Save" button without selecting batch for staff
+	Then Admin gets a Error messageq alert as "Batch is required" for staff
+		#doing
+	Scenario:Validate the Assign Staff form page without giving Status
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks "Save" button without giving status for staff
+	Then Admin gets a Error messagew alert as "Status is required"
+	
+	Scenario:Validate Cancel/Close(X) icon on Assign Staff form
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks Cancel/Close(X) Icon on Assign Staff form
+	Then Assign Staff popup window should be closed without saving
+	
+	Scenario:Validate Save button on Assign Staff form
+	Given Admin is in Assign Staff details pop up page
+	When Enter all the required fields with valid values and click Save button for staff
+	Then Admin gets a messager "Successfully Staff Assigned" alert 
+	
+	Scenario:Validate Cancel button on Assign Staff form
+	Given Admin is in Assign Staff details pop up page
+	When Admin clicks <Cancel>button for staff
+	Then Admin can see the Assign Staff popup disappears without assigning for staff 
+	
+	
+	
+	
+	
+	
 	
 	

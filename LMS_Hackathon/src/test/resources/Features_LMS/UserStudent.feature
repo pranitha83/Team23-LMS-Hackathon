@@ -22,13 +22,13 @@ Feature: User Page
     @3 
 	Scenario: Validate Dropdown in Assign Student Form
  	  Given Admin is in manage user page
-    When Admin see Assign Student Email Id (no need i guess)
+    When Admin see Assign Student Email Id for Student
   Then Admin should see drop down boxes with valid datas for Student Email id,Program Name and Batch Name
     @4
  Scenario: Validate radio button in Assign Student Form
    Given Admin is in manage user page
  		When Admin clicks Assign Student Program Name
-  	Then Admin should see two radio button for Status
+  	Then Admin should see two radio button for Status for student
  
   @5
   Scenario: Empty Form Submission
@@ -46,7 +46,7 @@ Feature: User Page
    Scenario: Validate the Assign Student form page without selecting Program
   Given Admin is in Assign Student details pop up page
     When Admin clicks "Save" button without selecting program
-    Then Admin gets a Error message alert as "Program is required"
+    Then Admin gets a Error message alert as "Program is required" for student program
    
    @8
    Scenario: Validate the Assign Student form page without selecting batch
@@ -57,11 +57,11 @@ Feature: User Page
    Scenario: Validate the Assign Student form page without giving Status 9
    Given Admin is in Assign Student details pop up page
     When Admin clicks "Save" button without giving status
-    Then Admin gets a Error message alert as "Status is required"
+    Then Admin gets a Error message alert as "Status is required" for student status
   @10 
    Scenario: Validate Cancel/Close(X) icon on Assign Student form 10
    Given Admin is in Assign Student details pop up page
-   # When Admin clicks Cancel/Close(X) Icon on Assign Student form
+   When Admin clicks Cancel/Close(X) Icon on Assign Student form
     Then Assign Student popup window should be closed without saving
    
   @11

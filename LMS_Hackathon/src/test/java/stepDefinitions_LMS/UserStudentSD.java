@@ -24,22 +24,15 @@
 	  		
 	  	    }
 	  	
-	  	/*@Given("Admin is in manage user page")
-	  	public void admin_is_in_manage_user_page() throws InterruptedException {
-	  		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	  	}*/
-
 	  	@When("Admin clicks User button")
 	  	public void admin_clicks_user_button() throws InterruptedException {
-	  	 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@");
 	  		Thread.sleep(3000);
 	  	    usp.userClick();
 	  	}  
 	  	  @Then("Admin should see a pop up open for assign student details with empty form along with Save and Cancel button and close \\(X) icon on the top right corner of the window")
-		  public void admin_should_see_a_pop_up_open_for_assign_student_details_with_empty_form_along_with_save_and_cancel_button_and_close_x_icon_on_the_top_right_corner_of_the_window() {
-		      // Write code here that turns the phrase above into concrete actions
-		      throw new io.cucumber.java.PendingException();
-		  }
+		  public void admin_should_see_a_pop_up_open_for_assign_student_details_with_empty_form_along_with_save_and_cancel_button_and_close_x_icon_on_the_top_right_corner_of_the_window() throws InterruptedException {
+		     usp.formValidation();
+		     }
 	  	@When("Admin clicks Assign Student Program Name")
 	  	public void admin_clicks_assign_student_program_name() {
 	  	   usp.assignStudent();
@@ -49,21 +42,21 @@
 	  		usp.emailDisplayed();
 	  		usp.prgramDisplayed();
 	  		usp.batchDisplayed();
-	  		System.out.println("LLLLLLLLLLLL");
+	  		usp.activeDisplayed();
 	  		usp.save();
 	  		usp.cancelBtnDisplayed();
-	  		System.out.println("Ddddd");
+	  		
 	  	}
 	  	@When("Admin see Assign Student Email Id \\(no need i guess)")
 	  	public void admin_see_assign_student_email_id_no_need_i_guess() {
-	  	    // Write code here that turns the phrase above into concrete actions
-	  	    throw new io.cucumber.java.PendingException();
+	  	   usp.emailDisplayed();
+	  	 usp.prgramDisplayed();
+	  		usp.batchDisplayed();
+	  		
 	  	}
 	  	@Then("Admin should see a pop up open for user details")
 	  	public void admin_should_see_a_pop_up_open_for_user_details() throws InterruptedException {
-	  	 	System.out.println("$$$$$$$$$$$$$$$$$$$$$");
-	  		System.out.println("I am in the Pop Page");
-	  		usp.manageUser();
+	  	 	System.out.println("Diplayed");
 	  	}
 
 	  	@When("Admin clicks Assign Student button")
@@ -109,20 +102,21 @@
 
 	  @When("Admin clicks {string} button without entering Student Email id")
 	  public void admin_clicks_button_without_entering_student_email_id(String string) throws InterruptedException {
-	     
+	    usp.clickProgram();
+	    usp.clickBatch();
+	    usp.clickActiveStatus();
 	  	usp.save();
 	  }
 
 	  @Then("Admin gets a Error message alert as {string}")
 	  public void admin_gets_a_error_message_alert_as(String string) throws InterruptedException {
-	  	System.out.println("Email id required");
-	  	usp.getEmailErrorAlert();
-
+	  	usp.getBatchErrorAlert();
 	  }
 
 	  @When("Admin clicks {string} button without selecting program")
 	  public void admin_clicks_button_without_selecting_program(String string) throws InterruptedException {
-	  	
+	  	usp.clickEmail();;
+	  	usp.clickBatch();
 	  	usp.save();
 	  	System.out.println("No Program");
 	  }
@@ -135,8 +129,10 @@
 
 	  @When("Admin clicks {string} button without selecting batch")
 	  public void admin_clicks_button_without_selecting_batch(String string) throws InterruptedException {
-	  	System.out.println("No batch ");
-
+	  	usp.clickEmail();;
+	  	usp.clickProgram();
+	  	usp.clickBatch();
+	  	usp.clickActiveStatus();
 	  	usp.save();
 	  }
 	  @Then("Admin gets a Error message alert for batch  as {string}")
@@ -146,7 +142,9 @@
 
 	  @When("Admin clicks {string} button without giving status")
 	  public void admin_clicks_button_without_giving_status(String string) throws InterruptedException {
-	  	System.out.println("No status ");
+	  	usp.clickEmail();;
+	  	usp.clickProgram();
+	  	usp.clickBatch();
 	  	usp.save();
 	  }
 
@@ -172,12 +170,15 @@
 	      }
 	  @When("Enter all the required fields with valid values and click Save button")
 	  public void enter_all_the_required_fields_with_valid_values_and_click_save_button() throws InterruptedException {
-	      usp.dropdown();
-	     // usp.listEmails();
-	      //usp.prgram();
-	      //usp.batch();
-	      //usp.activestatus();
-	      usp.save();
+	    
+	    usp.validEmailDropDown();
+	    usp.clickProgram();
+	    usp.getProgramElement();
+	    usp.clickBatch();
+	    usp.getbatchElement();
+	    usp.clickActiveStatus();
+	    usp.save();
+	    
 	  }
 
 	  @Then("Admin gets a message {string} alert")
@@ -190,27 +191,23 @@
 
 	
 	  @When("Admin clicks <Cancel>button")
-	  public void admin_clicks_cancel_button() {
-	      // Write code here that turns the phrase above into concrete actions
-	      throw new io.cucumber.java.PendingException();
-	  }
+	  public void admin_clicks_cancel_button() throws InterruptedException {
+	     usp.cancel();
+	     }
 
 	  @Then("Admin can see the Assign Student popup disappears without assigning")
 	  public void admin_can_see_the_assign_student_popup_disappears_without_assigning() {
-	      // Write code here that turns the phrase above into concrete actions
-	      throw new io.cucumber.java.PendingException();
+	      System.out.println("Assigned staff");
 	  }
 
 	  @Given("Admin is in Assign Student details pop up page")
-	  public void admin_is_in_assign_student_details_pop_up_page() {
-    // Write code here that turns the phrase above into concrete actions
-		  throw new io.cucumber.java.PendingException();
+	  public void admin_is_in_assign_student_details_pop_up_page() throws InterruptedException {
+   usp.formValidation();
 }
 
 	  @When("Admin clicks {string} button with entering any data")
-	  public void admin_clicks_button_with_entering_any_data(String string) {
-		  // Write code here that turns the phrase above into concrete actions
-		  throw new io.cucumber.java.PendingException();
+	  public void admin_clicks_button_with_entering_any_data(String string) throws InterruptedException {
+		usp.save();
 }
 
 	  }

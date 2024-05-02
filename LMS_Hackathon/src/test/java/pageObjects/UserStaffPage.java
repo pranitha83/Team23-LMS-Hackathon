@@ -32,15 +32,19 @@ import org.yaml.snakeyaml.scanner.Constant;
 public class UserStaffPage {
 	
 WebDriver driver;
+@FindBy(xpath="/html/body/app-root/app-user/div/p-dialog[2]/div/div/div[2]/form/div[7]") WebElement statusRequire;
+
+@FindBy(xpath="/html/body/div[2]/div[2]/ul/p-multiselectitem/li/span") WebElement batchSelect;
 @FindBy(xpath="//span[text()='saranya@gmail.com']") WebElement emailElement;
-@FindBy(xpath="//span[text()='Seleniumte84']") WebElement programElement;
+@FindBy(xpath="//span[text()='Java-Program']") WebElement programElement;
+@FindBy(xpath="//span[text()='Python101']") WebElement batchElement;
 @FindBy(xpath ="//p-dropdown[@id='userId']") WebElement emailDropDown;
 @FindBy(xpath ="//button[@label='Assign Staff']") WebElement assignStaff;
 @FindBy(xpath ="//span[@class='ng-tns-c101-10 p-dropdown-label p-inputtext p-placeholder ng-star-inserted']")WebElement getEmailString;
 	@FindBy(xpath ="//input[@id='skillName']") WebElement skillNameText;
 	@FindBy(xpath ="//p-dropdown[@id='programName']") WebElement programDropDown;
 	@FindBy(xpath ="//p-multiselect[@id='batchName']") WebElement batchName;
-	//@FindBy(xpath ="//input[@id='Active']") WebElement activeStatus;
+	@FindBy(xpath ="//input[@name='userStatus']") WebElement activeStatus;
 	//p-radiobutton-box
 	//@FindBy(xpath ="//div[@class='p-radiobutton-box']") WebElement inActiveStatus;
 	@FindBy(xpath ="//div[@class='p-radiobutton-box']") WebElement inActiveStatus;
@@ -49,7 +53,7 @@ WebDriver driver;
 	@FindBy(xpath ="//button[@label='Save']") WebElement save;
 	@FindBy(xpath ="//span[@class='p-dialog-header-close-icon ng-tns-c132-7 pi pi-times']") WebElement close;
 	@FindBy(xpath="//div[@class='ng-trigger ng-trigger-animation ng-tns-c132-7 p-fluid p-dialog p-component p-dialog-draggable p-dialog-resizable ng-star-inserted']") WebElement form;
-	@FindBy(xpath ="//div[contains(@class, 'Program Name is required.')]") WebElement programText;
+	@FindBy(xpath ="//div[text()= ' Program Name is required. ']") WebElement programText;
 	@FindBy(xpath ="//div[contains(@class, 'Batch Name is required.')]") WebElement batchText;
 	//@FindBy(xpath ="//i[@class='p-sortable-column-icon pi pi-fw pi-sort-amount-up-alt']") WebElement sortById;
 	//@FindBy(xpath ="//i[@class='p-sortable-column-icon pi pi-fw pi-sort-amount-up-alt']") WebElement sortById;
@@ -117,7 +121,7 @@ public void getProgramNameText() {
 	
 	String getProgramText=programText.getText();
 	System.out.println(getProgramText);
-	//AssertJUnit.assertEquals("Program Name is required.",getProgramText);
+	Assert.assertEquals("Program Name is required.",getProgramText);
 	}
 public void getBatchNameText() {
 	
@@ -127,6 +131,9 @@ public void getBatchNameText() {
 	}
 public void save() {
 	save.click();
+}
+public void cancel() {
+	cancel.click();
 }
 public boolean cancelBtnDisplayed() {
 	return cancel.isDisplayed();
@@ -148,7 +155,7 @@ public boolean emailDisplayed() {
 	
 }
 public boolean activeDisplayed() {
-	return inActiveStatus.isDisplayed();
+	return activeStatus.isDisplayed();
   
 }
 public boolean inactiveDisplayed() {
@@ -179,57 +186,14 @@ public void validEmailDropDown() throws InterruptedException {
 }
 public void validProgramDropDown() {
 	programDropDown.click();
-	//emailDropDown.click();
-	/* try {
-		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	     wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("input"))); // Change to the CSS selector of dropdown options
-	     System.out.println("@@@@@@@@@@@@@333333333333");
-	     // Get the dropdown options
-	     WebElement dropdownOptionsContainer = driver.findElement(By.tagName("p-dropdown"));
-	     List<WebElement> dropdownOptions = dropdownOptionsContainer.findElements(By.tagName("li"));
-	     int numberOfOptions = dropdownOptions.size();
-	     
-	     // Check if the dropdown has valid data (at least one option)
-	     Assert.assertTrue("Dropdown is empty or does not have valid data.", numberOfOptions > 0);
-	 } catch (Exception e) {
-        // Handle any exceptions
-        e.printStackTrace();
-    }*/
+	
 }
 public void validBatchDropDown() {
 	batchName.click();
-	/*emailDropDown.click();
-	 try {
-		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	     wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("input"))); // Change to the CSS selector of dropdown options
-	     System.out.println("@@@@@@@@@@@@@4444444444444");
-	     // Get the dropdown options
-	     WebElement dropdownOptionsContainer = driver.findElement(By.tagName("p-dropdown"));
-	     List<WebElement> dropdownOptions = dropdownOptionsContainer.findElements(By.tagName("li"));
-	     int numberOfOptions = dropdownOptions.size();
-	     
-	     // Check if the dropdown has valid data (at least one option)
-	     Assert.assertTrue("Dropdown is empty or does not have valid data.", numberOfOptions > 0);
-	 } catch (Exception e) {
-        // Handle any exceptions
-        e.printStackTrace();
-    }
-}*/
+	
 }
 public void emptyFormErrorMessage1() {
-   /* List<WebElement> errorMessages = driver.findElements(By.xpath("//div[@class='ng-star-inserted']"));
-    
-    // Assert that no error messages are displayed
-    Assert.assertTrue("Error messages are displayed", errorMessages.isEmpty());
 
-    for (WebElement errorMessage : errorMessages) {
-        String errorMessageText = errorMessage.getText();
-        if (errorMessageText.contains("Active") || errorMessageText.contains("Inactive")) {
-            continue; // Skip radio button messages
-        }
-        System.out.println("Error Message :" + errorMessageText);
-    }
-}*/
 	List<WebElement> errormsgelements = driver.findElements(By.xpath("//div[@class='ng-star-inserted']"));
 	for(WebElement errormsg : errormsgelements) {
 		String errorMsgText = errormsg.getText();
@@ -246,16 +210,34 @@ public void emptyFormErrorMessage1() {
 }
 	public void noEmailId() throws InterruptedException {
 		Thread.sleep(3000);
-		programDropDown.click();
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		WebElement emailOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//option[text()='Java SpringBoot']")));
 		
-	        emailOption.click();
-		emailOption.click();
+		emailDropDown.click();
+		System.out.println("Select Email Id"+getEmailString.getText());
 }
 	
 	public void getPrgramName() {
+		programDropDown.click();
 		programElement.click();
 	}
+	public void getBatchName() {
+		batchName.click();
+		batchElement.click();
+		System.out.println("Batch Element"+batchElement.getText());
+	}
+	public void getSkillText() {
+		skillNameText.sendKeys("IT");
+	}
+	public void getBatchSelect() {
+		batchSelect.getText();
+		System.out.println("BatchSelect" +batchSelect.getText());
+	}
+	public void clickActiveStatus() {
+	//	activeStatus.click();
+		//System.out.println("BatchSelect" +batchSelect.getText());
+	}
+	public void getStatusRequire() {
+		//statusRequire.getText();
+	}
+	
 	
 }

@@ -20,7 +20,9 @@ import org.openqa.selenium.By;
 
 	public class UserStudentPage {
 		//WebDriver driver;
-		@FindBy(xpath = "//*[@id='userId']") WebElement SelectEmail;
+		@FindBy(xpath = "//span[text()='Seleniumte89']") WebElement programElement;
+		@FindBy(xpath = "//span[text()='QAWarriors4']]") WebElement batchElement;
+		@FindBy(xpath = "//span[@class='ng-tns-c101-13 p-dropdown-label p-inputtext p-placeholder ng-star-inserted']") WebElement SelectEmail;
 		@FindBy(xpath = "//*[@id='programName']") WebElement programName;
 		@FindBy(xpath = "//*[@id='batchName']") WebElement batchName;
 		 @FindBy(xpath = "/html/body/app-root/app-user/div/p-dialog[3]/div/div/div[1]/div/button/span") 
@@ -45,8 +47,6 @@ import org.openqa.selenium.By;
 		@FindBy(xpath = "/html/body/app-root/app-user/div/p-dialog[3]/div/div/div[2]/form/div[3]/div") WebElement textErrorProgram;
 		@FindBy(xpath = "/html/body/app-root/app-user/div/p-dialog[3]/div/div/div[2]/form/div[4]/div") WebElement textErrorBatch;
 		@FindBy(xpath = "/html/body/app-root/app-user/div/p-dialog[3]/div/div/div[2]/form/div[6]") WebElement textErrorStatus;
-		//@FindBy(xpath ="//span[@class='p-dropdown-trigger-icon ng-tns-c101-12 pi pi-chevron-down']") WebElement dropDown;
-		//@FindBy(className = "p-dropdown-trigger-icon.ng-tns-c101-10.pi.pi-chevron-down") WebElement dropdown;
 		@FindBy(css = ".p-dropdown-trigger-icon.ng-tns-c101-14.pi.pi-chevron-down") WebElement newDropDown;
 		@FindBy(xpath = "//ul[@role='listbox']") List<WebElement> listEmail;
 		@FindBy(xpath = "//input[@class='p-dropdown-filter p-inputtext p-component ng-tns-c101-15") WebElement sendEmail;
@@ -55,16 +55,8 @@ import org.openqa.selenium.By;
 		@FindBy(xpath = "/html/body/div/div/ul/p-dropdownitem[3]/li") WebElement selectProgram;
 		
 		@FindBy(xpath ="//*[@id='userId']/div/div[3]/div[1]/div/input") WebElement ssss;
-		@FindBy(xpath="/html/body/app-root/app-user/div/p-dialog[3]/div/div/div[2]/form") WebElement form;
-		///html/body/app-root/app-user/div/p-dialog[3]/div/div/div[2]/form/div[2]/div
-//		public WebDriver driver = new ChromeDriver();
-//		public WebDriverWait driver1;
-//		public AssignStaffPage(WebDriver driver) {
-//			this.driver=driver;
-//			PageFactory.initElements(driver,this);
-//			
-//		}
-//		
+		@FindBy(xpath="//class['ng-invalid ng-star-inserted ng-touched ng-dirty']") WebElement form;
+		
 		WebDriver driver;
 		
 		public UserStudentPage(WebDriver driver) {
@@ -72,31 +64,11 @@ import org.openqa.selenium.By;
 			PageFactory.initElements(driver, this);
 		}
 
-		//By user=By.xpath("//span[@class='mat-button-wrapper']");
-		//By assignStudent=By.xpath("//*[@id='Assign']");
-		//By assignStaff=By.xpath("//button[contains(@class, 'p-button') and contains(@class, 'p-button-success') and contains(@class, 'p-button-rounded') and contains(., 'Assign Staff')]\r\n");
-		//@FindBy (id="username") WebElement username;
-		//@FindBy (id = "password") WebElement password;
-		//@FindBy (id = "login") WebElement loginButton;
-		//By user=By.xpath("//span[@class='mat-button-wrapper']");
-		//By assignStudent=By.xpath("//*[@id='Assign']");
-		//By assignStaff=By.xpath("//button[contains(@class, 'p-button') and contains(@class, 'p-button-success') and contains(@class, 'p-button-rounded') and contains(., 'Assign Staff')]\r\n");
 		
-		/*public void clickDropdown() {
-			dropdown.click();
-		}
-		
-		
-		public void listEmails() {
-			
-			System.out.println(listEmail.size());
-		
-			
-		}*/
 		public boolean emailDisplayed() {
-			return SelectEmail.isDisplayed();
+	return SelectEmail.isDisplayed();
 			
-		}
+	}
 		public boolean cancelBtnDisplayed() {
 			return cancel.isDisplayed();
 		}
@@ -117,8 +89,8 @@ import org.openqa.selenium.By;
 		}
 		public void formValidation() throws InterruptedException {
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	    wait.until(ExpectedConditions.visibilityOf(form));
+	/*		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    //wait.until(ExpectedConditions.visibilityOf(form));
 			List<WebElement> inputfields = form.findElements(By.tagName("input"));
 			
 			List<WebElement> dropdowns = form.findElements(By.tagName("p-dropdown"));
@@ -130,7 +102,7 @@ import org.openqa.selenium.By;
 	                isEmpty = false;
 	                break;
 	            }
-	        }
+	        }*/
 		}
 		
 		
@@ -151,34 +123,25 @@ import org.openqa.selenium.By;
 			assignEmail.click();
 			
 			}
+		public void clickEmail() {
+			SelectEmail.click();
+			
+		}
 		public void dropdown() throws InterruptedException {
-			/*WebElement dd=driver.findElement(By.xpath("//"));
-			 Actions actions = new Actions(driver);
-			 actions.moveToElement(dd).click().build().perform();*/
 			
 			Thread.sleep(2500);
 			SelectEmail.click();
-			System.out.println("$$$$$$$$$$$$$$$$");
 			Thread.sleep(2500);
-			ssss.sendKeys("neehasri@gmailcom");  
-			//newDropDown.click();
-			System.out.println("$$$$$$$$$$$$$$$$");
+			ssss.sendKeys("TestingSprintersOne@gmail.com");  
 			Thread.sleep(2500);
 			finalClick.click();
 			Thread.sleep(3000);
 			programName.click();
 			
-			
-			//Select select = new Select(sendEmail);
-			//.activeStatu//.sendKeys("neehasri@gmailcom");
-		//	select.selectByVisibleText();
-			//WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
-			//WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(SelectEmail));
-			//ele.click();
-		System.out.println("User role dropdown clicked");  
+			System.out.println("User role dropdown clicked");  
 
 			List<WebElement> roleOptions = driver.findElements(By.xpath("//p-dropdownitem[@class='ng-tns-c101-10 ng-star-inserted']"));
-	//	List<WebElement> dropd
+	
 			System.out.println("User role dropdown clicked!!!!!!!!");
 			String desiredRole = "neehasri@gmailcom"; // The text you want to select
 			System.out.println("User role dropdown clicked!!!!!!!!" +roleOptions.size());
@@ -194,46 +157,20 @@ import org.openqa.selenium.By;
 			    }
 			}
 			
-			//WebElement identifier = )
-			//WebElement dropdownElement = driver.findElement(By.id("your_dropdown_id"));
-
-			// Create a Select object with the dropdown element
-			//Select select = new Select(SelectEmail);
-			//sendEmail.sendKeys("neehasri@gmailcom");
-		//	select.selectByVisibleText();
-			//select.selectByVisibleText("Last 52 Weeks"); 
-			/*java.util.List<WebElement> options = sendEmail.findElements(By.tagName("li"));
-
-			for (WebElement option : options) {
-			    if (option.getText().equals("neehasri@gmail.com")) { // Adjust the email address as per your requirement
-			        option.click();
-			        break;
-			    }
-			}
-			//*[@id="userId"]/div/div[3]/div[2]/ul/p-dropdownitem/li
-			// WebElement option = driver.findElement(By.xpath("//span[contains(text(), 'neeha@gmail.com')]"));
-			//sendEmail.sendKeys("neehasri@gmailcom");
-			//System.out.println();
-		    Thread.sleep(2500);
-			programName.click();
-			Thread.sleep(2500);
-			batchName.click();
-			Thread.sleep(2500);
-			
-			
-			
-	//option.click();*/
-			//sendEmail.sendKeys(neehasri@gmailcom);
-		//	Select fruits = new Select(sendEmail);
-			
-		//	fruits.selectByVisibleText("neehasri@gmailcom");
-		//	fruits.selectByIndex(1);
-
+		
 			
 		}
+		public void clickProgram() {
+			programName.click();
+		}
+		public void clickBatch() {
+			batchName.click();
+		}
+		
 
 		public void cancel() throws InterruptedException {
 			cancel.click();
+			System.out.println("Click");
 		}
 		public void save() throws InterruptedException {
 			save.click();
@@ -280,7 +217,7 @@ import org.openqa.selenium.By;
 		
 		}
 		public void validEmailDropDown() {
-			SelectEmail.click();
+		//	SelectEmail.click();
 			 try {
 				 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 			     wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("input"))); // Change to the CSS selector of dropdown options
@@ -297,9 +234,19 @@ import org.openqa.selenium.By;
 		         e.printStackTrace();
 		     }
 		}
+	
+
+	public void getProgramElement() {
+		programElement.click();
+		
 	}
 
-
+	public void getbatchElement() {
+		batchElement.click();
+		
+	}
+	}
+	
 
 
 
