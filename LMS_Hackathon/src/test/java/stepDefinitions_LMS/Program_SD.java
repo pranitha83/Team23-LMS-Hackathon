@@ -25,7 +25,6 @@ import utilities.LoggerLoad;
 import utilities.PropertyFileReader;
 import utilities.TestContextSetup;
 
-
   public class Program_SD {
 	
 	 TestContextSetup context;
@@ -35,6 +34,7 @@ import utilities.TestContextSetup;
       Excel_Reader excelreader;
       Alert alert;
 	
+      
  public Program_SD(TestContextSetup context) {
 			
 		this.context=context;
@@ -70,7 +70,9 @@ import utilities.TestContextSetup;
 	public void admin_should_see_two_input_fields_and_their_respective_text_boxes_in_the_program_details_window() throws InterruptedException {
 		Thread.sleep(3000);
 		Assert.assertTrue(programpage.proNamedisplay());
-		
+
+		Thread.sleep(3000);
+
 		Assert.assertTrue(programpage.proDesdisplay());
 		
 	}
@@ -262,11 +264,22 @@ import utilities.TestContextSetup;
 	          
 		//Edit Program Name 
 		
-		@When("Admin edits the Name column and clicks save button")
-		public void admin_edits_the_name_column_and_clicks_save_button() {
-		    programpage.ProNameclear();
-		    programpage.ProNameupdate();
+		@When("Admin edits the Name column in given sheetname {string} and rowNumber {int} and then click Save button")
+		public void admin_edits_the_name_column_in_given_sheetname_and_row_number_and_then_click_save_button(String string, Integer int1) throws InvalidFormatException, IOException {
+			LoggerLoad.info("Editing Program Name and getting values from excel reader");
+			
+			programpage.ProNameclear();
+			
+			List<Map<String, String>> programData=excelreader.getData(PropertyFileReader.getexcelfilepath(), "ProgramModule");
+			System.out.println(programData);
+			
+			String programname = programData.get(int1).get("programName");
+			String programdesc = programData.get(int1).get("programDescription");
+			
+			programpage.EnterProNameandDesc(programname, programdesc);
+	    
 		    programpage.Savebuttonclick();
+			
 		}
 
 		@Then("Admin gets a message {string} alert and able to see the updated name in the table for the particular program")
@@ -275,15 +288,24 @@ import utilities.TestContextSetup;
 			 programpage.AlertProgramUpdate();
 		    
 		}
-	           //Edit Program description 
 		
-		@When("Admin edits the Description column and clicks save button")
-		public void admin_edits_the_description_column_and_clicks_save_button() throws InterruptedException {
-			Thread.sleep(2000);
-			    programpage.ProDescclear();
-			    programpage.ProDescupdate();
+		           //Edit Program description 
+		
+		@When("Admin edits the Description column in given sheetname {string} and rowNumber {int} and then click Save button")
+		public void admin_edits_the_description_column_in_given_sheetname_and_row_number_and_then_click_save_button(String string, Integer int1) throws InvalidFormatException, IOException {
+			LoggerLoad.info("Editing Program Descrption and getting value from the excel reader");
+			
+			programpage.ProDescclear();
+			 
+			 List<Map<String, String>> programData=excelreader.getData(PropertyFileReader.getexcelfilepath(), "ProgramModule");
+				System.out.println(programData);
+				
+				String programname = programData.get(int1).get("programName");
+				String programdesc = programData.get(int1).get("programDescription");
+				
+				programpage.EnterProNameandDesc(programname, programdesc);
+			   
 			    programpage.Savebuttonclick();
-		    
 		}
 
 		@Then("Admin gets a message {string} alert and able to see the updated description in the table for the particular program")
@@ -612,6 +634,93 @@ import utilities.TestContextSetup;
 	    	 LoggerLoad.info("Admin is on the Login Page ");
 	    	 LoggerLoad.info("Program Navigation Completed");
 	     }
+	     
+	     
+	   //=============================================Sorting==============================================================
+	     
+	     @When("Admin clicks the sort icon of program name column")
+	     public void admin_clicks_the_sort_icon_of_program_name_column() {
+	    	 LoggerLoad.info("Program Sorting Started");
+	    	    programpage.Programnamesort();
+	    	
+	      }
+	    @Then("The data get sorted on the table based on the program name column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_ascending_order() {
+	    	LoggerLoad.info("Program Sorting using program name ascending order");
+	     programpage.programnamesortgettext();
+	     LoggerLoad.info("SortedProgramNameAscendingList:"  +programpage.programnamesortgettext());
+	    	}
 
-		
+	     @Given("The data is in the ascending order on the table based on Program Name column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_name_column() throws InterruptedException {
+	    	
+	    	 programpage.Programnamesort();
+	    	 Thread.sleep(2000);
+	    	 programpage.Programnamesort();
+	    	 Thread.sleep(2000);
+	    	 programpage.Programnamesort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program name column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_name_column_values_in_descending_order() {
+	    	 LoggerLoad.info("Program Sorting using program name Descending order");
+	    	 programpage.programnamesortgettext();
+	    	 LoggerLoad.info("SortedProgramNameDecendingList:"  +programpage.programnamesortgettext());
+	    	 
+	     }
+
+	     @When("Admin clicks the sort icon of program Desc column")
+	     public void admin_clicks_the_sort_icon_of_program_desc_column() {
+	    	 
+	    	 programpage.ProgramDescsort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program description column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_ascending_order() {
+	    	 LoggerLoad.info("Program Sorting using program Desc ascending order");
+	    	 programpage.programDescsortgettext();
+	    	 LoggerLoad.info("SortedProgramDescAscendingList:"  +programpage.programDescsortgettext());
+	     }
+
+	     @Given("The data is in the ascending order on the table based on Program Description column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_description_column() throws InterruptedException {
+	    	 
+	    	 programpage.ProgramDescsort();
+	    	 Thread.sleep(2000);
+	    	 programpage.ProgramDescsort();
+	    	 Thread.sleep(2000);
+	    	 programpage.ProgramDescsort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program description column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_description_column_values_in_descending_order() {
+	    	 LoggerLoad.info("Program Sorting using program Decp Descending order");
+	    	 programpage.programDescsortgettext();
+	    	 LoggerLoad.info("SortedProgramDescDecendingList:"  +programpage.programDescsortgettext());
+	     }
+
+	     @When("Admin clicks the sort icon of program Status column")
+	     public void admin_clicks_the_sort_icon_of_program_status_column() {
+	         
+	    	 programpage.Programstatussort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program status column values in ascending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_ascending_order() {
+	         
+	     }
+
+	     @Given("The data is in the ascending order on the table based on Program Status column")
+	     public void the_data_is_in_the_ascending_order_on_the_table_based_on_program_status_column() throws InterruptedException {
+	    	 programpage.Programstatussort();
+	    	 Thread.sleep(2000);
+	    	 programpage.Programstatussort();
+	     }
+
+	     @Then("The data get sorted on the table based on the program status column values in descending order")
+	     public void the_data_get_sorted_on_the_table_based_on_the_program_status_column_values_in_descending_order() {
+	        
+	    	 LoggerLoad.info("Program Sorting Completed");
+	     }
+
 }

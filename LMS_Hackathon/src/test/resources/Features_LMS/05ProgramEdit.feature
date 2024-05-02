@@ -11,13 +11,21 @@ Feature: Edit New Program
   Scenario: Validate Edit Feature
     Then Admin should see a popup open for Program details to edit
 
-  Scenario: Edit Program Name
-    When Admin edits the Name column and clicks save button
+  Scenario Outline: Edit Program Name
+    When Admin edits the Name column in given sheetname "<sheetName>" and rowNumber <rowNo> and then click Save button
     Then Admin gets a message "Successful Program Updated" alert and able to see the updated name in the table for the particular program
 
-  Scenario: Edit Program description
-    When Admin edits the Description column and clicks save button
+    Examples: 
+      | sheetName   | rowNo |
+      | ProgramPage |     1 |
+
+  Scenario Outline: Edit Program description
+    When Admin edits the Description column in given sheetname "<sheetName>" and rowNumber <rowNo> and then click Save button
     Then Admin gets a message "Successful Program Updated" alert and able to see the updated description in the table for the particular program
+
+    Examples: 
+      | sheetName   | rowNo |
+      | ProgramPage |     2 |
 
   Scenario: Change Program Status
     When Admin changes the Status and clicks save button
