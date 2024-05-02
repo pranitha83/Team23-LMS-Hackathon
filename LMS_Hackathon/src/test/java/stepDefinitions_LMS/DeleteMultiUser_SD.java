@@ -42,7 +42,7 @@ public class DeleteMultiUser_SD {
 	@When("Admin select the check box of the user from the given {string} and rownumber {int}")
 	public void admin_select_the_check_box_of_the_user_from_the_given_and_rownumber(String SheetName, Integer RowNum)
 			throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		dltmultiuser.getChkBoxOfTheUsrFrmExcl(fName);
 	}
@@ -61,7 +61,7 @@ public class DeleteMultiUser_SD {
 	@Then("Admin can see the selected user is from the given {string} and rownumber {int} not deleted from the data table")
 	public void admin_can_see_the_selected_user_is_from_the_given_and_rownumber_not_deleted_from_the_data_table(
 			String SheetName, Integer RowNum) throws InvalidFormatException, IOException {
-		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "AddUser");
+		List<Map<String, String>> testData = excelreader.getData(PropertyFileReader.getexcelfilepath(), "User");
 		String fName = testData.get(RowNum).get("FirstName");
 		String lName = testData.get(RowNum).get("LastName");
 		Assert.assertEquals(dltmultiuser.chkUsrIsNtDltd(fName, lName), true);
