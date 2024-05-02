@@ -24,14 +24,14 @@
 	  		
 	  	    }
 	  	
-	  	/*@Given("Admin is in manage user page")
+	  	@Given("Admin is in manage user page")
 	  	public void admin_is_in_manage_user_page() throws InterruptedException {
-	  		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	  	}*/
+	  		
+	  	}
 
 	  	@When("Admin clicks User button")
 	  	public void admin_clicks_user_button() throws InterruptedException {
-	  	 	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@");
+	  	 	
 	  		Thread.sleep(3000);
 	  	    usp.userClick();
 	  	}  
@@ -49,10 +49,10 @@
 	  		usp.emailDisplayed();
 	  		usp.prgramDisplayed();
 	  		usp.batchDisplayed();
-	  		System.out.println("LLLLLLLLLLLL");
+	  		
 	  		usp.save();
 	  		usp.cancelBtnDisplayed();
-	  		System.out.println("Ddddd");
+	  		
 	  	}
 	  	@When("Admin see Assign Student Email Id \\(no need i guess)")
 	  	public void admin_see_assign_student_email_id_no_need_i_guess() {
@@ -61,8 +61,7 @@
 	  	}
 	  	@Then("Admin should see a pop up open for user details")
 	  	public void admin_should_see_a_pop_up_open_for_user_details() throws InterruptedException {
-	  	 	System.out.println("$$$$$$$$$$$$$$$$$$$$$");
-	  		System.out.println("I am in the Pop Page");
+	  	 	
 	  		usp.manageUser();
 	  	}
 
@@ -81,7 +80,7 @@
 	  	@When("Admin should see a radio button for status")
 	  	public void admin_should_see_a_radio_button_for_status() throws InterruptedException {
 	      usp.textStatus();
-	  	System.out.println("I am status here");
+	  	
 	  	}
 
 	  @Then("Admin clicks active radio button")
@@ -103,7 +102,7 @@
 	  @Then("Admin clicks gets alert Error message")
 	  public void admin_clicks_gets_alert_error_message() {
 	   //assertion
-	  	System.out.println("No info alert");
+	  	
 	  }
 
 

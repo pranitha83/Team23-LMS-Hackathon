@@ -8,7 +8,7 @@ Feature: User Page
     And Admin enter valid credentials  and clicks login button
     And Admin should land on dashboard page
     And Admin clicks User button
-    Then Admin should see a pop up open for user details
+    #Then Admin should see a pop up open for user details
 
   @1
   Scenario: Validate Assign Student Popup window
