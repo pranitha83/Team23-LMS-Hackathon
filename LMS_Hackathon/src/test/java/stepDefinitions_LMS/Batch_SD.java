@@ -74,7 +74,11 @@ public class Batch_SD {
 
     @Then("Admin should be able to see the delete icon button that is disabled")
     public void admin_should_be_able_to_see_the_delete_icon_button_that_is_disabled() {
-        // System.out.println("delete button " + batchpage.elementIsEnabled());
+        try{
+            Assert.assertFalse(batchpage.isGlobalDeleteEnabled());
+        }catch (Exception e){
+
+        }
     }
 
     @Then("Admin should be able to see the A New batch button")
